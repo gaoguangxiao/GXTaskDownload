@@ -1,0 +1,16 @@
+PODS:
+  - GXTaskDownload (0.1.0)
+
+DEPENDENCIES:
+  - GXTaskDownload (from `../`)
+
+EXTERNAL SOURCES:
+  GXTaskDownload:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GXTaskDownload: 407811290e2a4df1e5cbe9d817e457110cfc7b15
+
+PODFILE CHECKSUM: 7f30241549d646a6155961f99c987786caebba5a
+
+COCOAPODS: 1.14.3
