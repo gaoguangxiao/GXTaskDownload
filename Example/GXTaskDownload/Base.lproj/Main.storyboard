@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,18 +13,76 @@
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GXTaskDownload_Example" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFN-rA-4aQ">
+                                <rect key="frame" x="10" y="40" width="74" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="开启下载"/>
+                                <connections>
+                                    <action selector="开始下载:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xqJ-Bn-Nmf"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-0z-hKe">
+                                <rect key="frame" x="10" y="99" width="355" height="88"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uKM-s2-nJi">
+                                        <rect key="frame" x="0.0" y="74" width="355" height="4"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载进度" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYE-RX-0bd">
+                                        <rect key="frame" x="0.0" y="10" width="70" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下载状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoN-VS-XWg">
+                                        <rect key="frame" x="285" y="10" width="70" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <constraints>
+                                    <constraint firstItem="VYE-RX-0bd" firstAttribute="top" secondItem="Ask-0z-hKe" secondAttribute="top" constant="10" id="1D3-E4-2Gl"/>
+                                    <constraint firstItem="uKM-s2-nJi" firstAttribute="leading" secondItem="Ask-0z-hKe" secondAttribute="leading" id="9cy-zY-F24"/>
+                                    <constraint firstAttribute="trailing" secondItem="uKM-s2-nJi" secondAttribute="trailing" id="F3O-1V-mhb"/>
+                                    <constraint firstItem="VYE-RX-0bd" firstAttribute="leading" secondItem="Ask-0z-hKe" secondAttribute="leading" id="Q4n-pb-eSS"/>
+                                    <constraint firstAttribute="trailing" secondItem="YoN-VS-XWg" secondAttribute="trailing" id="UDX-pG-dZC"/>
+                                    <constraint firstAttribute="height" constant="88" id="XnN-4O-5SS"/>
+                                    <constraint firstItem="YoN-VS-XWg" firstAttribute="centerY" secondItem="VYE-RX-0bd" secondAttribute="centerY" id="mlb-uC-3AH"/>
+                                    <constraint firstAttribute="bottom" secondItem="uKM-s2-nJi" secondAttribute="bottom" constant="10" id="sa7-VR-Tuy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IFc-kT-nbF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ask-0z-hKe" firstAttribute="top" secondItem="yFN-rA-4aQ" secondAttribute="bottom" constant="25" id="7sU-33-62o"/>
+                            <constraint firstItem="yFN-rA-4aQ" firstAttribute="leading" secondItem="IFc-kT-nbF" secondAttribute="leading" constant="10" id="Pth-to-ZIE"/>
+                            <constraint firstItem="Ask-0z-hKe" firstAttribute="leading" secondItem="IFc-kT-nbF" secondAttribute="leading" constant="10" id="VfE-TI-WjH"/>
+                            <constraint firstItem="IFc-kT-nbF" firstAttribute="trailing" secondItem="Ask-0z-hKe" secondAttribute="trailing" constant="10" id="Y8Y-9i-Lcp"/>
+                            <constraint firstItem="yFN-rA-4aQ" firstAttribute="top" secondItem="IFc-kT-nbF" secondAttribute="top" constant="20" id="pCt-MR-D1n"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progress" destination="uKM-s2-nJi" id="DoG-h9-jz8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.400000000000006" y="-69.715142428785612"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
