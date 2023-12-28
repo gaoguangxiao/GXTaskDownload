@@ -7,79 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0619EE7B692552E27413920CB8ABE53F /* GXTaskDownloadDisk+DownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD46D035C82B006E4C230E1A4962147 /* GXTaskDownloadDisk+DownloadingDelegate.swift */; };
 		0C57CD6FFEEA3C8BD031624E06A916FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		1106E19ACF6DF3F6293348AB19E212A8 /* GXDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C76B4BF4E051526CC47F5161175C95 /* GXDownloader.swift */; };
-		1FC80CBACDD51BE71D5322DC8EAD4D9A /* GXDownloader+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34F6E7CA3BB1D5E1A458BFCEBCB1B7E /* GXDownloader+URLSessionDelegate.swift */; };
 		245A0870185514EC1ECFFDF79387F524 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		24A8EA81B7EE34DCC341D38A73CCC2DA /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF83B6BA08A1E52EB66B77CA1D2648E /* ReplaceMe.swift */; };
-		28BAA35C584A70F387794C0C2A162E3E /* GXDownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E879D55924337C6F86F0E1C1DFBC3E1F /* GXDownloadingState.swift */; };
+		24D2FA944DF44C31525E9295CAD567B9 /* GXDownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335D8F609B0118FBC4A3E51AD60A003E /* GXDownloadingDelegate.swift */; };
 		3712E1050B5B0093671EADC1993C6A33 /* Pods-GXTaskDownload_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04436E0789CCB967AAF97C0DF6E73F7F /* Pods-GXTaskDownload_Example-dummy.m */; };
 		38BB0599949FD6C020CF02541B68C4E2 /* Pods-GXTaskDownload_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D6A7567A4CDCDF1DAEB904836A7A73 /* Pods-GXTaskDownload_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		55F0F1C97A3548ABD4A4FE0B415CD638 /* GXTaskDownload-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C816F9BA74B7D63A30B1274DC5AEBEF7 /* GXTaskDownload-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		65B2FD451C9625D40BE727CC6954DA5A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		50B9E49A3AED66C9F3AD7128D0E17FFE /* GXDownloadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5805F0C789A52E2ACC863B046AA7E1FB /* GXDownloadingError.swift */; };
+		683A082DEFCD2B2EB88AB3012CE1DEB6 /* GXTaskDownloadDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADACE4FB23B53D81A1DB7066347D0BD /* GXTaskDownloadDisk.swift */; };
+		6C626AB96723E0265368CBAF32210EA0 /* GXDownloader+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267BAFF3587E98E70C36FA32FDE8EF52 /* GXDownloader+URLSessionDelegate.swift */; };
+		7239755FA80E2E70BCE244084A5DBF09 /* GXDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560485EA8F7D373750C5ADB23D8A574A /* GXDownloader.swift */; };
+		72885E644D86D9EE0EB221A303C9F0C8 /* GXTaskDiskFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72AA2421C285BB53BC53479BB4FC7FC /* GXTaskDiskFile.swift */; };
 		7F6FC675303E7B10F073FD1C7057606A /* Pods-GXTaskDownload_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 751F910E5505167AA83504893E1DA175 /* Pods-GXTaskDownload_Tests-dummy.m */; };
-		923214395ED2A779DD6C082757335CCE /* GXTaskDownload-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B1A6D7A0464B1B27F1D12DD4C5B861 /* GXTaskDownload-dummy.m */; };
-		A85AC06916C27419FB9867107453A986 /* GXDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E32FCF95918011D79026A72B6AE54C4 /* GXDownloading.swift */; };
+		83B372057406AADE3D9E6DB84E336DEA /* GXDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D949B7C4F5A61C65ACFC18A930A004F /* GXDownloading.swift */; };
+		92488CBFADECB4479E768AD233EB0433 /* GXTaskDownload-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4FF165134382ABAB53604478B3F3CA7 /* GXTaskDownload-dummy.m */; };
+		B72C0FCE3851BDE0CEDE878F33D216F5 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B697891FD7E65FE8FBDF2E31D77B23 /* ReplaceMe.swift */; };
 		BC9775FC9107EAD44BF2192EACEBC990 /* Pods-GXTaskDownload_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E03AB0BB3A2137386DAB6DA6C3AC4ED7 /* Pods-GXTaskDownload_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0EE94B0B4C7C3630EE09A2DB37CD5F9 /* GXDownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC684ECB7A6FF4CB8EEFB2BDB1929335 /* GXDownloadingDelegate.swift */; };
+		CE4DB9137DE5A97A7557576D2B965366 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		D2F3A5C8458DF2B2543F96D751AE2727 /* GXDownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6E1EEC0F1DEFB7C16879B2B51EC7E9 /* GXDownloadingState.swift */; };
+		E39DB34B76444F8920327F38F5B7A30C /* GXTaskDownload-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9818546A9644FFB350B1CE7F299FB245 /* GXTaskDownload-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		68262A0A1838F26A12D7EBBB4D6DEAFE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6639500E9EEB9A2B751155FF6DE10B15;
-			remoteInfo = GXTaskDownload;
-		};
-		92531B9231AC645772484DC2883D0EC9 /* PBXContainerItemProxy */ = {
+		A437996513304BD2406694E8201C71C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 15BE5F7CF6D3F5F3797D61E31CEA134D;
 			remoteInfo = "Pods-GXTaskDownload_Example";
 		};
+		DE40EC282356771E947E514587156906 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6639500E9EEB9A2B751155FF6DE10B15;
+			remoteInfo = GXTaskDownload;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		04436E0789CCB967AAF97C0DF6E73F7F /* Pods-GXTaskDownload_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GXTaskDownload_Example-dummy.m"; sourceTree = "<group>"; };
 		07422E363B455EB7616EB833BED09176 /* Pods-GXTaskDownload_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		255A3F0826AFDFA5E4EB349E8A96E08D /* GXTaskDownload.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GXTaskDownload.modulemap; sourceTree = "<group>"; };
-		34B1A6D7A0464B1B27F1D12DD4C5B861 /* GXTaskDownload-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GXTaskDownload-dummy.m"; sourceTree = "<group>"; };
+		10B08829A18B574F365BE113CE3381BA /* GXTaskDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.debug.xcconfig; sourceTree = "<group>"; };
+		12592FBC9C318BFB0844DDA75576BC8C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		125C22B945CCBBCBD699EF60D0D2251D /* GXTaskDownload.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GXTaskDownload.modulemap; sourceTree = "<group>"; };
+		267BAFF3587E98E70C36FA32FDE8EF52 /* GXDownloader+URLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "GXDownloader+URLSessionDelegate.swift"; sourceTree = "<group>"; };
+		292207B5B4428F4BDEC37258376AA57A /* GXTaskDownload.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GXTaskDownload.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		335D8F609B0118FBC4A3E51AD60A003E /* GXDownloadingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloadingDelegate.swift; sourceTree = "<group>"; };
 		39B0D340BF71C3D8B47C996665620C47 /* Pods-GXTaskDownload_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GXTaskDownload_Example.modulemap"; sourceTree = "<group>"; };
 		3A791C1047B9D25DE3C65E72CD2DFB7D /* Pods-GXTaskDownload_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3E32FCF95918011D79026A72B6AE54C4 /* GXDownloading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloading.swift; path = GXTaskDownload/Classes/GXDownloading.swift; sourceTree = "<group>"; };
+		3B6E1EEC0F1DEFB7C16879B2B51EC7E9 /* GXDownloadingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingState.swift; path = GXTaskDownload/Classes/GXDownloadingState.swift; sourceTree = "<group>"; };
+		40961FFFF355CC69E5F46D5F39C104F0 /* GXTaskDownload-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GXTaskDownload-Info.plist"; sourceTree = "<group>"; };
+		41B697891FD7E65FE8FBDF2E31D77B23 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GXTaskDownload/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		518557ECB22E2EF29E36A5F33E251433 /* Pods-GXTaskDownload_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		589946C2374AD93952865D51BC122CEE /* GXTaskDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.debug.xcconfig; sourceTree = "<group>"; };
-		58EDCA433723027C086D26E8DE8660B6 /* GXTaskDownload-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-prefix.pch"; sourceTree = "<group>"; };
+		560485EA8F7D373750C5ADB23D8A574A /* GXDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloader.swift; sourceTree = "<group>"; };
+		5805F0C789A52E2ACC863B046AA7E1FB /* GXDownloadingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingError.swift; path = GXTaskDownload/Classes/GXDownloadingError.swift; sourceTree = "<group>"; };
 		6DDFEE06009D7E308FBE2BD4F7825A83 /* Pods-GXTaskDownload_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GXTaskDownload_Example-frameworks.sh"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		751F910E5505167AA83504893E1DA175 /* Pods-GXTaskDownload_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GXTaskDownload_Tests-dummy.m"; sourceTree = "<group>"; };
+		7B9694235E7700311522D662312843BD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		876036B62080A95A84AADB5287992E2A /* Pods-GXTaskDownload_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		876AC96BA213D56BB20272DED5BE56D4 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		8839F831DC4089DEC9FAB9D3A41B0DA0 /* Pods-GXTaskDownload_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GXTaskDownload_Example"; path = Pods_GXTaskDownload_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9818546A9644FFB350B1CE7F299FB245 /* GXTaskDownload-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-umbrella.h"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FF23827717AED11A2ABF09743EE6DBB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		A0C76B4BF4E051526CC47F5161175C95 /* GXDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloader.swift; path = GXTaskDownload/Classes/GXDownloader.swift; sourceTree = "<group>"; };
+		9D949B7C4F5A61C65ACFC18A930A004F /* GXDownloading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloading.swift; sourceTree = "<group>"; };
 		BD743571137FD385E0F9C0968AC6CD92 /* Pods-GXTaskDownload_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Tests-Info.plist"; sourceTree = "<group>"; };
-		C34F6E7CA3BB1D5E1A458BFCEBCB1B7E /* GXDownloader+URLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GXDownloader+URLSessionDelegate.swift"; path = "GXTaskDownload/Classes/GXDownloader+URLSessionDelegate.swift"; sourceTree = "<group>"; };
-		C3987A71EE5EFF1C18582E9B41F4A328 /* GXTaskDownload.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GXTaskDownload.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C4FF165134382ABAB53604478B3F3CA7 /* GXTaskDownload-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GXTaskDownload-dummy.m"; sourceTree = "<group>"; };
+		C72AA2421C285BB53BC53479BB4FC7FC /* GXTaskDiskFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXTaskDiskFile.swift; path = GXTaskDownload/Classes/GXTaskDiskFile.swift; sourceTree = "<group>"; };
 		C79A8D13FC5D59187EBF646306931EF1 /* Pods-GXTaskDownload_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C816F9BA74B7D63A30B1274DC5AEBEF7 /* GXTaskDownload-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-umbrella.h"; sourceTree = "<group>"; };
-		CC684ECB7A6FF4CB8EEFB2BDB1929335 /* GXDownloadingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingDelegate.swift; path = GXTaskDownload/Classes/GXDownloadingDelegate.swift; sourceTree = "<group>"; };
+		C9A51A31469DF880975186D11672CF3F /* GXTaskDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.release.xcconfig; sourceTree = "<group>"; };
 		D099775F68FB594CD66F72D59ADA6A91 /* Pods-GXTaskDownload_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GXTaskDownload_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D24E2BECAADEA9D70C35BAD37239215B /* Pods-GXTaskDownload_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		D5AD30209C267E9DD57402E89EA3A24A /* GXTaskDownload */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GXTaskDownload; path = GXTaskDownload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E03AB0BB3A2137386DAB6DA6C3AC4ED7 /* Pods-GXTaskDownload_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GXTaskDownload_Tests-umbrella.h"; sourceTree = "<group>"; };
-		E222047C420AEF27A9B1E433198C9446 /* GXTaskDownload-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GXTaskDownload-Info.plist"; sourceTree = "<group>"; };
 		E398A1DC01A37F32918D634906FEEEDB /* Pods-GXTaskDownload_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GXTaskDownload_Tests"; path = Pods_GXTaskDownload_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E879D55924337C6F86F0E1C1DFBC3E1F /* GXDownloadingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingState.swift; path = GXTaskDownload/Classes/GXDownloadingState.swift; sourceTree = "<group>"; };
+		E9EBEA39E3A85CA746DECA59AA8B066A /* GXTaskDownload-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-prefix.pch"; sourceTree = "<group>"; };
+		EDD46D035C82B006E4C230E1A4962147 /* GXTaskDownloadDisk+DownloadingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GXTaskDownloadDisk+DownloadingDelegate.swift"; path = "GXTaskDownload/Classes/GXTaskDownloadDisk+DownloadingDelegate.swift"; sourceTree = "<group>"; };
 		EEBC5A1D0B327C59B5790DEA5F28D36E /* Pods-GXTaskDownload_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GXTaskDownload_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		F3D6A7567A4CDCDF1DAEB904836A7A73 /* Pods-GXTaskDownload_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GXTaskDownload_Example-umbrella.h"; sourceTree = "<group>"; };
 		F3DBC6E9D72648A1FAFCA53D5A6FF88F /* Pods-GXTaskDownload_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Example-Info.plist"; sourceTree = "<group>"; };
 		FA0AC25E813DDCAED878C8EE9FA72D99 /* Pods-GXTaskDownload_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GXTaskDownload_Tests.modulemap"; sourceTree = "<group>"; };
-		FB922F62CAD72FAFDB15DE4A25BC576F /* GXTaskDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.release.xcconfig; sourceTree = "<group>"; };
-		FEF83B6BA08A1E52EB66B77CA1D2648E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GXTaskDownload/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		FADACE4FB23B53D81A1DB7066347D0BD /* GXTaskDownloadDisk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXTaskDownloadDisk.swift; path = GXTaskDownload/Classes/GXTaskDownloadDisk.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,14 +99,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6619DF2C2E064A30AAA6F3902D260C40 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				65B2FD451C9625D40BE727CC6954DA5A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		90ECCFFFB89380C35027800E5853F81B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -107,24 +107,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		BB29703D6FF4FCB50B46D9DAEB03042B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE4DB9137DE5A97A7557576D2B965366 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		3803F16A01E7F398CE5C1F3220D41709 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				255A3F0826AFDFA5E4EB349E8A96E08D /* GXTaskDownload.modulemap */,
-				34B1A6D7A0464B1B27F1D12DD4C5B861 /* GXTaskDownload-dummy.m */,
-				E222047C420AEF27A9B1E433198C9446 /* GXTaskDownload-Info.plist */,
-				58EDCA433723027C086D26E8DE8660B6 /* GXTaskDownload-prefix.pch */,
-				C816F9BA74B7D63A30B1274DC5AEBEF7 /* GXTaskDownload-umbrella.h */,
-				589946C2374AD93952865D51BC122CEE /* GXTaskDownload.debug.xcconfig */,
-				FB922F62CAD72FAFDB15DE4A25BC576F /* GXTaskDownload.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GXTaskDownload";
-			sourceTree = "<group>";
-		};
 		55A938E6F00DA9869F11A715DDC07E09 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +134,18 @@
 				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		6E08884DB431EB7868DEEBF6623CCBDC /* download */ = {
+			isa = PBXGroup;
+			children = (
+				560485EA8F7D373750C5ADB23D8A574A /* GXDownloader.swift */,
+				267BAFF3587E98E70C36FA32FDE8EF52 /* GXDownloader+URLSessionDelegate.swift */,
+				9D949B7C4F5A61C65ACFC18A930A004F /* GXDownloading.swift */,
+				335D8F609B0118FBC4A3E51AD60A003E /* GXDownloadingDelegate.swift */,
+			);
+			name = download;
+			path = GXTaskDownload/Classes/download;
 			sourceTree = "<group>";
 		};
 		8FFB6AB8280D3E541679875F102C81FB /* Pods-GXTaskDownload_Tests */ = {
@@ -180,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				DCD01D42686203983CE283D207D18AD6 /* Development Pods */,
+				D6A0869FB93ECC3261ED2EF0BBF421C8 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
 				55A938E6F00DA9869F11A715DDC07E09 /* Products */,
 				FB44D6F016A99A3B101679ABC07EECB5 /* Targets Support Files */,
@@ -195,38 +200,54 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DCD01D42686203983CE283D207D18AD6 /* Development Pods */ = {
+		D55C77A8189E45524EE7271AB12650D4 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				E5E4E77F299AE2E084E4EFF14A103D3F /* GXTaskDownload */,
+				292207B5B4428F4BDEC37258376AA57A /* GXTaskDownload.podspec */,
+				12592FBC9C318BFB0844DDA75576BC8C /* LICENSE */,
+				7B9694235E7700311522D662312843BD /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		D6A0869FB93ECC3261ED2EF0BBF421C8 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE9C5991A685D1B7CFD50B5663F7A471 /* GXTaskDownload */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
-		E5E4E77F299AE2E084E4EFF14A103D3F /* GXTaskDownload */ = {
+		D6CC7AAF493F4485D05A10743FC0BDC9 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A0C76B4BF4E051526CC47F5161175C95 /* GXDownloader.swift */,
-				C34F6E7CA3BB1D5E1A458BFCEBCB1B7E /* GXDownloader+URLSessionDelegate.swift */,
-				3E32FCF95918011D79026A72B6AE54C4 /* GXDownloading.swift */,
-				CC684ECB7A6FF4CB8EEFB2BDB1929335 /* GXDownloadingDelegate.swift */,
-				E879D55924337C6F86F0E1C1DFBC3E1F /* GXDownloadingState.swift */,
-				FEF83B6BA08A1E52EB66B77CA1D2648E /* ReplaceMe.swift */,
-				F7D024C3B473B03809216EE96EDD34D9 /* Pod */,
-				3803F16A01E7F398CE5C1F3220D41709 /* Support Files */,
+				125C22B945CCBBCBD699EF60D0D2251D /* GXTaskDownload.modulemap */,
+				C4FF165134382ABAB53604478B3F3CA7 /* GXTaskDownload-dummy.m */,
+				40961FFFF355CC69E5F46D5F39C104F0 /* GXTaskDownload-Info.plist */,
+				E9EBEA39E3A85CA746DECA59AA8B066A /* GXTaskDownload-prefix.pch */,
+				9818546A9644FFB350B1CE7F299FB245 /* GXTaskDownload-umbrella.h */,
+				10B08829A18B574F365BE113CE3381BA /* GXTaskDownload.debug.xcconfig */,
+				C9A51A31469DF880975186D11672CF3F /* GXTaskDownload.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GXTaskDownload";
+			sourceTree = "<group>";
+		};
+		DE9C5991A685D1B7CFD50B5663F7A471 /* GXTaskDownload */ = {
+			isa = PBXGroup;
+			children = (
+				5805F0C789A52E2ACC863B046AA7E1FB /* GXDownloadingError.swift */,
+				3B6E1EEC0F1DEFB7C16879B2B51EC7E9 /* GXDownloadingState.swift */,
+				C72AA2421C285BB53BC53479BB4FC7FC /* GXTaskDiskFile.swift */,
+				FADACE4FB23B53D81A1DB7066347D0BD /* GXTaskDownloadDisk.swift */,
+				EDD46D035C82B006E4C230E1A4962147 /* GXTaskDownloadDisk+DownloadingDelegate.swift */,
+				41B697891FD7E65FE8FBDF2E31D77B23 /* ReplaceMe.swift */,
+				6E08884DB431EB7868DEEBF6623CCBDC /* download */,
+				D55C77A8189E45524EE7271AB12650D4 /* Pod */,
+				D6CC7AAF493F4485D05A10743FC0BDC9 /* Support Files */,
 			);
 			name = GXTaskDownload;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		F7D024C3B473B03809216EE96EDD34D9 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				C3987A71EE5EFF1C18582E9B41F4A328 /* GXTaskDownload.podspec */,
-				876AC96BA213D56BB20272DED5BE56D4 /* LICENSE */,
-				9FF23827717AED11A2ABF09743EE6DBB /* README.md */,
-			);
-			name = Pod;
 			sourceTree = "<group>";
 		};
 		FB44D6F016A99A3B101679ABC07EECB5 /* Targets Support Files */ = {
@@ -249,11 +270,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56B4DF77AD12C80FFC55E2C161B2ADCD /* Headers */ = {
+		7B1ADD39103909F80541BA5561AB9B40 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F0F1C97A3548ABD4A4FE0B415CD638 /* GXTaskDownload-umbrella.h in Headers */,
+				E39DB34B76444F8920327F38F5B7A30C /* GXTaskDownload-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +301,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				D28C5096BAC72822CBCD33FFFF24ECA9 /* PBXTargetDependency */,
+				73687F08FBA21D959ACBA0AA0ACBF048 /* PBXTargetDependency */,
 			);
 			name = "Pods-GXTaskDownload_Example";
 			productName = Pods_GXTaskDownload_Example;
@@ -299,7 +320,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				11768686C77B8EDC51F2515E9087961B /* PBXTargetDependency */,
+				4A8871E87D94BDAB8DB1E9ACDF02DD7B /* PBXTargetDependency */,
 			);
 			name = "Pods-GXTaskDownload_Tests";
 			productName = Pods_GXTaskDownload_Tests;
@@ -308,12 +329,12 @@
 		};
 		6639500E9EEB9A2B751155FF6DE10B15 /* GXTaskDownload */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3127ED1B168AD4AC238C2B9574CDB653 /* Build configuration list for PBXNativeTarget "GXTaskDownload" */;
+			buildConfigurationList = 918A05C6F010C716107D4727332D185B /* Build configuration list for PBXNativeTarget "GXTaskDownload" */;
 			buildPhases = (
-				56B4DF77AD12C80FFC55E2C161B2ADCD /* Headers */,
-				059FBC6921A8902072F590282BA05D28 /* Sources */,
-				6619DF2C2E064A30AAA6F3902D260C40 /* Frameworks */,
-				8DCD0FA0D706D789F05A1B25862C6A02 /* Resources */,
+				7B1ADD39103909F80541BA5561AB9B40 /* Headers */,
+				1DB7F7F06874CF6C0AA3BDAB25BABEA4 /* Sources */,
+				BB29703D6FF4FCB50B46D9DAEB03042B /* Frameworks */,
+				97597CA434D2674028635E84269C0CAF /* Resources */,
 			);
 			buildRules = (
 			);
@@ -361,7 +382,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DCD0FA0D706D789F05A1B25862C6A02 /* Resources */ = {
+		97597CA434D2674028635E84269C0CAF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,17 +399,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		059FBC6921A8902072F590282BA05D28 /* Sources */ = {
+		1DB7F7F06874CF6C0AA3BDAB25BABEA4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1106E19ACF6DF3F6293348AB19E212A8 /* GXDownloader.swift in Sources */,
-				1FC80CBACDD51BE71D5322DC8EAD4D9A /* GXDownloader+URLSessionDelegate.swift in Sources */,
-				A85AC06916C27419FB9867107453A986 /* GXDownloading.swift in Sources */,
-				F0EE94B0B4C7C3630EE09A2DB37CD5F9 /* GXDownloadingDelegate.swift in Sources */,
-				28BAA35C584A70F387794C0C2A162E3E /* GXDownloadingState.swift in Sources */,
-				923214395ED2A779DD6C082757335CCE /* GXTaskDownload-dummy.m in Sources */,
-				24A8EA81B7EE34DCC341D38A73CCC2DA /* ReplaceMe.swift in Sources */,
+				7239755FA80E2E70BCE244084A5DBF09 /* GXDownloader.swift in Sources */,
+				6C626AB96723E0265368CBAF32210EA0 /* GXDownloader+URLSessionDelegate.swift in Sources */,
+				83B372057406AADE3D9E6DB84E336DEA /* GXDownloading.swift in Sources */,
+				24D2FA944DF44C31525E9295CAD567B9 /* GXDownloadingDelegate.swift in Sources */,
+				50B9E49A3AED66C9F3AD7128D0E17FFE /* GXDownloadingError.swift in Sources */,
+				D2F3A5C8458DF2B2543F96D751AE2727 /* GXDownloadingState.swift in Sources */,
+				72885E644D86D9EE0EB221A303C9F0C8 /* GXTaskDiskFile.swift in Sources */,
+				92488CBFADECB4479E768AD233EB0433 /* GXTaskDownload-dummy.m in Sources */,
+				683A082DEFCD2B2EB88AB3012CE1DEB6 /* GXTaskDownloadDisk.swift in Sources */,
+				0619EE7B692552E27413920CB8ABE53F /* GXTaskDownloadDisk+DownloadingDelegate.swift in Sources */,
+				B72C0FCE3851BDE0CEDE878F33D216F5 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,17 +436,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		11768686C77B8EDC51F2515E9087961B /* PBXTargetDependency */ = {
+		4A8871E87D94BDAB8DB1E9ACDF02DD7B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GXTaskDownload_Example";
 			target = 15BE5F7CF6D3F5F3797D61E31CEA134D /* Pods-GXTaskDownload_Example */;
-			targetProxy = 92531B9231AC645772484DC2883D0EC9 /* PBXContainerItemProxy */;
+			targetProxy = A437996513304BD2406694E8201C71C9 /* PBXContainerItemProxy */;
 		};
-		D28C5096BAC72822CBCD33FFFF24ECA9 /* PBXTargetDependency */ = {
+		73687F08FBA21D959ACBA0AA0ACBF048 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GXTaskDownload;
 			target = 6639500E9EEB9A2B751155FF6DE10B15 /* GXTaskDownload */;
-			targetProxy = 68262A0A1838F26A12D7EBBB4D6DEAFE /* PBXContainerItemProxy */;
+			targetProxy = DE40EC282356771E947E514587156906 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -459,6 +484,37 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		366FB7646EEF1F3CE6AFC0CB1D271737 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10B08829A18B574F365BE113CE3381BA /* GXTaskDownload.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GXTaskDownload/GXTaskDownload-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload.modulemap";
+				PRODUCT_MODULE_NAME = GXTaskDownload;
+				PRODUCT_NAME = GXTaskDownload;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		53C3E25AAA4B72EA5E6511B14240FB35 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -555,6 +611,38 @@
 			};
 			name = Release;
 		};
+		8251BEC702EEFC8D9FAE1B17E9EA4CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A51A31469DF880975186D11672CF3F /* GXTaskDownload.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GXTaskDownload/GXTaskDownload-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload.modulemap";
+				PRODUCT_MODULE_NAME = GXTaskDownload;
+				PRODUCT_NAME = GXTaskDownload;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		8A1F2C4F286245C5DD2A8B7A652937AE /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D24E2BECAADEA9D70C35BAD37239215B /* Pods-GXTaskDownload_Tests.release.xcconfig */;
@@ -622,38 +710,6 @@
 			};
 			name = Debug;
 		};
-		A1CA91F7B8A896E2BAF9C66ACE741DA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB922F62CAD72FAFDB15DE4A25BC576F /* GXTaskDownload.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GXTaskDownload/GXTaskDownload-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload.modulemap";
-				PRODUCT_MODULE_NAME = GXTaskDownload;
-				PRODUCT_NAME = GXTaskDownload;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -720,37 +776,6 @@
 			};
 			name = Debug;
 		};
-		E47CD70D41339E24BED8D594C44B11B8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 589946C2374AD93952865D51BC122CEE /* GXTaskDownload.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GXTaskDownload/GXTaskDownload-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload.modulemap";
-				PRODUCT_MODULE_NAME = GXTaskDownload;
-				PRODUCT_NAME = GXTaskDownload;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,20 +788,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3127ED1B168AD4AC238C2B9574CDB653 /* Build configuration list for PBXNativeTarget "GXTaskDownload" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E47CD70D41339E24BED8D594C44B11B8 /* Debug */,
-				A1CA91F7B8A896E2BAF9C66ACE741DA5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D299434AB35E7FD6F7921C8EF24742FF /* Debug */,
 				7EE7A78859F657F6BEFC651185B43192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		918A05C6F010C716107D4727332D185B /* Build configuration list for PBXNativeTarget "GXTaskDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				366FB7646EEF1F3CE6AFC0CB1D271737 /* Debug */,
+				8251BEC702EEFC8D9FAE1B17E9EA4CD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

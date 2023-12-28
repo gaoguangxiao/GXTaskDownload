@@ -70,6 +70,7 @@ public class GXDownloader: NSObject, GXDownloading {
         os_log("测试%@ - %d [%@]", log: GXDownloader.logger, type: .debug, #function, #line, String(describing: url))
         
         guard let task = task else {
+            delegate?.download(self, startError: .taskFail)
             return
         }
         
@@ -83,7 +84,18 @@ public class GXDownloader: NSObject, GXDownloading {
     }
     
     public func pause() {
-        
+        guard let task = task else {
+            return
+        }
+//        state = 
+        task.suspend()
+    }
+    
+    public func resume() {
+        guard let task = task else {
+            return
+        }
+        task.resume()
     }
     
     public func stop() {

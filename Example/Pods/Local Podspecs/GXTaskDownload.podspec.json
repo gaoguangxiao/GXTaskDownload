@@ -1,7 +1,7 @@
 {
   "name": "GXTaskDownload",
   "version": "0.1.0",
-  "summary": "A short description of GXTaskDownload.",
+  "summary": "资源下载功能",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/小修/GXTaskDownload",
   "license": {

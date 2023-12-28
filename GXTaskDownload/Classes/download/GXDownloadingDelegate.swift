@@ -26,6 +26,13 @@ public protocol GXDownloadingDelegate {
     ///   - error: An optional `Error` if the download failed to complete. If there were no errors then this will be nil.
     func download(_ download: GXDownloading, completedWithError error: Error?)
     
+    /// Triggered when a `Downloading` instance has fully completed its request.
+    ///
+    /// - Parameters:
+    ///   - download: The current `Downloading` instance
+    ///   - error: An optional `Error` if the download failed to complete. If there were no errors then this will be nil.
+    func download(_ download: GXDownloading, startError error: GXDownloadingError?)
+    
     /// Triggered periodically whenever the `Downloading` instance has more data. In addition, this method provides the current progress of the overall operation as a float.
     ///
     /// - Parameters:
