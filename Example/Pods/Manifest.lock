@@ -1,5 +1,5 @@
 PODS:
-  - GXTaskDownload (0.1.0)
+  - GXTaskDownload (0.1.3)
 
 DEPENDENCIES:
   - GXTaskDownload (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GXTaskDownload: 26d4946877fa7195f27cf4accb54fe50141794d3
+  GXTaskDownload: 319652ff6b3d07d60046571d9ce345a1895191d0
 
 PODFILE CHECKSUM: 7f30241549d646a6155961f99c987786caebba5a
 

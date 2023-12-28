@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.1.1'
+  s.version          = '0.1.3'
   s.summary          = '资源下载功能'
 
 # This description is used to generate tags and improve search results.
@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/小修/GXTaskDownload'
+  s.homepage         = 'https://github.com/gaoguangxiao'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '小修' => 'gaoguangxiao125@sina.com' }
