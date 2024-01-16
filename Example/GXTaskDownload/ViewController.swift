@@ -8,6 +8,7 @@
 
 import UIKit
 import GXTaskDownload
+import GGXSwiftExtension
 
 class ViewController: UIViewController {
 
@@ -25,6 +26,7 @@ class ViewController: UIViewController {
     lazy var downloader: GXTaskDownloadDisk = {
         let task = GXTaskDownloadDisk()
 //        downloader.delegate = self
+        print("task.diskFile.downloadPath:\(task.diskFile.downloadPath)")
         return task
     }()
     
@@ -36,8 +38,18 @@ class ViewController: UIViewController {
     }
 
     var downloadURL: String {
-        return "https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"
+//        return "https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"
+//        return "https://file.risekid.cn/static/qa.risekid.cn.zip"
+//        return "https://file.risekid.cn/app/spine/buddy/mojing.json"
+//        return "https://qa.risekid.cn/4307.async.js"
+        return "https://qa.risekid.cn/babu/lanlongbabu_2.png"
     }
+    
+    var downloadURLS : Array<String> {
+        return ["https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4",
+        "https://file.risekid.cn/static/qa.risekid.cn.zip"]
+    }
+    
     //检测URL下载是否完毕，URL文件大小
     
     //检测下载状态
@@ -48,6 +60,33 @@ class ViewController: UIViewController {
         { "已下载" }
         else { "未下载" }
         下载状态.text = status
+    }
+    
+    @IBAction func 多URL下载(_ sender: Any) {
+        
+        //获取URL大小
+//        let check = GXCheckTaskSize()
+//        if let uurl = downloadURL.toUrl {
+//            check.checkUrlTask(url: uurl) { fileSize in
+//                print("线程:\(Thread.current)")
+//                print("文件大小：\(fileSize)")
+//            }
+//        }
+        
+        //多个URL大小
+//        var totalCount: Int64 = 0
+//        let checks = GXCheckTaskManager()
+//        checks.checkUrls(urls: downloadURLS) { progress,fileSize in
+//            if progress == 1.0 {
+//                
+//            }
+//            print("文件校验进度：\(progress)，文件大小：\(fileSize)")
+//        }
+        
+//        let downloader = GXDownloadManager()
+//        downloader.start(forURL: downloadURLS, path: "") { progress, state in
+//            print("文件进度：\(progress)，文件状态：\(state)")
+//        }
     }
     
     @IBAction func 开始下载(_ sender: UIButton) {
@@ -89,6 +128,8 @@ class ViewController: UIViewController {
                     self.downloadPro.text = "下载进度:\(progress)"
                     self.progress.progress = progress
                 }
+            case .error:
+                break
             }
         }
 //        downloader.initDownloadUrl(downloadURl)

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-0z-hKe">
-                                <rect key="frame" x="10" y="99" width="355" height="88"/>
+                                <rect key="frame" x="10" y="199" width="355" height="88"/>
                                 <subviews>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uKM-s2-nJi">
                                         <rect key="frame" x="0.0" y="74" width="355" height="4"/>
@@ -76,17 +76,29 @@
                                     <constraint firstAttribute="bottom" secondItem="uKM-s2-nJi" secondAttribute="bottom" constant="10" id="sa7-VR-Tuy"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bx-81-1v1">
+                                <rect key="frame" x="10" y="89" width="94" height="34"/>
+                                <color key="backgroundColor" red="0.0" green="0.45882352939999999" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="多URL下载"/>
+                                <state key="selected" title="暂停下载"/>
+                                <connections>
+                                    <action selector="多URL下载:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Doe-ch-cJM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IFc-kT-nbF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5ZG-jl-8io" firstAttribute="centerY" secondItem="yFN-rA-4aQ" secondAttribute="centerY" id="3t1-X5-p33"/>
-                            <constraint firstItem="Ask-0z-hKe" firstAttribute="top" secondItem="yFN-rA-4aQ" secondAttribute="bottom" constant="25" id="7sU-33-62o"/>
+                            <constraint firstItem="Ask-0z-hKe" firstAttribute="top" secondItem="yFN-rA-4aQ" secondAttribute="bottom" constant="125" id="7sU-33-62o"/>
                             <constraint firstItem="IFc-kT-nbF" firstAttribute="trailing" secondItem="5ZG-jl-8io" secondAttribute="trailing" constant="10" id="8Vu-b4-fxX"/>
                             <constraint firstItem="yFN-rA-4aQ" firstAttribute="leading" secondItem="IFc-kT-nbF" secondAttribute="leading" constant="10" id="Pth-to-ZIE"/>
                             <constraint firstItem="aCn-aX-YHa" firstAttribute="centerY" secondItem="yFN-rA-4aQ" secondAttribute="centerY" id="QHt-Yw-cB3"/>
+                            <constraint firstItem="7bx-81-1v1" firstAttribute="leading" secondItem="yFN-rA-4aQ" secondAttribute="leading" id="Rmb-tE-OC5"/>
                             <constraint firstItem="Ask-0z-hKe" firstAttribute="leading" secondItem="IFc-kT-nbF" secondAttribute="leading" constant="10" id="VfE-TI-WjH"/>
                             <constraint firstItem="IFc-kT-nbF" firstAttribute="trailing" secondItem="Ask-0z-hKe" secondAttribute="trailing" constant="10" id="Y8Y-9i-Lcp"/>
+                            <constraint firstItem="7bx-81-1v1" firstAttribute="top" secondItem="yFN-rA-4aQ" secondAttribute="bottom" constant="15" id="gqU-i7-6af"/>
                             <constraint firstItem="aCn-aX-YHa" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="lq0-4I-Uhp"/>
                             <constraint firstItem="yFN-rA-4aQ" firstAttribute="top" secondItem="IFc-kT-nbF" secondAttribute="top" constant="20" id="pCt-MR-D1n"/>
                         </constraints>
