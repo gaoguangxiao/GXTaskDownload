@@ -49,7 +49,10 @@ public class GXTaskDiskFile {
     var url: URL?
     
     /// 下载文件路径
-    var urlStr: String?
+//    var urlStr: String?
+    
+    /// URL下载信息
+    var downloadURLModel: GXDownloadURLModel?
     
 //MARK: 方法
     func getFilePath(url: String) -> String {
@@ -67,7 +70,7 @@ public class GXTaskDiskFile {
     }
     
     public func checkUrlTask() -> Bool {
-        guard let urlStr = self.urlStr else {
+        guard let urlStr = self.downloadURLModel?.src else {
             print("URL不可为空")
             return false
         }

@@ -19,24 +19,27 @@ public class GXDownloadManager: NSObject {
                                              target: nil)
     
     /// 最大下载数
-    public var maxConcurrentCount = 3
+    public var maxConcurrentCount = 9
     
     private var waitingTasks: Array<GXTaskDownloadDisk> = []
     
     private var downloadBlock: GXTaskDownloadBlock?
     
+    private var downloadTotalBlock: GXTaskDownloadTotalBlock?
+    
     var isFinish = false
     
     func progressCallBack() {
-        print("等待任务数量:\(waitTaskcount)")
+//        print("等待任务数量:\(waitTaskcount)")
         let downCounted = self.tasksCount - Float(waitTaskcount)
         let progress = downCounted/self.tasksCount
-        print("进度:\(progress)")
-        
-        
+//        print("进度:\(progress)")
         objc_sync_enter(self)
         if let pro = self.downloadBlock {
             pro(progress, .downloading)
+        }
+        if let pro = self.downloadTotalBlock {
+            pro(self.tasksCount,downCounted,.downloading)
         }
         objc_sync_exit(self)
         //        回调进度还需要优化--
@@ -45,6 +48,21 @@ public class GXDownloadManager: NSObject {
         //            pro(progress, .downloading)
         //        }
         //        objc_sync_exit(self)
+    }
+    
+    func stateCallBack(state: GXDownloadingState) {
+//        print("等待任务数量:\(waitTaskcount)")
+        let downCounted = self.tasksCount - Float(waitTaskcount)
+        let progress = downCounted/self.tasksCount
+//        print("进度:\(progress)")
+        objc_sync_enter(self)
+        if let pro = self.downloadBlock {
+            pro(progress, state)
+        }
+        if let pro = self.downloadTotalBlock {
+            pro(self.tasksCount,downCounted,state)
+        }
+        objc_sync_exit(self)
     }
 }
 
@@ -82,11 +100,19 @@ extension GXDownloadManager {
         waitingTasks.append(downloader)
     }
     
-    func enqueue(url: String, policy:Int, path: String) {
+    func enqueue(url: String, policy: Int, path: String) {
         /// 创建一个任务
         let downloader = GXTaskDownloadDisk()
         downloader.diskFile.taskDownloadPath = path + url.toPath.stringByDeletingLastPathComponent + "/\(policy)"
         downloader.prepare(forURL: url)
+        waitingTasks.append(downloader)
+    }
+    
+    func enqueue(urlModel: GXDownloadURLModel, path: String) {
+        /// 创建一个任务
+        let downloader = GXTaskDownloadDisk()
+        downloader.diskFile.taskDownloadPath = path + (urlModel.src?.toPath.stringByDeletingLastPathComponent ?? "")
+        downloader.prepare(urlModel: urlModel)
         waitingTasks.append(downloader)
     }
     
@@ -102,16 +128,13 @@ extension GXDownloadManager {
                     if !self.isFinish { //仅回调一次
                         self.isFinish = true
                         
-                        if let pro = self.downloadBlock {
-                            pro(progress, .completed)
-                        }
+                        self.stateCallBack(state: .completed)
                     }
                 } else {
                     self.execute()
                     //进度回调
-                    self.progressCallBack()
+                    self.stateCallBack(state: .downloading)
                 }
-                
             }
         })
     }
@@ -168,6 +191,34 @@ extension GXDownloadManager {
             }
         }
     }
+    
+    
+    /// 下载一组URLS
+    /// - Parameters:
+    ///   - urls: urls description
+    ///   - path: <#path description#>
+    ///   - block: <#block description#>
+    public func start(forURL urls: Array<GXDownloadURLModel>, path: String, block: @escaping GXTaskDownloadTotalBlock) {
+    
+        self.downloadTotalBlock = block
+        LogInfo("开始下载")
+        
+        //入队
+        for url in urls {
+            self.enqueue(urlModel: url, path: path)
+        }
+        
+        tasksCount = Float(urls.count)
+        
+        //执行
+        self.executeQueue.async {
+            for _ in 0 ..< self.maxConcurrentCount {
+                //                print("下载次数：\(1)")
+                self.execute()
+            }
+        }
+    }
+    
     /// 下载一组URLS
     /// - Parameters:
     ///   - urls: <#urls description#>

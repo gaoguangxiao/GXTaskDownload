@@ -7,87 +7,141 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		02DF3E43844CA6470DF6BE7B71B8854A /* FieldDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E72AED352A8FD47A41CDB7DF8EE28 /* FieldDescriptor.swift */; };
+		04FD9E3BC34EC336770EF32A5A20075E /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA20CD3F749D0973331F6FAAD9B1DC4D /* TransformOf.swift */; };
+		063F8EB8E79B5C9ADC0689DC7EE1BBDC /* ExtendCustomBasicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3B335062D9A859338DA694A81EFF06 /* ExtendCustomBasicType.swift */; };
+		08D0BE328CCDB0B1D44F52A82D1C2566 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C860466F6EECB872AB4DBDFA9C03ADF /* Metadata.swift */; };
 		0C57CD6FFEEA3C8BD031624E06A916FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		14FC2CF1F7F7F878583F23022F3E2D4B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A02F6F74D080F7B2C91229F305D6751 /* UIViewController+Extension.swift */; };
-		1577B157E61CB6A5B96618124E8B3207 /* GXDownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C16F582308FED1040B921F2AFD16A78D /* GXDownloadingDelegate.swift */; };
-		162A225142758D47DC4C9B8B6F862EEA /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7DF767E5AE765DA2FC64BC248FC7C3 /* Bundle+Extension.swift */; };
-		1CFE94783F68236F7DA041FDC8EA1D15 /* LogSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D254AADAB293ABC6062FAF3DF92EE48D /* LogSwift.swift */; };
-		1FE411365515471C8C414BA33B72E419 /* GXTaskDownload-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91D7E3FE79820CB358C09771268E4623 /* GXTaskDownload-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2178E5F824C6339338505BF60EBA105D /* GXCheckTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B28D3B12AB69659DC57A8BDECA5A4C /* GXCheckTaskManager.swift */; };
-		27EE24BDA5708AEE5C80D0D43E3F2E8F /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D44E8D5F7398F9A098B10A80DB67F5 /* Dictionary+Extension.swift */; };
-		30B338752013CEBD8F8349F17D5026F9 /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F963C3EBCE4D710BE75FA7C5DC27FC3 /* Array+extension.swift */; };
-		3125E611C3A7848F87BB6A16BF956440 /* TimerInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA7959EF40BAE190777A08921C4E930 /* TimerInterval+Extension.swift */; };
-		3D92D65264FA51B3B718C179AED849B9 /* GXTaskDownloadDisk+DownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D211DD2D117FCBC5F8A49E37022FD1CE /* GXTaskDownloadDisk+DownloadingDelegate.swift */; };
-		3E6B91222DE0DA3FDB3DE76CDD06A0AE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A6C12A2FB939BEAA2919FBD0EB223 /* UIImageView+Extension.swift */; };
-		41050C72E58FAF0FD7C54200124E6FE9 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1386ACA1B433ACACF2A2D6EBDE8892B5 /* CGSize+Extension.swift */; };
-		46DC0AD82240D968C66B2B18B2056E42 /* GXTaskDiskFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91220976D34C7D556C494B49F58E43F /* GXTaskDiskFile.swift */; };
-		46E149B5506607B2981D59D35EE799B1 /* GXCheckTaskSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973261D62A6DFF0DFAEED49E91A87FCE /* GXCheckTaskSize.swift */; };
-		4858F86DE7F1931EB791EB5428141828 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4691B4710E33160CE865BC8F8CAD3A /* URL+Extension.swift */; };
-		4C727DEF360A22A0F6CAC209B2DAA439 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA94BB651E86CE30AED706534DE69509 /* UIKit+Extension.swift */; };
-		52041A7F4C2417992A594568EEBB5834 /* GGXSwiftExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01E5C427957E1B3F260CFB1FB8F4C4C1 /* GGXSwiftExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		552FCC918590B4F5D267E8BCD544E08C /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CEC3E2D6DFE9BF4377E3938BC5A9E2 /* UIApplication+Extension.swift */; };
-		56C3CC363FE1D57C5B08090657EC9AE5 /* Pods-GXTaskDownload_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04436E0789CCB967AAF97C0DF6E73F7F /* Pods-GXTaskDownload_Example-dummy.m */; };
-		58130F6830D98CBD20B52054E26860CA /* GXDownloadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BA1F7D04C071EF749629404C7062EE9 /* GXDownloadingError.swift */; };
-		5A3390FABFD1A7F11FEA6B5B5DC00BDF /* GXDownloadConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4238B93416FC54A4A77451DA801E09B2 /* GXDownloadConstants.swift */; };
-		5B49D704C886FABE03194237D8619BB1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1579C2868D9F9D84175737242156AB97 /* UIColor+Extension.swift */; };
-		6603C427856793776524E21EBA8B5208 /* UIResponder+ Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AA1EEC33374374E92931837F6B4DEA /* UIResponder+ Extension.swift.swift */; };
-		6FA9A079718639CDA259550AF0DF9E0F /* GXTaskDownloadDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30341402950CFE03DF85F00592B1B380 /* GXTaskDownloadDisk.swift */; };
+		0F3C93F65F8D0F8271E8DDCB14070E35 /* Export.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E146938645D68119F096DDB116D6AAF /* Export.swift */; };
+		14FC2CF1F7F7F878583F23022F3E2D4B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D14967CBD0036388AEF54EDB6E5EDD /* UIViewController+Extension.swift */; };
+		162A225142758D47DC4C9B8B6F862EEA /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3D2DE4250159F759A78C6B571C25E1 /* Bundle+Extension.swift */; };
+		1CFE94783F68236F7DA041FDC8EA1D15 /* LogSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4961AE3388091BDE391BAE4D4300A10 /* LogSwift.swift */; };
+		1F4584D0F2C46341EA58CCFF352256A3 /* GXTaskDownload-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 52D8821C95B622EEC35D7AB172921E79 /* GXTaskDownload-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		23AB491624A259EDE5F2D12476579056 /* NSDecimalNumberTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C6CAC94811FF32630254D1D636C2385 /* NSDecimalNumberTransform.swift */; };
+		27EE24BDA5708AEE5C80D0D43E3F2E8F /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D50035B47A24E4AA47C4FEB2B22564F /* Dictionary+Extension.swift */; };
+		2A06F8E9D9F5765DB072C26B30AFCB2C /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33AFB31950C36694ADC04C1C6C7E312E /* ISO8601DateTransform.swift */; };
+		2B1E429018B11057BF827026DCFA1D29 /* BuiltInBasicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E56F0E40AEF84A0B5884B1116E0E8DB /* BuiltInBasicType.swift */; };
+		30B338752013CEBD8F8349F17D5026F9 /* Array+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB841EA49B8886A7604A845AA935C6 /* Array+extension.swift */; };
+		3125E611C3A7848F87BB6A16BF956440 /* TimerInterval+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8CC04641D1619C160F644485AE0EA0 /* TimerInterval+Extension.swift */; };
+		3713721B2A722D79B148C7295828F656 /* Pods-GXTaskDownload_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D6A7567A4CDCDF1DAEB904836A7A73 /* Pods-GXTaskDownload_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37D7F03E5D96004A4D335B0B9CF1638F /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F91E915A6B9A02F465A379EF231AB99 /* TransformType.swift */; };
+		37EC92F6AE4BCB912E031D0B72C207C7 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D3F3B9203530EBE80AC6BC61835F10 /* Properties.swift */; };
+		3D28683B09431F346CD5FC2319551373 /* ExtendCustomModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2361301CD7CF2EE5BB5C2FA87F8888C1 /* ExtendCustomModelType.swift */; };
+		3E6B91222DE0DA3FDB3DE76CDD06A0AE /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED408ABC06C593E38A906A27BAE6909 /* UIImageView+Extension.swift */; };
+		405016D38AE45A5CFDEBD2A2333E8085 /* GXDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4822149978C3BECF470651B3671750 /* GXDownloadManager.swift */; };
+		41050C72E58FAF0FD7C54200124E6FE9 /* CGSize+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C428FC051E01126C206E7E82D77A78 /* CGSize+Extension.swift */; };
+		44CB76A56DD7A2B34E897813ECD88177 /* HandyJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = B1D7F750C85CCCA27858CDE3B9CFB9FA /* HandyJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4693C7888607CF99FABF6578A14363EF /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30803E8992BC440438BBFCF04F884FD /* EnumTransform.swift */; };
+		4858F86DE7F1931EB791EB5428141828 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1928E65A13F6390B40AEB13C10AB80B /* URL+Extension.swift */; };
+		4C727DEF360A22A0F6CAC209B2DAA439 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF42A32974DC6DD54E64372FFD0E3339 /* UIKit+Extension.swift */; };
+		511F77E7850FA544C72D88A6BBCDB1D8 /* GXTaskDownload-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BD46EDBA508E1223AEF34B2D2892431 /* GXTaskDownload-dummy.m */; };
+		52041A7F4C2417992A594568EEBB5834 /* GGXSwiftExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11ED1D152FC38EF8579535F246A6ACBD /* GGXSwiftExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		552FCC918590B4F5D267E8BCD544E08C /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA76FD7DAC9310B812444D5B6CE804 /* UIApplication+Extension.swift */; };
+		57719B8A2F74C8704ED115A2F269FACB /* EnumType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBB7EA785CE76BCBEE3E6091DFE5FAC /* EnumType.swift */; };
+		57F4D34CB729B158BC735027C428EEBB /* Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593B762707F3A49964120947D2D6DD11 /* Deserializer.swift */; };
+		5827D676550E670ACE438EEDCFBA9121 /* DataTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34B17E6E9BB9DD9A30C27E09B6D90953 /* DataTransform.swift */; };
+		5B49D704C886FABE03194237D8619BB1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66E5C739F53A82E41B8798CDA70306F /* UIColor+Extension.swift */; };
+		61F38A3888592007D73F01C5664BD1A8 /* OtherExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CBC86791D4071D2D3E5C175FDBD625E /* OtherExtension.swift */; };
+		6217A1A99F2625F5CF9B4FA33C7AFF0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		65F2E826627AFFA724776352988B3474 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD221407B6AD3522971DFAE87753BDDB /* DateFormatterTransform.swift */; };
+		6603C427856793776524E21EBA8B5208 /* UIResponder+ Extension.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB23C831B8D4243952AD0CBC5E9088B2 /* UIResponder+ Extension.swift.swift */; };
+		66BCA43DCA3EF91226055D52C1AD94A9 /* GXDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93A9BA97BEA2915D7853F175DE35DAF1 /* GXDownloader.swift */; };
+		784731F037503E13644FBEAEBFEF49E9 /* GXDownloadConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 292973BBFB828E26E5DC94B55F260C75 /* GXDownloadConstants.swift */; };
+		7B9BD1FC1DA034D1454257FC401914EA /* Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD70613411E0865E33FE47335BB8CFAC /* Serializer.swift */; };
 		7F6FC675303E7B10F073FD1C7057606A /* Pods-GXTaskDownload_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 751F910E5505167AA83504893E1DA175 /* Pods-GXTaskDownload_Tests-dummy.m */; };
-		86764C325D1219A234D5B118DAF22BD5 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D82E3FE26FF03DB42F977C8C6D0E6B /* Double+Extension.swift */; };
-		87A429691B1558AE672CBA47649595BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		891BBE679A546004863CB92E043E5CA2 /* WKWebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7CD0BB66630AD00027EEC57C55BC5A /* WKWebView+Extension.swift */; };
-		919072A3A2F0F8E4EAA38A1CBDE17A57 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27541698B6D81BD1E166D627D964EEE9 /* Date+Extension.swift */; };
-		9305B1AFB71FA90B6FD7EACADD54A933 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B907F02DDECCF9129ADBA8B4AA14434 /* UITableViewCell+Extension.swift */; };
-		B1EB3DC8A2A29E20476F3D14BA097D8A /* GXDownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D931176BD9E8145095D688CB1398632A /* GXDownloadingState.swift */; };
-		B2CA9C328C953989B8F9CAA9BFF6A25F /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C098777A3C6B0214DFED7F96832CED /* UIDevice+Extension.swift */; };
-		B4DA266662AC9258101B81126547A8BD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD950F2C26253045926E4952336B3B4A /* String+Extension.swift */; };
-		B816B6A096B775A4B1B4DDAAE68757C6 /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E10CBAFA9859E6B663705FA8D7F34B /* UserDefault+Extension.swift */; };
-		BA4080C8E202F48F74574C51765A1192 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 381BF8CE5F8CF5F40C27AFCFAB3CD46E /* UIAlertViewController+Extension.swift */; };
-		BA5C3FAACF002072FAA5A888238E47B5 /* GXDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA945EB9393287E6737D165E7A992CB /* GXDownloader.swift */; };
-		BC6AE90F899FD91D07EBAB1BB04DDA06 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE548E31999073E671C44B1C3EBE470 /* UINavigationBar+Extension.swift */; };
+		81CB9D3A1851C7C7CFDB6DBD8FB76354 /* GXDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D63E168917DDBA26EF22923273AD964 /* GXDownloading.swift */; };
+		8278D61A6C6B994EFB4AC3E32DFA7962 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2C64C5B70F69539AA6EEBE6F358091 /* Logger.swift */; };
+		829510035DA62B80D73965534C8774BC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		866AEBD4382AD3DBC95C18F03D7C25DE /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0B1BDB427C32F164F285DAAE5ED8A /* ReplaceMe.swift */; };
+		86764C325D1219A234D5B118DAF22BD5 /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE596C4FD6E59F927A73FAF994E2F1E /* Double+Extension.swift */; };
+		86A71E2862A5828E4953F6DE359DBB1B /* GXCheckTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5D93A65D117798D7C2EDD1B1DB76721 /* GXCheckTaskManager.swift */; };
+		873D98BECA9ABAB10A0606FE7179FE08 /* ContextDescriptorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B72BDC4F289D52D8B4C593E176B3F8D /* ContextDescriptorType.swift */; };
+		889D303B5596CE32E52E90E35B938CE4 /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2274E5B88BCBBC9137463971C1F93C4F /* DateTransform.swift */; };
+		891BBE679A546004863CB92E043E5CA2 /* WKWebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC6AC5F6EDDFBDC09DEA1701EA4A93 /* WKWebView+Extension.swift */; };
+		8A844C0BCDD45D79D8E7931E4FB3D737 /* HandyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D453B79368C9935A1303532C0FEE8B51 /* HandyJSON-dummy.m */; };
+		8EB7E2911F7ED26B7B509DB0500F0425 /* CustomDateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67663595C4AABBB6AC76D86434DBE51E /* CustomDateFormatTransform.swift */; };
+		8F6B3FC60A2F510F408CBE18B9E7C91D /* HexColorTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A277CB3AA8947E6590BB47C4C3D536F /* HexColorTransform.swift */; };
+		919072A3A2F0F8E4EAA38A1CBDE17A57 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E45E0A311EDDEE489ACDAFC225872C15 /* Date+Extension.swift */; };
+		9305B1AFB71FA90B6FD7EACADD54A933 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD81371C0425A8F0412828FDCBFF2729 /* UITableViewCell+Extension.swift */; };
+		99013623F739B515AEA492E0811684BD /* GXDownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789C0A37106C9A20A7BA2F5BEF0E13B0 /* GXDownloadingDelegate.swift */; };
+		9AA74D06FAEB2B31238756494C2C0369 /* GXDownloadURLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32365F054A00C58626C93E0F978BE7B9 /* GXDownloadURLModel.swift */; };
+		A45EBC880B7A3C42F873471C957A76FE /* HandyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5AFFC23884DC3FC1C773CA52D23998BD /* HandyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A758347C2CC0A5BF14D3AE5085A49622 /* GXDownloader+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27D39A0BCB9E35105888C7353A4952B /* GXDownloader+URLSessionDelegate.swift */; };
+		AB361C5FA57767F6DFCE607A21A3875A /* GXDownloadingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BBEFD3FAA5808529A6BE27C83EA321 /* GXDownloadingError.swift */; };
+		B19A39EE716243D86BA4336B989CEFC5 /* GXTaskDiskFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFA242F7027E5494BCB30E2515C0087 /* GXTaskDiskFile.swift */; };
+		B2CA9C328C953989B8F9CAA9BFF6A25F /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8783E54B8FA8B7A019C76CFC94359919 /* UIDevice+Extension.swift */; };
+		B4DA266662AC9258101B81126547A8BD /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DEB4641A5DABE0AA11DF0811F93F9B /* String+Extension.swift */; };
+		B5C918AFCD06F1D82F1B4651A3E118B8 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2204FCEB6665DD34A86548A439F8E3A5 /* Configuration.swift */; };
+		B7D8E95688BA8B7050446002A2A70B85 /* ReflectionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079088D71A24A54BD257A9D2AA8C41D7 /* ReflectionHelper.swift */; };
+		B816B6A096B775A4B1B4DDAAE68757C6 /* UserDefault+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6606525F279858080AD66791ABEBAC /* UserDefault+Extension.swift */; };
+		BA4080C8E202F48F74574C51765A1192 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92D002002F2D9C798772C32807B6094 /* UIAlertViewController+Extension.swift */; };
+		BC087A52E29FDFC0B1243A3A9BC9B791 /* BuiltInBridgeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CD134D9F8E5D1721FEC5404002152F /* BuiltInBridgeType.swift */; };
+		BC6AE90F899FD91D07EBAB1BB04DDA06 /* UINavigationBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D8FA7F11AF1AEB58F55F440A17BC97 /* UINavigationBar+Extension.swift */; };
 		BC9775FC9107EAD44BF2192EACEBC990 /* Pods-GXTaskDownload_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E03AB0BB3A2137386DAB6DA6C3AC4ED7 /* Pods-GXTaskDownload_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF38BA1A20C8960099569AF9D9EABA46 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4205D704A28FCF3E3DD43D031698579 /* ReplaceMe.swift */; };
-		C261A9B5E7D90308F5CAD1D9CF88B7F7 /* GXDownloader+URLSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D995571D3826054745971D79D99EFA24 /* GXDownloader+URLSessionDelegate.swift */; };
-		C69EBDB1CD02E81534D4391F2B192E64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C949A9628C2F7B797338767493427849 /* GXTaskDownload-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 041812F45136B69D10DA8C36AFC790C5 /* GXTaskDownload-dummy.m */; };
-		D1914DB82F9E84EDCF0E7CE33F8D2651 /* GXDownloading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FCF05698E04BEB4DA55A16E2A73AA21 /* GXDownloading.swift */; };
-		D1FEB91329E50DFC4F6E92C0CBA40F31 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A62DC339B1E5351B8A3419D9EEE3C75 /* DateFormatter+Extension.swift */; };
-		D4DBF6DC657D8B76EA03EC44EFCDDCCE /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92C7B80186924497D9E22E0760F35C4 /* FileManager+Extension.swift */; };
-		DC4300BFABDACB6584378AE3C8B38A50 /* GGXSwiftExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DCCBC0B96B27D080A48D38578B15BF8 /* GGXSwiftExtension-dummy.m */; };
-		DC75C019F1CACF4D8771203F6F11A5DA /* AttributeString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5850A5E0F886CC163EFD8908A18711 /* AttributeString+Extension.swift */; };
-		DFB17CE34B0BA51F3DFE8A100A668824 /* UIImage+commonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0356C8422B98307336F345D9ADDFC05E /* UIImage+commonExtension.swift */; };
-		DFBF25FE7B8A06A24DB0E71FAB82E8A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10239718787E0E7886C108E0D85C7501 /* UIView+Extension.swift */; };
-		E3BD3DD63A0473EE13E7DA6F68032925 /* UIEdgeInsets+CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAE60F43B2CAF6CDE052E14729FDF90 /* UIEdgeInsets+CommonExtension.swift */; };
+		BFF38B2EAAF163D1F578D2F2D85818E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		C2C25267FB340029FC77C95406E4D48F /* PropertyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5A0BF0E2E9C0B6985F2C6C5C5C9C5D8 /* PropertyInfo.swift */; };
+		C5F925EC99AC7143A7626946A6956233 /* Pods-GXTaskDownload_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04436E0789CCB967AAF97C0DF6E73F7F /* Pods-GXTaskDownload_Example-dummy.m */; };
+		C8190C42B1DEF2CD7ED7DD7F806A6118 /* AnyExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FBFFB9C62E938ABF7EF3E60F960641 /* AnyExtensions.swift */; };
+		D04BC8098C27F910362DFA693EC13219 /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CE55ABC47393826A021258347504A5 /* URLTransform.swift */; };
+		D1FEB91329E50DFC4F6E92C0CBA40F31 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55172DAA59837BAF2A92E855BD5F4BF9 /* DateFormatter+Extension.swift */; };
+		D26811EC78C5E6020128DAA403077239 /* Measuable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C9A5C0754A8821DA497B9CD5F646AB /* Measuable.swift */; };
+		D3830E69C04159EE2E80B609243F8164 /* GXDownloadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B64DB203ED30CB2076310D3E5AF3B8 /* GXDownloadingState.swift */; };
+		D4DBF6DC657D8B76EA03EC44EFCDDCCE /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8404252B309FAB94A715981631119B /* FileManager+Extension.swift */; };
+		D4F7587AD2DAA629ED283DF4C3BDDE79 /* HelpingMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91787A3B61F18302B72679BA21035F11 /* HelpingMapper.swift */; };
+		D61DEB4ACE0D5C7146B78357DF37955F /* PointerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553F0D55AA9275A76AC8D495620EA3E8 /* PointerType.swift */; };
+		DC4300BFABDACB6584378AE3C8B38A50 /* GGXSwiftExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 789059253DF7D18547464D1D5A66F1E0 /* GGXSwiftExtension-dummy.m */; };
+		DC75C019F1CACF4D8771203F6F11A5DA /* AttributeString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B7703A035C0ACE0C15D136D6DC705 /* AttributeString+Extension.swift */; };
+		DFB17CE34B0BA51F3DFE8A100A668824 /* UIImage+commonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DBB19F3A00678B4DD456D6BE3AED12 /* UIImage+commonExtension.swift */; };
+		DFBF25FE7B8A06A24DB0E71FAB82E8A7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA4EC9B37210788348746333CE61992 /* UIView+Extension.swift */; };
+		E1B8B8EA3890F7C58271426D6ABCF62F /* Transformable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E853A1831C63246B0D91E5626AE6D48 /* Transformable.swift */; };
+		E24D9FC950F6071E821B6CF28CCB3F77 /* GXCheckTaskSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777980BB051EA772156130FF0A18167 /* GXCheckTaskSize.swift */; };
+		E3BD3DD63A0473EE13E7DA6F68032925 /* UIEdgeInsets+CommonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D25F99DC0F94584B4A5001963B31041 /* UIEdgeInsets+CommonExtension.swift */; };
 		E5296EDB32DEDAAC103FE3FDF584AB50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		E70B796C6629A11796F3CBC5265AB54E /* Pods-GXTaskDownload_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F3D6A7567A4CDCDF1DAEB904836A7A73 /* Pods-GXTaskDownload_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F1D21586E0C022B15047A7FC01263D4E /* GXDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2828E4BD0682ED6174683241FDEB7108 /* GXDownloadManager.swift */; };
-		F3B86EA56DF8AE09AA529345FC4F9A79 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF90ECAF7570F4462CBA118A6B5ADA5 /* ReplaceMe.swift */; };
-		F40415026C26A7BD952587D9A7D1A194 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119CA08FBB0457B3E8C6EAE85C8AF23C /* Int+Extension.swift */; };
+		E888B13BE95F9F067F78EBB8013E18D6 /* GXTaskDownloadDisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0E2C132A4FF16DF4E050F45314FCBE /* GXTaskDownloadDisk.swift */; };
+		E8EDC32DCFBEF2730A818D5A86813104 /* GXTaskDownloadDisk+DownloadingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE5AB689AB613E7F7475875DE95B9B4A /* GXTaskDownloadDisk+DownloadingDelegate.swift */; };
+		F3B86EA56DF8AE09AA529345FC4F9A79 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF94C8DB09636FC84E2C0313D14DB721 /* ReplaceMe.swift */; };
+		F40415026C26A7BD952587D9A7D1A194 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8E770FC7D9B592A1639929D45D0AC02 /* Int+Extension.swift */; };
+		F82A73A3A489DB867694A90C87B836AA /* CBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A937576E0A902BE46F38ADE3E3D3BB5E /* CBridge.swift */; };
+		FA4FAC40C732FE9786857CAF1EB566EB /* MangledName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84E8FE58BA199AA192E46814D9725DE /* MangledName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0A17ACBDD41CE73D3EA353AA54AA4575 /* PBXContainerItemProxy */ = {
+		0A93E12103DE1918CA5BC36D80B43A99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 34208A50A6E2389A7BB30C187CD9E2A4;
-			remoteInfo = GGXSwiftExtension;
+			remoteGlobalIDString = 10D88C24864319FF583AD6D156896F32;
+			remoteInfo = HandyJSON;
 		};
-		2904374C560013187341757359257248 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6639500E9EEB9A2B751155FF6DE10B15;
-			remoteInfo = GXTaskDownload;
-		};
-		49CE17DF4C21E51DCF2CAF34FFF4A8B5 /* PBXContainerItemProxy */ = {
+		27A1F76FC2266185F8C2C94E4356A27E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 15BE5F7CF6D3F5F3797D61E31CEA134D;
 			remoteInfo = "Pods-GXTaskDownload_Example";
 		};
-		74C2B66B213DBEC68E6E32CF914B8F7A /* PBXContainerItemProxy */ = {
+		7C5E0C2EC57467CFC80CDAAA5892776C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6639500E9EEB9A2B751155FF6DE10B15;
+			remoteInfo = GXTaskDownload;
+		};
+		936C147247868314E4BD8CB61FECBFBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34208A50A6E2389A7BB30C187CD9E2A4;
+			remoteInfo = GGXSwiftExtension;
+		};
+		EF760EAAF3C0AC983C32FAC3DB9A88B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10D88C24864319FF583AD6D156896F32;
+			remoteInfo = HandyJSON;
+		};
+		F7853D6E3F56813278F5B35FC55BE635 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -97,109 +151,162 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01E5C427957E1B3F260CFB1FB8F4C4C1 /* GGXSwiftExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGXSwiftExtension-umbrella.h"; sourceTree = "<group>"; };
-		0356C8422B98307336F345D9ADDFC05E /* UIImage+commonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+commonExtension.swift"; path = "GGXSwiftExtension/Classes/UIImage+commonExtension.swift"; sourceTree = "<group>"; };
-		041812F45136B69D10DA8C36AFC790C5 /* GXTaskDownload-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GXTaskDownload-dummy.m"; sourceTree = "<group>"; };
+		00FBFFB9C62E938ABF7EF3E60F960641 /* AnyExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyExtensions.swift; path = Source/AnyExtensions.swift; sourceTree = "<group>"; };
+		02D3F3B9203530EBE80AC6BC61835F10 /* Properties.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Properties.swift; path = Source/Properties.swift; sourceTree = "<group>"; };
+		03AC0972B40FB8330BE0FAD35CCD0FF1 /* GXTaskDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.release.xcconfig; sourceTree = "<group>"; };
 		04436E0789CCB967AAF97C0DF6E73F7F /* Pods-GXTaskDownload_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GXTaskDownload_Example-dummy.m"; sourceTree = "<group>"; };
+		0468DCC4918DD1BCE422973F0840490E /* GGXSwiftExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GGXSwiftExtension-Info.plist"; sourceTree = "<group>"; };
+		054EA7163B58EF91F5CBED5F3F1B9F19 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		07422E363B455EB7616EB833BED09176 /* Pods-GXTaskDownload_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		10239718787E0E7886C108E0D85C7501 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
-		119CA08FBB0457B3E8C6EAE85C8AF23C /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "GGXSwiftExtension/Classes/Int+Extension.swift"; sourceTree = "<group>"; };
-		11CEC3E2D6DFE9BF4377E3938BC5A9E2 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "GGXSwiftExtension/Classes/UIApplication+Extension.swift"; sourceTree = "<group>"; };
-		1386ACA1B433ACACF2A2D6EBDE8892B5 /* CGSize+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Extension.swift"; path = "GGXSwiftExtension/Classes/CGSize+Extension.swift"; sourceTree = "<group>"; };
-		1579C2868D9F9D84175737242156AB97 /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "GGXSwiftExtension/Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
-		1A4691B4710E33160CE865BC8F8CAD3A /* URL+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Extension.swift"; path = "GGXSwiftExtension/Classes/URL+Extension.swift"; sourceTree = "<group>"; };
-		1A62DC339B1E5351B8A3419D9EEE3C75 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Extension.swift"; path = "GGXSwiftExtension/Classes/DateFormatter+Extension.swift"; sourceTree = "<group>"; };
-		27541698B6D81BD1E166D627D964EEE9 /* Date+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Extension.swift"; path = "GGXSwiftExtension/Classes/Date+Extension.swift"; sourceTree = "<group>"; };
-		2828E4BD0682ED6174683241FDEB7108 /* GXDownloadManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadManager.swift; path = GXTaskDownload/Classes/GXDownloadManager.swift; sourceTree = "<group>"; };
-		3019F311D4056B3D7F7E760E7240B1CC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		30341402950CFE03DF85F00592B1B380 /* GXTaskDownloadDisk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXTaskDownloadDisk.swift; path = GXTaskDownload/Classes/GXTaskDownloadDisk.swift; sourceTree = "<group>"; };
-		381BF8CE5F8CF5F40C27AFCFAB3CD46E /* UIAlertViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertViewController+Extension.swift"; path = "GGXSwiftExtension/Classes/UIAlertViewController+Extension.swift"; sourceTree = "<group>"; };
+		079088D71A24A54BD257A9D2AA8C41D7 /* ReflectionHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReflectionHelper.swift; path = Source/ReflectionHelper.swift; sourceTree = "<group>"; };
+		0B093631ED31CE997FFFC1F325A3F36A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		0B8EC2DF3FE4E30A07E8AE3C0C2B8C29 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		0ED408ABC06C593E38A906A27BAE6909 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		11ED1D152FC38EF8579535F246A6ACBD /* GGXSwiftExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGXSwiftExtension-umbrella.h"; sourceTree = "<group>"; };
+		1BD862D7C53E99B18A7BDE4E0A16FCE4 /* HandyJSON-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "HandyJSON-Info.plist"; sourceTree = "<group>"; };
+		1DBB7EA785CE76BCBEE3E6091DFE5FAC /* EnumType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumType.swift; path = Source/EnumType.swift; sourceTree = "<group>"; };
+		1F0E2C132A4FF16DF4E050F45314FCBE /* GXTaskDownloadDisk.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXTaskDownloadDisk.swift; path = GXTaskDownload/Classes/GXTaskDownloadDisk.swift; sourceTree = "<group>"; };
+		1F91E915A6B9A02F465A379EF231AB99 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = Source/TransformType.swift; sourceTree = "<group>"; };
+		2204FCEB6665DD34A86548A439F8E3A5 /* Configuration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Configuration.swift; path = Source/Configuration.swift; sourceTree = "<group>"; };
+		2274E5B88BCBBC9137463971C1F93C4F /* DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = Source/DateTransform.swift; sourceTree = "<group>"; };
+		22CB876D5E47720FEF41C7B98AA46833 /* GXTaskDownload-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GXTaskDownload-Info.plist"; sourceTree = "<group>"; };
+		22DBB19F3A00678B4DD456D6BE3AED12 /* UIImage+commonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+commonExtension.swift"; path = "GGXSwiftExtension/Classes/UIImage+commonExtension.swift"; sourceTree = "<group>"; };
+		2361301CD7CF2EE5BB5C2FA87F8888C1 /* ExtendCustomModelType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtendCustomModelType.swift; path = Source/ExtendCustomModelType.swift; sourceTree = "<group>"; };
+		25C0B1BDB427C32F164F285DAAE5ED8A /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GXTaskDownload/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
+		26CE55ABC47393826A021258347504A5 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = Source/URLTransform.swift; sourceTree = "<group>"; };
+		281B7703A035C0ACE0C15D136D6DC705 /* AttributeString+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AttributeString+Extension.swift"; path = "GGXSwiftExtension/Classes/AttributeString+Extension.swift"; sourceTree = "<group>"; };
+		28616DE70E74C82E7E5A2DB1243FE29D /* HandyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandyJSON-prefix.pch"; sourceTree = "<group>"; };
+		28DC794761401022884E15E16123D540 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		292973BBFB828E26E5DC94B55F260C75 /* GXDownloadConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloadConstants.swift; sourceTree = "<group>"; };
+		2A277CB3AA8947E6590BB47C4C3D536F /* HexColorTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HexColorTransform.swift; path = Source/HexColorTransform.swift; sourceTree = "<group>"; };
+		2A8404252B309FAB94A715981631119B /* FileManager+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+Extension.swift"; path = "GGXSwiftExtension/Classes/FileManager+Extension.swift"; sourceTree = "<group>"; };
+		2B2C64C5B70F69539AA6EEBE6F358091 /* Logger.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Logger.swift; path = Source/Logger.swift; sourceTree = "<group>"; };
+		2B72BDC4F289D52D8B4C593E176B3F8D /* ContextDescriptorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContextDescriptorType.swift; path = Source/ContextDescriptorType.swift; sourceTree = "<group>"; };
+		32365F054A00C58626C93E0F978BE7B9 /* GXDownloadURLModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadURLModel.swift; path = GXTaskDownload/Classes/GXDownloadURLModel.swift; sourceTree = "<group>"; };
+		33AFB31950C36694ADC04C1C6C7E312E /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = Source/ISO8601DateTransform.swift; sourceTree = "<group>"; };
+		34B17E6E9BB9DD9A30C27E09B6D90953 /* DataTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTransform.swift; path = Source/DataTransform.swift; sourceTree = "<group>"; };
 		39B0D340BF71C3D8B47C996665620C47 /* Pods-GXTaskDownload_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GXTaskDownload_Example.modulemap"; sourceTree = "<group>"; };
 		3A791C1047B9D25DE3C65E72CD2DFB7D /* Pods-GXTaskDownload_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		3B907F02DDECCF9129ADBA8B4AA14434 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extension.swift"; path = "GGXSwiftExtension/Classes/UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
-		3BA1F7D04C071EF749629404C7062EE9 /* GXDownloadingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingError.swift; path = GXTaskDownload/Classes/GXDownloadingError.swift; sourceTree = "<group>"; };
-		3BA7959EF40BAE190777A08921C4E930 /* TimerInterval+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimerInterval+Extension.swift"; path = "GGXSwiftExtension/Classes/TimerInterval+Extension.swift"; sourceTree = "<group>"; };
-		3F963C3EBCE4D710BE75FA7C5DC27FC3 /* Array+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+extension.swift"; path = "GGXSwiftExtension/Classes/Array+extension.swift"; sourceTree = "<group>"; };
-		4238B93416FC54A4A77451DA801E09B2 /* GXDownloadConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloadConstants.swift; sourceTree = "<group>"; };
-		43B28D3B12AB69659DC57A8BDECA5A4C /* GXCheckTaskManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXCheckTaskManager.swift; path = GXTaskDownload/Classes/GXCheckTaskManager.swift; sourceTree = "<group>"; };
-		45C098777A3C6B0214DFED7F96832CED /* UIDevice+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "GGXSwiftExtension/Classes/UIDevice+Extension.swift"; sourceTree = "<group>"; };
-		48517E99147F28A6DE5F66127E53AA00 /* GXTaskDownload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.release.xcconfig; sourceTree = "<group>"; };
-		4A02F6F74D080F7B2C91229F305D6751 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "GGXSwiftExtension/Classes/UIViewController+Extension.swift"; sourceTree = "<group>"; };
-		4AAE60F43B2CAF6CDE052E14729FDF90 /* UIEdgeInsets+CommonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIEdgeInsets+CommonExtension.swift"; path = "GGXSwiftExtension/Classes/UIEdgeInsets+CommonExtension.swift"; sourceTree = "<group>"; };
-		4BF90ECAF7570F4462CBA118A6B5ADA5 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GGXSwiftExtension/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		4C7DF767E5AE765DA2FC64BC248FC7C3 /* Bundle+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Extension.swift"; path = "GGXSwiftExtension/Classes/Bundle+Extension.swift"; sourceTree = "<group>"; };
+		3B3D8E877BDDF3F459113EA45F7F1E8A /* GGXSwiftExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GGXSwiftExtension.modulemap; sourceTree = "<group>"; };
+		3C6CAC94811FF32630254D1D636C2385 /* NSDecimalNumberTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NSDecimalNumberTransform.swift; path = Source/NSDecimalNumberTransform.swift; sourceTree = "<group>"; };
+		3CBC86791D4071D2D3E5C175FDBD625E /* OtherExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OtherExtension.swift; path = Source/OtherExtension.swift; sourceTree = "<group>"; };
+		3D63E168917DDBA26EF22923273AD964 /* GXDownloading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloading.swift; sourceTree = "<group>"; };
+		3E146938645D68119F096DDB116D6AAF /* Export.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Export.swift; path = Source/Export.swift; sourceTree = "<group>"; };
+		4BFA242F7027E5494BCB30E2515C0087 /* GXTaskDiskFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXTaskDiskFile.swift; path = GXTaskDownload/Classes/GXTaskDiskFile.swift; sourceTree = "<group>"; };
+		4C860466F6EECB872AB4DBDFA9C03ADF /* Metadata.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Metadata.swift; path = Source/Metadata.swift; sourceTree = "<group>"; };
+		4E56F0E40AEF84A0B5884B1116E0E8DB /* BuiltInBasicType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuiltInBasicType.swift; path = Source/BuiltInBasicType.swift; sourceTree = "<group>"; };
+		4F6606525F279858080AD66791ABEBAC /* UserDefault+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UserDefault+Extension.swift"; path = "GGXSwiftExtension/Classes/UserDefault+Extension.swift"; sourceTree = "<group>"; };
 		518557ECB22E2EF29E36A5F33E251433 /* Pods-GXTaskDownload_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C51B1F92EB950B430DFB9E5184C2F8B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		52D8821C95B622EEC35D7AB172921E79 /* GXTaskDownload-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-umbrella.h"; sourceTree = "<group>"; };
+		55172DAA59837BAF2A92E855BD5F4BF9 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+Extension.swift"; path = "GGXSwiftExtension/Classes/DateFormatter+Extension.swift"; sourceTree = "<group>"; };
+		553F0D55AA9275A76AC8D495620EA3E8 /* PointerType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointerType.swift; path = Source/PointerType.swift; sourceTree = "<group>"; };
+		57DEB4641A5DABE0AA11DF0811F93F9B /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "GGXSwiftExtension/Classes/String+Extension.swift"; sourceTree = "<group>"; };
+		593B762707F3A49964120947D2D6DD11 /* Deserializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deserializer.swift; path = Source/Deserializer.swift; sourceTree = "<group>"; };
+		5AFFC23884DC3FC1C773CA52D23998BD /* HandyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HandyJSON-umbrella.h"; sourceTree = "<group>"; };
+		5D25F99DC0F94584B4A5001963B31041 /* UIEdgeInsets+CommonExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIEdgeInsets+CommonExtension.swift"; path = "GGXSwiftExtension/Classes/UIEdgeInsets+CommonExtension.swift"; sourceTree = "<group>"; };
+		5DE961007E9C37359B4B65F38ABFA242 /* GGXSwiftExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGXSwiftExtension.release.xcconfig; sourceTree = "<group>"; };
+		5E853A1831C63246B0D91E5626AE6D48 /* Transformable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transformable.swift; path = Source/Transformable.swift; sourceTree = "<group>"; };
 		607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GGXSwiftExtension; path = GGXSwiftExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63913A9C170FCF70B716BA5E429C4EDF /* GGXSwiftExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GGXSwiftExtension-Info.plist"; sourceTree = "<group>"; };
-		6DCCBC0B96B27D080A48D38578B15BF8 /* GGXSwiftExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGXSwiftExtension-dummy.m"; sourceTree = "<group>"; };
+		63BBEFD3FAA5808529A6BE27C83EA321 /* GXDownloadingError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingError.swift; path = GXTaskDownload/Classes/GXDownloadingError.swift; sourceTree = "<group>"; };
+		67663595C4AABBB6AC76D86434DBE51E /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = Source/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
+		69C428FC051E01126C206E7E82D77A78 /* CGSize+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGSize+Extension.swift"; path = "GGXSwiftExtension/Classes/CGSize+Extension.swift"; sourceTree = "<group>"; };
+		6BD46EDBA508E1223AEF34B2D2892431 /* GXTaskDownload-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GXTaskDownload-dummy.m"; sourceTree = "<group>"; };
+		6D50035B47A24E4AA47C4FEB2B22564F /* Dictionary+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extension.swift"; path = "GGXSwiftExtension/Classes/Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		6DDFEE06009D7E308FBE2BD4F7825A83 /* Pods-GXTaskDownload_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GXTaskDownload_Example-frameworks.sh"; sourceTree = "<group>"; };
+		6E9E72AED352A8FD47A41CDB7DF8EE28 /* FieldDescriptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FieldDescriptor.swift; path = Source/FieldDescriptor.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		74AE239CDC4F646BA5D1C412BDF66764 /* GGXSwiftExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGXSwiftExtension.release.xcconfig; sourceTree = "<group>"; };
 		751F910E5505167AA83504893E1DA175 /* Pods-GXTaskDownload_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GXTaskDownload_Tests-dummy.m"; sourceTree = "<group>"; };
-		7C4222BE0C16181B0D38EDE56B28C116 /* GGXSwiftExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GGXSwiftExtension.modulemap; sourceTree = "<group>"; };
-		7DACEB107F95C5D2DAB5A8F64B6773B5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		7FCF05698E04BEB4DA55A16E2A73AA21 /* GXDownloading.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloading.swift; sourceTree = "<group>"; };
+		764DF5B6720CC89B2918E0787E1EB006 /* GGXSwiftExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGXSwiftExtension.debug.xcconfig; sourceTree = "<group>"; };
+		789059253DF7D18547464D1D5A66F1E0 /* GGXSwiftExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GGXSwiftExtension-dummy.m"; sourceTree = "<group>"; };
+		789C0A37106C9A20A7BA2F5BEF0E13B0 /* GXDownloadingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloadingDelegate.swift; sourceTree = "<group>"; };
+		7D5BF92EC209951A5C8A28217D0E8984 /* GGXSwiftExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGXSwiftExtension-prefix.pch"; sourceTree = "<group>"; };
+		81ADD2396C39B0F2EAF110438FC3127E /* GXTaskDownload.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GXTaskDownload.modulemap; sourceTree = "<group>"; };
+		84CB841EA49B8886A7604A845AA935C6 /* Array+extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+extension.swift"; path = "GGXSwiftExtension/Classes/Array+extension.swift"; sourceTree = "<group>"; };
 		876036B62080A95A84AADB5287992E2A /* Pods-GXTaskDownload_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		8783E54B8FA8B7A019C76CFC94359919 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+Extension.swift"; path = "GGXSwiftExtension/Classes/UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		87A249C67522112DD205F4CCC2079484 /* HandyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HandyJSON.debug.xcconfig; sourceTree = "<group>"; };
 		8839F831DC4089DEC9FAB9D3A41B0DA0 /* Pods-GXTaskDownload_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GXTaskDownload_Example"; path = Pods_GXTaskDownload_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		90D44E8D5F7398F9A098B10A80DB67F5 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Dictionary+Extension.swift"; path = "GGXSwiftExtension/Classes/Dictionary+Extension.swift"; sourceTree = "<group>"; };
-		91D7E3FE79820CB358C09771268E4623 /* GXTaskDownload-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-umbrella.h"; sourceTree = "<group>"; };
-		96E505646E9C545C70394837CCF25193 /* GXTaskDownload.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = GXTaskDownload.modulemap; sourceTree = "<group>"; };
-		973261D62A6DFF0DFAEED49E91A87FCE /* GXCheckTaskSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXCheckTaskSize.swift; path = GXTaskDownload/Classes/GXCheckTaskSize.swift; sourceTree = "<group>"; };
-		996C7B6C394F6072AC93C83470B0810C /* GGXSwiftExtension-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GGXSwiftExtension-prefix.pch"; sourceTree = "<group>"; };
-		9AA945EB9393287E6737D165E7A992CB /* GXDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloader.swift; sourceTree = "<group>"; };
+		91787A3B61F18302B72679BA21035F11 /* HelpingMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HelpingMapper.swift; path = Source/HelpingMapper.swift; sourceTree = "<group>"; };
+		93A9BA97BEA2915D7853F175DE35DAF1 /* GXDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloader.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9F7A6C12A2FB939BEAA2919FBD0EB223 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImageView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		A00A1C69A6365A388F1B7411A097A4CC /* GGXSwiftExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GGXSwiftExtension.debug.xcconfig; sourceTree = "<group>"; };
-		A9E10CBAFA9859E6B663705FA8D7F34B /* UserDefault+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UserDefault+Extension.swift"; path = "GGXSwiftExtension/Classes/UserDefault+Extension.swift"; sourceTree = "<group>"; };
-		ABE548E31999073E671C44B1C3EBE470 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Extension.swift"; path = "GGXSwiftExtension/Classes/UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
-		B343A8BFC07B20015F840F2EB4879EA3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		B92C7B80186924497D9E22E0760F35C4 /* FileManager+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+Extension.swift"; path = "GGXSwiftExtension/Classes/FileManager+Extension.swift"; sourceTree = "<group>"; };
+		9E3D2DE4250159F759A78C6B571C25E1 /* Bundle+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+Extension.swift"; path = "GGXSwiftExtension/Classes/Bundle+Extension.swift"; sourceTree = "<group>"; };
+		A07CFB7B9CAA2C338E71ABE567349032 /* GXTaskDownload-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-prefix.pch"; sourceTree = "<group>"; };
+		A470340EE5F348DFC7F31AD91042659C /* GXTaskDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.debug.xcconfig; sourceTree = "<group>"; };
+		A66E5C739F53A82E41B8798CDA70306F /* UIColor+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Extension.swift"; path = "GGXSwiftExtension/Classes/UIColor+Extension.swift"; sourceTree = "<group>"; };
+		A937576E0A902BE46F38ADE3E3D3BB5E /* CBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBridge.swift; path = Source/CBridge.swift; sourceTree = "<group>"; };
+		AC4822149978C3BECF470651B3671750 /* GXDownloadManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadManager.swift; path = GXTaskDownload/Classes/GXDownloadManager.swift; sourceTree = "<group>"; };
+		AE5AB689AB613E7F7475875DE95B9B4A /* GXTaskDownloadDisk+DownloadingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GXTaskDownloadDisk+DownloadingDelegate.swift"; path = "GXTaskDownload/Classes/GXTaskDownloadDisk+DownloadingDelegate.swift"; sourceTree = "<group>"; };
+		AFA4EC9B37210788348746333CE61992 /* UIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Extension.swift"; path = "GGXSwiftExtension/Classes/UIView+Extension.swift"; sourceTree = "<group>"; };
+		B1D7F750C85CCCA27858CDE3B9CFB9FA /* HandyJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HandyJSON.h; path = Source/HandyJSON.h; sourceTree = "<group>"; };
+		B2AC6AC5F6EDDFBDC09DEA1701EA4A93 /* WKWebView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+Extension.swift"; path = "GGXSwiftExtension/Classes/WKWebView+Extension.swift"; sourceTree = "<group>"; };
+		B30803E8992BC440438BBFCF04F884FD /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = Source/EnumTransform.swift; sourceTree = "<group>"; };
+		B318EBBC5B99481A5375304EAFE226B1 /* HandyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HandyJSON.release.xcconfig; sourceTree = "<group>"; };
+		B4961AE3388091BDE391BAE4D4300A10 /* LogSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogSwift.swift; path = GGXSwiftExtension/Classes/LogSwift.swift; sourceTree = "<group>"; };
+		B777980BB051EA772156130FF0A18167 /* GXCheckTaskSize.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXCheckTaskSize.swift; path = GXTaskDownload/Classes/GXCheckTaskSize.swift; sourceTree = "<group>"; };
+		BAE596C4FD6E59F927A73FAF994E2F1E /* Double+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Extension.swift"; path = "GGXSwiftExtension/Classes/Double+Extension.swift"; sourceTree = "<group>"; };
 		BD743571137FD385E0F9C0968AC6CD92 /* Pods-GXTaskDownload_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Tests-Info.plist"; sourceTree = "<group>"; };
-		C0AA1EEC33374374E92931837F6B4DEA /* UIResponder+ Extension.swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIResponder+ Extension.swift.swift"; path = "GGXSwiftExtension/Classes/UIResponder+ Extension.swift.swift"; sourceTree = "<group>"; };
-		C16F582308FED1040B921F2AFD16A78D /* GXDownloadingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GXDownloadingDelegate.swift; sourceTree = "<group>"; };
-		C3B6C06E6840970336618562B69FBEB6 /* GXTaskDownload-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "GXTaskDownload-Info.plist"; sourceTree = "<group>"; };
-		C4205D704A28FCF3E3DD43D031698579 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GXTaskDownload/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		C79A8D13FC5D59187EBF646306931EF1 /* Pods-GXTaskDownload_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Example.release.xcconfig"; sourceTree = "<group>"; };
-		C91220976D34C7D556C494B49F58E43F /* GXTaskDiskFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXTaskDiskFile.swift; path = GXTaskDownload/Classes/GXTaskDiskFile.swift; sourceTree = "<group>"; };
-		CD7CD0BB66630AD00027EEC57C55BC5A /* WKWebView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+Extension.swift"; path = "GGXSwiftExtension/Classes/WKWebView+Extension.swift"; sourceTree = "<group>"; };
-		CD950F2C26253045926E4952336B3B4A /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "GGXSwiftExtension/Classes/String+Extension.swift"; sourceTree = "<group>"; };
+		C84E8FE58BA199AA192E46814D9725DE /* MangledName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MangledName.swift; path = Source/MangledName.swift; sourceTree = "<group>"; };
+		C8E770FC7D9B592A1639929D45D0AC02 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "GGXSwiftExtension/Classes/Int+Extension.swift"; sourceTree = "<group>"; };
+		C92D002002F2D9C798772C32807B6094 /* UIAlertViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertViewController+Extension.swift"; path = "GGXSwiftExtension/Classes/UIAlertViewController+Extension.swift"; sourceTree = "<group>"; };
+		CAF9EBC9139EED805B8D2D3AE6B8CD6A /* HandyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = HandyJSON.modulemap; sourceTree = "<group>"; };
+		CB23C831B8D4243952AD0CBC5E9088B2 /* UIResponder+ Extension.swift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIResponder+ Extension.swift.swift"; path = "GGXSwiftExtension/Classes/UIResponder+ Extension.swift.swift"; sourceTree = "<group>"; };
+		CD54121DDA84872534168702B5F92950 /* HandyJSON */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = HandyJSON; path = HandyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF94C8DB09636FC84E2C0313D14DB721 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = GGXSwiftExtension/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
 		D099775F68FB594CD66F72D59ADA6A91 /* Pods-GXTaskDownload_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GXTaskDownload_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D211DD2D117FCBC5F8A49E37022FD1CE /* GXTaskDownloadDisk+DownloadingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "GXTaskDownloadDisk+DownloadingDelegate.swift"; path = "GXTaskDownload/Classes/GXTaskDownloadDisk+DownloadingDelegate.swift"; sourceTree = "<group>"; };
+		D1928E65A13F6390B40AEB13C10AB80B /* URL+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URL+Extension.swift"; path = "GGXSwiftExtension/Classes/URL+Extension.swift"; sourceTree = "<group>"; };
 		D24E2BECAADEA9D70C35BAD37239215B /* Pods-GXTaskDownload_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GXTaskDownload_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		D254AADAB293ABC6062FAF3DF92EE48D /* LogSwift.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LogSwift.swift; path = GGXSwiftExtension/Classes/LogSwift.swift; sourceTree = "<group>"; };
-		D2FD96F16CFEA23573F4603046573916 /* GGXSwiftExtension.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GGXSwiftExtension.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		D2D8FA7F11AF1AEB58F55F440A17BC97 /* UINavigationBar+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UINavigationBar+Extension.swift"; path = "GGXSwiftExtension/Classes/UINavigationBar+Extension.swift"; sourceTree = "<group>"; };
+		D453B79368C9935A1303532C0FEE8B51 /* HandyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HandyJSON-dummy.m"; sourceTree = "<group>"; };
+		D4D14967CBD0036388AEF54EDB6E5EDD /* UIViewController+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "GGXSwiftExtension/Classes/UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		D5A0BF0E2E9C0B6985F2C6C5C5C9C5D8 /* PropertyInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PropertyInfo.swift; path = Source/PropertyInfo.swift; sourceTree = "<group>"; };
 		D5AD30209C267E9DD57402E89EA3A24A /* GXTaskDownload */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GXTaskDownload; path = GXTaskDownload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D931176BD9E8145095D688CB1398632A /* GXDownloadingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingState.swift; path = GXTaskDownload/Classes/GXDownloadingState.swift; sourceTree = "<group>"; };
-		D995571D3826054745971D79D99EFA24 /* GXDownloader+URLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "GXDownloader+URLSessionDelegate.swift"; sourceTree = "<group>"; };
-		DE5850A5E0F886CC163EFD8908A18711 /* AttributeString+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AttributeString+Extension.swift"; path = "GGXSwiftExtension/Classes/AttributeString+Extension.swift"; sourceTree = "<group>"; };
+		DBAA76FD7DAC9310B812444D5B6CE804 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+Extension.swift"; path = "GGXSwiftExtension/Classes/UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		DD70613411E0865E33FE47335BB8CFAC /* Serializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Serializer.swift; path = Source/Serializer.swift; sourceTree = "<group>"; };
 		E03AB0BB3A2137386DAB6DA6C3AC4ED7 /* Pods-GXTaskDownload_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GXTaskDownload_Tests-umbrella.h"; sourceTree = "<group>"; };
+		E38C73ACA5B150BBB59690B641491296 /* GXTaskDownload.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GXTaskDownload.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		E398A1DC01A37F32918D634906FEEEDB /* Pods-GXTaskDownload_Tests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-GXTaskDownload_Tests"; path = Pods_GXTaskDownload_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4D82E3FE26FF03DB42F977C8C6D0E6B /* Double+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Double+Extension.swift"; path = "GGXSwiftExtension/Classes/Double+Extension.swift"; sourceTree = "<group>"; };
-		E82C4EC3AD3E7E66F9CC22CAB68E0FD2 /* GXTaskDownload.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = GXTaskDownload.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		EA94BB651E86CE30AED706534DE69509 /* UIKit+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Extension.swift"; path = "GGXSwiftExtension/Classes/UIKit+Extension.swift"; sourceTree = "<group>"; };
+		E45E0A311EDDEE489ACDAFC225872C15 /* Date+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Date+Extension.swift"; path = "GGXSwiftExtension/Classes/Date+Extension.swift"; sourceTree = "<group>"; };
+		E5D93A65D117798D7C2EDD1B1DB76721 /* GXCheckTaskManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXCheckTaskManager.swift; path = GXTaskDownload/Classes/GXCheckTaskManager.swift; sourceTree = "<group>"; };
+		E621224AB54DE3933371014F6BDF3C1E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E7C9A5C0754A8821DA497B9CD5F646AB /* Measuable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Measuable.swift; path = Source/Measuable.swift; sourceTree = "<group>"; };
+		E9CD134D9F8E5D1721FEC5404002152F /* BuiltInBridgeType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BuiltInBridgeType.swift; path = Source/BuiltInBridgeType.swift; sourceTree = "<group>"; };
 		EEBC5A1D0B327C59B5790DEA5F28D36E /* Pods-GXTaskDownload_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GXTaskDownload_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EF8CC04641D1619C160F644485AE0EA0 /* TimerInterval+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TimerInterval+Extension.swift"; path = "GGXSwiftExtension/Classes/TimerInterval+Extension.swift"; sourceTree = "<group>"; };
+		F27D39A0BCB9E35105888C7353A4952B /* GXDownloader+URLSessionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "GXDownloader+URLSessionDelegate.swift"; sourceTree = "<group>"; };
 		F3D6A7567A4CDCDF1DAEB904836A7A73 /* Pods-GXTaskDownload_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GXTaskDownload_Example-umbrella.h"; sourceTree = "<group>"; };
 		F3DBC6E9D72648A1FAFCA53D5A6FF88F /* Pods-GXTaskDownload_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GXTaskDownload_Example-Info.plist"; sourceTree = "<group>"; };
-		F6F87516C8B05EC388B7F01D159BA000 /* GXTaskDownload-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GXTaskDownload-prefix.pch"; sourceTree = "<group>"; };
+		F8B64DB203ED30CB2076310D3E5AF3B8 /* GXDownloadingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GXDownloadingState.swift; path = GXTaskDownload/Classes/GXDownloadingState.swift; sourceTree = "<group>"; };
 		FA0AC25E813DDCAED878C8EE9FA72D99 /* Pods-GXTaskDownload_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-GXTaskDownload_Tests.modulemap"; sourceTree = "<group>"; };
-		FF004B36B09F472875C3A6CAFC292D49 /* GXTaskDownload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GXTaskDownload.debug.xcconfig; sourceTree = "<group>"; };
+		FA20CD3F749D0973331F6FAAD9B1DC4D /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = Source/TransformOf.swift; sourceTree = "<group>"; };
+		FD221407B6AD3522971DFAE87753BDDB /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = Source/DateFormatterTransform.swift; sourceTree = "<group>"; };
+		FD81371C0425A8F0412828FDCBFF2729 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableViewCell+Extension.swift"; path = "GGXSwiftExtension/Classes/UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		FF3B335062D9A859338DA694A81EFF06 /* ExtendCustomBasicType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExtendCustomBasicType.swift; path = Source/ExtendCustomBasicType.swift; sourceTree = "<group>"; };
+		FF42A32974DC6DD54E64372FFD0E3339 /* UIKit+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIKit+Extension.swift"; path = "GGXSwiftExtension/Classes/UIKit+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1620A7842D6B9F7D1A168D35E63356A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFF38B2EAAF163D1F578D2F2D85818E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31CF6BCDE307E71E54B9202BE2F3A142 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				829510035DA62B80D73965534C8774BC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		90ECCFFFB89380C35027800E5853F81B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0C57CD6FFEEA3C8BD031624E06A916FC /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		920404740911F00884F58CA2BF3D31E6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C69EBDB1CD02E81534D4391F2B192E64 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,26 +318,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2E16F4C23AF1A2B8EE80CB515C60459 /* Frameworks */ = {
+		E22884298BEC43394386904CC577DE36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87A429691B1558AE672CBA47649595BB /* Foundation.framework in Frameworks */,
+				6217A1A99F2625F5CF9B4FA33C7AFF0B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BF4F31145CAF6AD6DEEA27E02AC9CE8 /* Products */ = {
+		0562F38037D10B7796E25FF9245FFCD8 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */,
-				D5AD30209C267E9DD57402E89EA3A24A /* GXTaskDownload */,
-				8839F831DC4089DEC9FAB9D3A41B0DA0 /* Pods-GXTaskDownload_Example */,
-				E398A1DC01A37F32918D634906FEEEDB /* Pods-GXTaskDownload_Tests */,
+				E38C73ACA5B150BBB59690B641491296 /* GXTaskDownload.podspec */,
+				054EA7163B58EF91F5CBED5F3F1B9F19 /* LICENSE */,
+				0B093631ED31CE997FFFC1F325A3F36A /* README.md */,
 			);
-			name = Products;
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		0D383F4856BAF79C9EC7F0021B429C8C /* HandyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				00FBFFB9C62E938ABF7EF3E60F960641 /* AnyExtensions.swift */,
+				4E56F0E40AEF84A0B5884B1116E0E8DB /* BuiltInBasicType.swift */,
+				E9CD134D9F8E5D1721FEC5404002152F /* BuiltInBridgeType.swift */,
+				A937576E0A902BE46F38ADE3E3D3BB5E /* CBridge.swift */,
+				2204FCEB6665DD34A86548A439F8E3A5 /* Configuration.swift */,
+				2B72BDC4F289D52D8B4C593E176B3F8D /* ContextDescriptorType.swift */,
+				67663595C4AABBB6AC76D86434DBE51E /* CustomDateFormatTransform.swift */,
+				34B17E6E9BB9DD9A30C27E09B6D90953 /* DataTransform.swift */,
+				FD221407B6AD3522971DFAE87753BDDB /* DateFormatterTransform.swift */,
+				2274E5B88BCBBC9137463971C1F93C4F /* DateTransform.swift */,
+				593B762707F3A49964120947D2D6DD11 /* Deserializer.swift */,
+				B30803E8992BC440438BBFCF04F884FD /* EnumTransform.swift */,
+				1DBB7EA785CE76BCBEE3E6091DFE5FAC /* EnumType.swift */,
+				3E146938645D68119F096DDB116D6AAF /* Export.swift */,
+				FF3B335062D9A859338DA694A81EFF06 /* ExtendCustomBasicType.swift */,
+				2361301CD7CF2EE5BB5C2FA87F8888C1 /* ExtendCustomModelType.swift */,
+				6E9E72AED352A8FD47A41CDB7DF8EE28 /* FieldDescriptor.swift */,
+				B1D7F750C85CCCA27858CDE3B9CFB9FA /* HandyJSON.h */,
+				91787A3B61F18302B72679BA21035F11 /* HelpingMapper.swift */,
+				2A277CB3AA8947E6590BB47C4C3D536F /* HexColorTransform.swift */,
+				33AFB31950C36694ADC04C1C6C7E312E /* ISO8601DateTransform.swift */,
+				2B2C64C5B70F69539AA6EEBE6F358091 /* Logger.swift */,
+				C84E8FE58BA199AA192E46814D9725DE /* MangledName.swift */,
+				E7C9A5C0754A8821DA497B9CD5F646AB /* Measuable.swift */,
+				4C860466F6EECB872AB4DBDFA9C03ADF /* Metadata.swift */,
+				3C6CAC94811FF32630254D1D636C2385 /* NSDecimalNumberTransform.swift */,
+				3CBC86791D4071D2D3E5C175FDBD625E /* OtherExtension.swift */,
+				553F0D55AA9275A76AC8D495620EA3E8 /* PointerType.swift */,
+				02D3F3B9203530EBE80AC6BC61835F10 /* Properties.swift */,
+				D5A0BF0E2E9C0B6985F2C6C5C5C9C5D8 /* PropertyInfo.swift */,
+				079088D71A24A54BD257A9D2AA8C41D7 /* ReflectionHelper.swift */,
+				DD70613411E0865E33FE47335BB8CFAC /* Serializer.swift */,
+				5E853A1831C63246B0D91E5626AE6D48 /* Transformable.swift */,
+				FA20CD3F749D0973331F6FAAD9B1DC4D /* TransformOf.swift */,
+				1F91E915A6B9A02F465A379EF231AB99 /* TransformType.swift */,
+				26CE55ABC47393826A021258347504A5 /* URLTransform.swift */,
+				D106B971ACEFBA333A7D7BD53F8ED50C /* Support Files */,
+			);
+			name = HandyJSON;
+			path = HandyJSON;
+			sourceTree = "<group>";
+		};
+		35B481CEC6615C32E1F0D02631618E3A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D383F4856BAF79C9EC7F0021B429C8C /* HandyJSON */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3BADD42583321DF8121D9889495F4EF8 /* download */ = {
+			isa = PBXGroup;
+			children = (
+				292973BBFB828E26E5DC94B55F260C75 /* GXDownloadConstants.swift */,
+				93A9BA97BEA2915D7853F175DE35DAF1 /* GXDownloader.swift */,
+				F27D39A0BCB9E35105888C7353A4952B /* GXDownloader+URLSessionDelegate.swift */,
+				3D63E168917DDBA26EF22923273AD964 /* GXDownloading.swift */,
+				789C0A37106C9A20A7BA2F5BEF0E13B0 /* GXDownloadingDelegate.swift */,
+			);
+			name = download;
+			path = GXTaskDownload/Classes/download;
+			sourceTree = "<group>";
+		};
+		528D5E0280A6940CA0B71E6F5B3C6DF6 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				59E8AEE1996CFAE56BF66DCBEE0F45A5 /* GGXSwiftExtension */,
+				5CDF5411C5D96401B951F9A1B709C52B /* GXTaskDownload */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		54454AF181D505DD3D889BFCCA961AF1 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				28DC794761401022884E15E16123D540 /* GGXSwiftExtension.podspec */,
+				0B8EC2DF3FE4E30A07E8AE3C0C2B8C29 /* LICENSE */,
+				E621224AB54DE3933371014F6BDF3C1E /* README.md */,
+			);
+			name = Pod;
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -241,42 +432,65 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		774D1E74C3BB516EF1AB5BAC895D786B /* Support Files */ = {
+		59E8AEE1996CFAE56BF66DCBEE0F45A5 /* GGXSwiftExtension */ = {
 			isa = PBXGroup;
 			children = (
-				96E505646E9C545C70394837CCF25193 /* GXTaskDownload.modulemap */,
-				041812F45136B69D10DA8C36AFC790C5 /* GXTaskDownload-dummy.m */,
-				C3B6C06E6840970336618562B69FBEB6 /* GXTaskDownload-Info.plist */,
-				F6F87516C8B05EC388B7F01D159BA000 /* GXTaskDownload-prefix.pch */,
-				91D7E3FE79820CB358C09771268E4623 /* GXTaskDownload-umbrella.h */,
-				FF004B36B09F472875C3A6CAFC292D49 /* GXTaskDownload.debug.xcconfig */,
-				48517E99147F28A6DE5F66127E53AA00 /* GXTaskDownload.release.xcconfig */,
+				84CB841EA49B8886A7604A845AA935C6 /* Array+extension.swift */,
+				281B7703A035C0ACE0C15D136D6DC705 /* AttributeString+Extension.swift */,
+				9E3D2DE4250159F759A78C6B571C25E1 /* Bundle+Extension.swift */,
+				69C428FC051E01126C206E7E82D77A78 /* CGSize+Extension.swift */,
+				E45E0A311EDDEE489ACDAFC225872C15 /* Date+Extension.swift */,
+				55172DAA59837BAF2A92E855BD5F4BF9 /* DateFormatter+Extension.swift */,
+				6D50035B47A24E4AA47C4FEB2B22564F /* Dictionary+Extension.swift */,
+				BAE596C4FD6E59F927A73FAF994E2F1E /* Double+Extension.swift */,
+				2A8404252B309FAB94A715981631119B /* FileManager+Extension.swift */,
+				C8E770FC7D9B592A1639929D45D0AC02 /* Int+Extension.swift */,
+				B4961AE3388091BDE391BAE4D4300A10 /* LogSwift.swift */,
+				CF94C8DB09636FC84E2C0313D14DB721 /* ReplaceMe.swift */,
+				57DEB4641A5DABE0AA11DF0811F93F9B /* String+Extension.swift */,
+				EF8CC04641D1619C160F644485AE0EA0 /* TimerInterval+Extension.swift */,
+				C92D002002F2D9C798772C32807B6094 /* UIAlertViewController+Extension.swift */,
+				DBAA76FD7DAC9310B812444D5B6CE804 /* UIApplication+Extension.swift */,
+				A66E5C739F53A82E41B8798CDA70306F /* UIColor+Extension.swift */,
+				8783E54B8FA8B7A019C76CFC94359919 /* UIDevice+Extension.swift */,
+				5D25F99DC0F94584B4A5001963B31041 /* UIEdgeInsets+CommonExtension.swift */,
+				22DBB19F3A00678B4DD456D6BE3AED12 /* UIImage+commonExtension.swift */,
+				0ED408ABC06C593E38A906A27BAE6909 /* UIImageView+Extension.swift */,
+				FF42A32974DC6DD54E64372FFD0E3339 /* UIKit+Extension.swift */,
+				D2D8FA7F11AF1AEB58F55F440A17BC97 /* UINavigationBar+Extension.swift */,
+				CB23C831B8D4243952AD0CBC5E9088B2 /* UIResponder+ Extension.swift.swift */,
+				FD81371C0425A8F0412828FDCBFF2729 /* UITableViewCell+Extension.swift */,
+				AFA4EC9B37210788348746333CE61992 /* UIView+Extension.swift */,
+				D4D14967CBD0036388AEF54EDB6E5EDD /* UIViewController+Extension.swift */,
+				D1928E65A13F6390B40AEB13C10AB80B /* URL+Extension.swift */,
+				4F6606525F279858080AD66791ABEBAC /* UserDefault+Extension.swift */,
+				B2AC6AC5F6EDDFBDC09DEA1701EA4A93 /* WKWebView+Extension.swift */,
+				54454AF181D505DD3D889BFCCA961AF1 /* Pod */,
+				BA46A8285973FEA9C7F6C40F685984A7 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/GXTaskDownload";
-			sourceTree = "<group>";
+			name = GGXSwiftExtension;
+			path = /Users/gaoguangxiao/Documents/GitHub/ggxswiftexten;
+			sourceTree = "<absolute>";
 		};
-		80CBD7D6A91A84ABE24BC54AAD5A46CF /* Pod */ = {
+		5CDF5411C5D96401B951F9A1B709C52B /* GXTaskDownload */ = {
 			isa = PBXGroup;
 			children = (
-				E82C4EC3AD3E7E66F9CC22CAB68E0FD2 /* GXTaskDownload.podspec */,
-				3019F311D4056B3D7F7E760E7240B1CC /* LICENSE */,
-				5C51B1F92EB950B430DFB9E5184C2F8B /* README.md */,
+				E5D93A65D117798D7C2EDD1B1DB76721 /* GXCheckTaskManager.swift */,
+				B777980BB051EA772156130FF0A18167 /* GXCheckTaskSize.swift */,
+				63BBEFD3FAA5808529A6BE27C83EA321 /* GXDownloadingError.swift */,
+				F8B64DB203ED30CB2076310D3E5AF3B8 /* GXDownloadingState.swift */,
+				AC4822149978C3BECF470651B3671750 /* GXDownloadManager.swift */,
+				32365F054A00C58626C93E0F978BE7B9 /* GXDownloadURLModel.swift */,
+				4BFA242F7027E5494BCB30E2515C0087 /* GXTaskDiskFile.swift */,
+				1F0E2C132A4FF16DF4E050F45314FCBE /* GXTaskDownloadDisk.swift */,
+				AE5AB689AB613E7F7475875DE95B9B4A /* GXTaskDownloadDisk+DownloadingDelegate.swift */,
+				25C0B1BDB427C32F164F285DAAE5ED8A /* ReplaceMe.swift */,
+				3BADD42583321DF8121D9889495F4EF8 /* download */,
+				0562F38037D10B7796E25FF9245FFCD8 /* Pod */,
+				EA49B2F163BBD93C013905C18E367047 /* Support Files */,
 			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		8F31605755205A55560BED2C5DEF04DB /* download */ = {
-			isa = PBXGroup;
-			children = (
-				4238B93416FC54A4A77451DA801E09B2 /* GXDownloadConstants.swift */,
-				9AA945EB9393287E6737D165E7A992CB /* GXDownloader.swift */,
-				D995571D3826054745971D79D99EFA24 /* GXDownloader+URLSessionDelegate.swift */,
-				7FCF05698E04BEB4DA55A16E2A73AA21 /* GXDownloading.swift */,
-				C16F582308FED1040B921F2AFD16A78D /* GXDownloadingDelegate.swift */,
-			);
-			name = download;
-			path = GXTaskDownload/Classes/download;
+			name = GXTaskDownload;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		8FFB6AB8280D3E541679875F102C81FB /* Pods-GXTaskDownload_Tests */ = {
@@ -293,40 +507,6 @@
 			);
 			name = "Pods-GXTaskDownload_Tests";
 			path = "Target Support Files/Pods-GXTaskDownload_Tests";
-			sourceTree = "<group>";
-		};
-		933CB220CB02D46B141D949192145AAF /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F12FD8803E50CAEDBB9B50408BF26F61 /* GGXSwiftExtension */,
-				BF86F4CAC03FC15F1A44837D6055C038 /* GXTaskDownload */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		957F28DD6DFE7A204A2258C440E7154C /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				D2FD96F16CFEA23573F4603046573916 /* GGXSwiftExtension.podspec */,
-				B343A8BFC07B20015F840F2EB4879EA3 /* LICENSE */,
-				7DACEB107F95C5D2DAB5A8F64B6773B5 /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		9D77883EC6C59A79E10F390A3BAC8417 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7C4222BE0C16181B0D38EDE56B28C116 /* GGXSwiftExtension.modulemap */,
-				6DCCBC0B96B27D080A48D38578B15BF8 /* GGXSwiftExtension-dummy.m */,
-				63913A9C170FCF70B716BA5E429C4EDF /* GGXSwiftExtension-Info.plist */,
-				996C7B6C394F6072AC93C83470B0810C /* GGXSwiftExtension-prefix.pch */,
-				01E5C427957E1B3F260CFB1FB8F4C4C1 /* GGXSwiftExtension-umbrella.h */,
-				A00A1C69A6365A388F1B7411A097A4CC /* GGXSwiftExtension.debug.xcconfig */,
-				74AE239CDC4F646BA5D1C412BDF66764 /* GGXSwiftExtension.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../GXTaskDownload/Example/Pods/Target Support Files/GGXSwiftExtension";
 			sourceTree = "<group>";
 		};
 		B9ED90609C4C79E3102BC147BBF6A6D1 /* Pods-GXTaskDownload_Example */ = {
@@ -346,35 +526,58 @@
 			path = "Target Support Files/Pods-GXTaskDownload_Example";
 			sourceTree = "<group>";
 		};
-		BF86F4CAC03FC15F1A44837D6055C038 /* GXTaskDownload */ = {
+		BA46A8285973FEA9C7F6C40F685984A7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				43B28D3B12AB69659DC57A8BDECA5A4C /* GXCheckTaskManager.swift */,
-				973261D62A6DFF0DFAEED49E91A87FCE /* GXCheckTaskSize.swift */,
-				3BA1F7D04C071EF749629404C7062EE9 /* GXDownloadingError.swift */,
-				D931176BD9E8145095D688CB1398632A /* GXDownloadingState.swift */,
-				2828E4BD0682ED6174683241FDEB7108 /* GXDownloadManager.swift */,
-				C91220976D34C7D556C494B49F58E43F /* GXTaskDiskFile.swift */,
-				30341402950CFE03DF85F00592B1B380 /* GXTaskDownloadDisk.swift */,
-				D211DD2D117FCBC5F8A49E37022FD1CE /* GXTaskDownloadDisk+DownloadingDelegate.swift */,
-				C4205D704A28FCF3E3DD43D031698579 /* ReplaceMe.swift */,
-				8F31605755205A55560BED2C5DEF04DB /* download */,
-				80CBD7D6A91A84ABE24BC54AAD5A46CF /* Pod */,
-				774D1E74C3BB516EF1AB5BAC895D786B /* Support Files */,
+				3B3D8E877BDDF3F459113EA45F7F1E8A /* GGXSwiftExtension.modulemap */,
+				789059253DF7D18547464D1D5A66F1E0 /* GGXSwiftExtension-dummy.m */,
+				0468DCC4918DD1BCE422973F0840490E /* GGXSwiftExtension-Info.plist */,
+				7D5BF92EC209951A5C8A28217D0E8984 /* GGXSwiftExtension-prefix.pch */,
+				11ED1D152FC38EF8579535F246A6ACBD /* GGXSwiftExtension-umbrella.h */,
+				764DF5B6720CC89B2918E0787E1EB006 /* GGXSwiftExtension.debug.xcconfig */,
+				5DE961007E9C37359B4B65F38ABFA242 /* GGXSwiftExtension.release.xcconfig */,
 			);
-			name = GXTaskDownload;
-			path = ../..;
+			name = "Support Files";
+			path = "../GXTaskDownload/Example/Pods/Target Support Files/GGXSwiftExtension";
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				933CB220CB02D46B141D949192145AAF /* Development Pods */,
+				528D5E0280A6940CA0B71E6F5B3C6DF6 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				0BF4F31145CAF6AD6DEEA27E02AC9CE8 /* Products */,
+				35B481CEC6615C32E1F0D02631618E3A /* Pods */,
+				CFA38225CA7699706D61612CF688C2C4 /* Products */,
 				FB44D6F016A99A3B101679ABC07EECB5 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CFA38225CA7699706D61612CF688C2C4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				607E1AE85374AD5AF6953AE2B0415B55 /* GGXSwiftExtension */,
+				D5AD30209C267E9DD57402E89EA3A24A /* GXTaskDownload */,
+				CD54121DDA84872534168702B5F92950 /* HandyJSON */,
+				8839F831DC4089DEC9FAB9D3A41B0DA0 /* Pods-GXTaskDownload_Example */,
+				E398A1DC01A37F32918D634906FEEEDB /* Pods-GXTaskDownload_Tests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D106B971ACEFBA333A7D7BD53F8ED50C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CAF9EBC9139EED805B8D2D3AE6B8CD6A /* HandyJSON.modulemap */,
+				D453B79368C9935A1303532C0FEE8B51 /* HandyJSON-dummy.m */,
+				1BD862D7C53E99B18A7BDE4E0A16FCE4 /* HandyJSON-Info.plist */,
+				28616DE70E74C82E7E5A2DB1243FE29D /* HandyJSON-prefix.pch */,
+				5AFFC23884DC3FC1C773CA52D23998BD /* HandyJSON-umbrella.h */,
+				87A249C67522112DD205F4CCC2079484 /* HandyJSON.debug.xcconfig */,
+				B318EBBC5B99481A5375304EAFE226B1 /* HandyJSON.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HandyJSON";
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -385,45 +588,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F12FD8803E50CAEDBB9B50408BF26F61 /* GGXSwiftExtension */ = {
+		EA49B2F163BBD93C013905C18E367047 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				3F963C3EBCE4D710BE75FA7C5DC27FC3 /* Array+extension.swift */,
-				DE5850A5E0F886CC163EFD8908A18711 /* AttributeString+Extension.swift */,
-				4C7DF767E5AE765DA2FC64BC248FC7C3 /* Bundle+Extension.swift */,
-				1386ACA1B433ACACF2A2D6EBDE8892B5 /* CGSize+Extension.swift */,
-				27541698B6D81BD1E166D627D964EEE9 /* Date+Extension.swift */,
-				1A62DC339B1E5351B8A3419D9EEE3C75 /* DateFormatter+Extension.swift */,
-				90D44E8D5F7398F9A098B10A80DB67F5 /* Dictionary+Extension.swift */,
-				E4D82E3FE26FF03DB42F977C8C6D0E6B /* Double+Extension.swift */,
-				B92C7B80186924497D9E22E0760F35C4 /* FileManager+Extension.swift */,
-				119CA08FBB0457B3E8C6EAE85C8AF23C /* Int+Extension.swift */,
-				D254AADAB293ABC6062FAF3DF92EE48D /* LogSwift.swift */,
-				4BF90ECAF7570F4462CBA118A6B5ADA5 /* ReplaceMe.swift */,
-				CD950F2C26253045926E4952336B3B4A /* String+Extension.swift */,
-				3BA7959EF40BAE190777A08921C4E930 /* TimerInterval+Extension.swift */,
-				381BF8CE5F8CF5F40C27AFCFAB3CD46E /* UIAlertViewController+Extension.swift */,
-				11CEC3E2D6DFE9BF4377E3938BC5A9E2 /* UIApplication+Extension.swift */,
-				1579C2868D9F9D84175737242156AB97 /* UIColor+Extension.swift */,
-				45C098777A3C6B0214DFED7F96832CED /* UIDevice+Extension.swift */,
-				4AAE60F43B2CAF6CDE052E14729FDF90 /* UIEdgeInsets+CommonExtension.swift */,
-				0356C8422B98307336F345D9ADDFC05E /* UIImage+commonExtension.swift */,
-				9F7A6C12A2FB939BEAA2919FBD0EB223 /* UIImageView+Extension.swift */,
-				EA94BB651E86CE30AED706534DE69509 /* UIKit+Extension.swift */,
-				ABE548E31999073E671C44B1C3EBE470 /* UINavigationBar+Extension.swift */,
-				C0AA1EEC33374374E92931837F6B4DEA /* UIResponder+ Extension.swift.swift */,
-				3B907F02DDECCF9129ADBA8B4AA14434 /* UITableViewCell+Extension.swift */,
-				10239718787E0E7886C108E0D85C7501 /* UIView+Extension.swift */,
-				4A02F6F74D080F7B2C91229F305D6751 /* UIViewController+Extension.swift */,
-				1A4691B4710E33160CE865BC8F8CAD3A /* URL+Extension.swift */,
-				A9E10CBAFA9859E6B663705FA8D7F34B /* UserDefault+Extension.swift */,
-				CD7CD0BB66630AD00027EEC57C55BC5A /* WKWebView+Extension.swift */,
-				957F28DD6DFE7A204A2258C440E7154C /* Pod */,
-				9D77883EC6C59A79E10F390A3BAC8417 /* Support Files */,
+				81ADD2396C39B0F2EAF110438FC3127E /* GXTaskDownload.modulemap */,
+				6BD46EDBA508E1223AEF34B2D2892431 /* GXTaskDownload-dummy.m */,
+				22CB876D5E47720FEF41C7B98AA46833 /* GXTaskDownload-Info.plist */,
+				A07CFB7B9CAA2C338E71ABE567349032 /* GXTaskDownload-prefix.pch */,
+				52D8821C95B622EEC35D7AB172921E79 /* GXTaskDownload-umbrella.h */,
+				A470340EE5F348DFC7F31AD91042659C /* GXTaskDownload.debug.xcconfig */,
+				03AC0972B40FB8330BE0FAD35CCD0FF1 /* GXTaskDownload.release.xcconfig */,
 			);
-			name = GGXSwiftExtension;
-			path = /Users/gaoguangxiao/Documents/GitHub/ggxswiftexten;
-			sourceTree = "<absolute>";
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GXTaskDownload";
+			sourceTree = "<group>";
 		};
 		FB44D6F016A99A3B101679ABC07EECB5 /* Targets Support Files */ = {
 			isa = PBXGroup;
@@ -445,19 +623,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E21D77FBC4A62A9EE8B377B193A1839 /* Headers */ = {
+		6AF683D50EB95E9DCA3C444EAC7F7BFC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70B796C6629A11796F3CBC5265AB54E /* Pods-GXTaskDownload_Example-umbrella.h in Headers */,
+				1F4584D0F2C46341EA58CCFF352256A3 /* GXTaskDownload-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A769D3D2AD8A38BC93225EE69EBF1619 /* Headers */ = {
+		A72322B72E58EFC643BC69E0056091A8 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FE411365515471C8C414BA33B72E419 /* GXTaskDownload-umbrella.h in Headers */,
+				44CB76A56DD7A2B34E897813ECD88177 /* HandyJSON.h in Headers */,
+				A45EBC880B7A3C42F873471C957A76FE /* HandyJSON-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E813322782A895A37F39753361FAD64E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3713721B2A722D79B148C7295828F656 /* Pods-GXTaskDownload_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,20 +659,39 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		15BE5F7CF6D3F5F3797D61E31CEA134D /* Pods-GXTaskDownload_Example */ = {
+		10D88C24864319FF583AD6D156896F32 /* HandyJSON */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 68C180367C33B72DB2178D502100F7F7 /* Build configuration list for PBXNativeTarget "Pods-GXTaskDownload_Example" */;
+			buildConfigurationList = 8E9FBB95372CD753AD57AC3255C436D4 /* Build configuration list for PBXNativeTarget "HandyJSON" */;
 			buildPhases = (
-				4E21D77FBC4A62A9EE8B377B193A1839 /* Headers */,
-				13267E841C12C3EA88600D05BCAD8E64 /* Sources */,
-				C2E16F4C23AF1A2B8EE80CB515C60459 /* Frameworks */,
-				E96913A6E86AC7BEB460C0D97C0A7777 /* Resources */,
+				A72322B72E58EFC643BC69E0056091A8 /* Headers */,
+				A570088ED0F43561774B678FB45B0598 /* Sources */,
+				31CF6BCDE307E71E54B9202BE2F3A142 /* Frameworks */,
+				19A58DEFA178433D4DDC76E1804061F4 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CA534711442D5D70CEF73C7EA48F7D05 /* PBXTargetDependency */,
-				55FD1A198FA08A3FB22230B2EF72366C /* PBXTargetDependency */,
+			);
+			name = HandyJSON;
+			productName = HandyJSON;
+			productReference = CD54121DDA84872534168702B5F92950 /* HandyJSON */;
+			productType = "com.apple.product-type.framework";
+		};
+		15BE5F7CF6D3F5F3797D61E31CEA134D /* Pods-GXTaskDownload_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C94DA754899233466302FA09B7DD809 /* Build configuration list for PBXNativeTarget "Pods-GXTaskDownload_Example" */;
+			buildPhases = (
+				E813322782A895A37F39753361FAD64E /* Headers */,
+				1FBEEACD57946554277C06627F0D9703 /* Sources */,
+				1620A7842D6B9F7D1A168D35E63356A0 /* Frameworks */,
+				B58B6A6F65A8F2F078128CD0E1967C5D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0649DC7322E4C4E72C105E9AED0DB34 /* PBXTargetDependency */,
+				01FD16C2F44ADB6CB1394487CFDD7F36 /* PBXTargetDependency */,
+				7D264ED387736E7AD632210D3C72BC4C /* PBXTargetDependency */,
 			);
 			name = "Pods-GXTaskDownload_Example";
 			productName = Pods_GXTaskDownload_Example;
@@ -504,7 +710,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				DF0D7525E7EA7F5B5AB285C10DD33F86 /* PBXTargetDependency */,
+				16866ECEB62A11663C11537D45641D89 /* PBXTargetDependency */,
 			);
 			name = "Pods-GXTaskDownload_Tests";
 			productName = Pods_GXTaskDownload_Tests;
@@ -531,17 +737,18 @@
 		};
 		6639500E9EEB9A2B751155FF6DE10B15 /* GXTaskDownload */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8230F875A27BA12A182F25A899B9BF37 /* Build configuration list for PBXNativeTarget "GXTaskDownload" */;
+			buildConfigurationList = 1CC2B234DF5D832542E7DDFFF8463570 /* Build configuration list for PBXNativeTarget "GXTaskDownload" */;
 			buildPhases = (
-				A769D3D2AD8A38BC93225EE69EBF1619 /* Headers */,
-				D2830FCFF42802EEBFB20A2275695FE4 /* Sources */,
-				920404740911F00884F58CA2BF3D31E6 /* Frameworks */,
-				A84CEF6B0AD818CD52DDB529A308C6B8 /* Resources */,
+				6AF683D50EB95E9DCA3C444EAC7F7BFC /* Headers */,
+				88D6101AE4F1EBF252A70768B491352A /* Sources */,
+				E22884298BEC43394386904CC577DE36 /* Frameworks */,
+				58B6B14CD02064B3E1E6728AD6986A9C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				FAA9350E05CC6040859E163A2FADE147 /* PBXTargetDependency */,
+				32283BAB548FA0CBED350EC279E389B9 /* PBXTargetDependency */,
+				950F76C84EAB4978835CC813505BDDFD /* PBXTargetDependency */,
 			);
 			name = GXTaskDownload;
 			productName = GXTaskDownload;
@@ -566,12 +773,13 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 0BF4F31145CAF6AD6DEEA27E02AC9CE8 /* Products */;
+			productRefGroup = CFA38225CA7699706D61612CF688C2C4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				34208A50A6E2389A7BB30C187CD9E2A4 /* GGXSwiftExtension */,
 				6639500E9EEB9A2B751155FF6DE10B15 /* GXTaskDownload */,
+				10D88C24864319FF583AD6D156896F32 /* HandyJSON */,
 				15BE5F7CF6D3F5F3797D61E31CEA134D /* Pods-GXTaskDownload_Example */,
 				30663720B535F13D5F986DCAADDF79C0 /* Pods-GXTaskDownload_Tests */,
 			);
@@ -579,6 +787,13 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		19A58DEFA178433D4DDC76E1804061F4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		23D98CAE15B975E73DEAF57A79D89A5B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -586,7 +801,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A84CEF6B0AD818CD52DDB529A308C6B8 /* Resources */ = {
+		58B6B14CD02064B3E1E6728AD6986A9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B58B6A6F65A8F2F078128CD0E1967C5D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -600,21 +822,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E96913A6E86AC7BEB460C0D97C0A7777 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		13267E841C12C3EA88600D05BCAD8E64 /* Sources */ = {
+		1FBEEACD57946554277C06627F0D9703 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				56C3CC363FE1D57C5B08090657EC9AE5 /* Pods-GXTaskDownload_Example-dummy.m in Sources */,
+				C5F925EC99AC7143A7626946A6956233 /* Pods-GXTaskDownload_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,25 +841,69 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D2830FCFF42802EEBFB20A2275695FE4 /* Sources */ = {
+		88D6101AE4F1EBF252A70768B491352A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2178E5F824C6339338505BF60EBA105D /* GXCheckTaskManager.swift in Sources */,
-				46E149B5506607B2981D59D35EE799B1 /* GXCheckTaskSize.swift in Sources */,
-				5A3390FABFD1A7F11FEA6B5B5DC00BDF /* GXDownloadConstants.swift in Sources */,
-				BA5C3FAACF002072FAA5A888238E47B5 /* GXDownloader.swift in Sources */,
-				C261A9B5E7D90308F5CAD1D9CF88B7F7 /* GXDownloader+URLSessionDelegate.swift in Sources */,
-				D1914DB82F9E84EDCF0E7CE33F8D2651 /* GXDownloading.swift in Sources */,
-				1577B157E61CB6A5B96618124E8B3207 /* GXDownloadingDelegate.swift in Sources */,
-				58130F6830D98CBD20B52054E26860CA /* GXDownloadingError.swift in Sources */,
-				B1EB3DC8A2A29E20476F3D14BA097D8A /* GXDownloadingState.swift in Sources */,
-				F1D21586E0C022B15047A7FC01263D4E /* GXDownloadManager.swift in Sources */,
-				46DC0AD82240D968C66B2B18B2056E42 /* GXTaskDiskFile.swift in Sources */,
-				C949A9628C2F7B797338767493427849 /* GXTaskDownload-dummy.m in Sources */,
-				6FA9A079718639CDA259550AF0DF9E0F /* GXTaskDownloadDisk.swift in Sources */,
-				3D92D65264FA51B3B718C179AED849B9 /* GXTaskDownloadDisk+DownloadingDelegate.swift in Sources */,
-				BF38BA1A20C8960099569AF9D9EABA46 /* ReplaceMe.swift in Sources */,
+				86A71E2862A5828E4953F6DE359DBB1B /* GXCheckTaskManager.swift in Sources */,
+				E24D9FC950F6071E821B6CF28CCB3F77 /* GXCheckTaskSize.swift in Sources */,
+				784731F037503E13644FBEAEBFEF49E9 /* GXDownloadConstants.swift in Sources */,
+				66BCA43DCA3EF91226055D52C1AD94A9 /* GXDownloader.swift in Sources */,
+				A758347C2CC0A5BF14D3AE5085A49622 /* GXDownloader+URLSessionDelegate.swift in Sources */,
+				81CB9D3A1851C7C7CFDB6DBD8FB76354 /* GXDownloading.swift in Sources */,
+				99013623F739B515AEA492E0811684BD /* GXDownloadingDelegate.swift in Sources */,
+				AB361C5FA57767F6DFCE607A21A3875A /* GXDownloadingError.swift in Sources */,
+				D3830E69C04159EE2E80B609243F8164 /* GXDownloadingState.swift in Sources */,
+				405016D38AE45A5CFDEBD2A2333E8085 /* GXDownloadManager.swift in Sources */,
+				9AA74D06FAEB2B31238756494C2C0369 /* GXDownloadURLModel.swift in Sources */,
+				B19A39EE716243D86BA4336B989CEFC5 /* GXTaskDiskFile.swift in Sources */,
+				511F77E7850FA544C72D88A6BBCDB1D8 /* GXTaskDownload-dummy.m in Sources */,
+				E888B13BE95F9F067F78EBB8013E18D6 /* GXTaskDownloadDisk.swift in Sources */,
+				E8EDC32DCFBEF2730A818D5A86813104 /* GXTaskDownloadDisk+DownloadingDelegate.swift in Sources */,
+				866AEBD4382AD3DBC95C18F03D7C25DE /* ReplaceMe.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A570088ED0F43561774B678FB45B0598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8190C42B1DEF2CD7ED7DD7F806A6118 /* AnyExtensions.swift in Sources */,
+				2B1E429018B11057BF827026DCFA1D29 /* BuiltInBasicType.swift in Sources */,
+				BC087A52E29FDFC0B1243A3A9BC9B791 /* BuiltInBridgeType.swift in Sources */,
+				F82A73A3A489DB867694A90C87B836AA /* CBridge.swift in Sources */,
+				B5C918AFCD06F1D82F1B4651A3E118B8 /* Configuration.swift in Sources */,
+				873D98BECA9ABAB10A0606FE7179FE08 /* ContextDescriptorType.swift in Sources */,
+				8EB7E2911F7ED26B7B509DB0500F0425 /* CustomDateFormatTransform.swift in Sources */,
+				5827D676550E670ACE438EEDCFBA9121 /* DataTransform.swift in Sources */,
+				65F2E826627AFFA724776352988B3474 /* DateFormatterTransform.swift in Sources */,
+				889D303B5596CE32E52E90E35B938CE4 /* DateTransform.swift in Sources */,
+				57F4D34CB729B158BC735027C428EEBB /* Deserializer.swift in Sources */,
+				4693C7888607CF99FABF6578A14363EF /* EnumTransform.swift in Sources */,
+				57719B8A2F74C8704ED115A2F269FACB /* EnumType.swift in Sources */,
+				0F3C93F65F8D0F8271E8DDCB14070E35 /* Export.swift in Sources */,
+				063F8EB8E79B5C9ADC0689DC7EE1BBDC /* ExtendCustomBasicType.swift in Sources */,
+				3D28683B09431F346CD5FC2319551373 /* ExtendCustomModelType.swift in Sources */,
+				02DF3E43844CA6470DF6BE7B71B8854A /* FieldDescriptor.swift in Sources */,
+				8A844C0BCDD45D79D8E7931E4FB3D737 /* HandyJSON-dummy.m in Sources */,
+				D4F7587AD2DAA629ED283DF4C3BDDE79 /* HelpingMapper.swift in Sources */,
+				8F6B3FC60A2F510F408CBE18B9E7C91D /* HexColorTransform.swift in Sources */,
+				2A06F8E9D9F5765DB072C26B30AFCB2C /* ISO8601DateTransform.swift in Sources */,
+				8278D61A6C6B994EFB4AC3E32DFA7962 /* Logger.swift in Sources */,
+				FA4FAC40C732FE9786857CAF1EB566EB /* MangledName.swift in Sources */,
+				D26811EC78C5E6020128DAA403077239 /* Measuable.swift in Sources */,
+				08D0BE328CCDB0B1D44F52A82D1C2566 /* Metadata.swift in Sources */,
+				23AB491624A259EDE5F2D12476579056 /* NSDecimalNumberTransform.swift in Sources */,
+				61F38A3888592007D73F01C5664BD1A8 /* OtherExtension.swift in Sources */,
+				D61DEB4ACE0D5C7146B78357DF37955F /* PointerType.swift in Sources */,
+				37EC92F6AE4BCB912E031D0B72C207C7 /* Properties.swift in Sources */,
+				C2C25267FB340029FC77C95406E4D48F /* PropertyInfo.swift in Sources */,
+				B7D8E95688BA8B7050446002A2A70B85 /* ReflectionHelper.swift in Sources */,
+				7B9BD1FC1DA034D1454257FC401914EA /* Serializer.swift in Sources */,
+				E1B8B8EA3890F7C58271426D6ABCF62F /* Transformable.swift in Sources */,
+				04FD9E3BC34EC336770EF32A5A20075E /* TransformOf.swift in Sources */,
+				37D7F03E5D96004A4D335B0B9CF1638F /* TransformType.swift in Sources */,
+				D04BC8098C27F910362DFA693EC13219 /* URLTransform.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,36 +948,77 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		55FD1A198FA08A3FB22230B2EF72366C /* PBXTargetDependency */ = {
+		01FD16C2F44ADB6CB1394487CFDD7F36 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GXTaskDownload;
 			target = 6639500E9EEB9A2B751155FF6DE10B15 /* GXTaskDownload */;
-			targetProxy = 2904374C560013187341757359257248 /* PBXContainerItemProxy */;
+			targetProxy = 7C5E0C2EC57467CFC80CDAAA5892776C /* PBXContainerItemProxy */;
 		};
-		CA534711442D5D70CEF73C7EA48F7D05 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GGXSwiftExtension;
-			target = 34208A50A6E2389A7BB30C187CD9E2A4 /* GGXSwiftExtension */;
-			targetProxy = 74C2B66B213DBEC68E6E32CF914B8F7A /* PBXContainerItemProxy */;
-		};
-		DF0D7525E7EA7F5B5AB285C10DD33F86 /* PBXTargetDependency */ = {
+		16866ECEB62A11663C11537D45641D89 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-GXTaskDownload_Example";
 			target = 15BE5F7CF6D3F5F3797D61E31CEA134D /* Pods-GXTaskDownload_Example */;
-			targetProxy = 49CE17DF4C21E51DCF2CAF34FFF4A8B5 /* PBXContainerItemProxy */;
+			targetProxy = 27A1F76FC2266185F8C2C94E4356A27E /* PBXContainerItemProxy */;
 		};
-		FAA9350E05CC6040859E163A2FADE147 /* PBXTargetDependency */ = {
+		32283BAB548FA0CBED350EC279E389B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GGXSwiftExtension;
 			target = 34208A50A6E2389A7BB30C187CD9E2A4 /* GGXSwiftExtension */;
-			targetProxy = 0A17ACBDD41CE73D3EA353AA54AA4575 /* PBXContainerItemProxy */;
+			targetProxy = 936C147247868314E4BD8CB61FECBFBD /* PBXContainerItemProxy */;
+		};
+		7D264ED387736E7AD632210D3C72BC4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HandyJSON;
+			target = 10D88C24864319FF583AD6D156896F32 /* HandyJSON */;
+			targetProxy = 0A93E12103DE1918CA5BC36D80B43A99 /* PBXContainerItemProxy */;
+		};
+		950F76C84EAB4978835CC813505BDDFD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = HandyJSON;
+			target = 10D88C24864319FF583AD6D156896F32 /* HandyJSON */;
+			targetProxy = EF760EAAF3C0AC983C32FAC3DB9A88B2 /* PBXContainerItemProxy */;
+		};
+		B0649DC7322E4C4E72C105E9AED0DB34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GGXSwiftExtension;
+			target = 34208A50A6E2389A7BB30C187CD9E2A4 /* GGXSwiftExtension */;
+			targetProxy = F7853D6E3F56813278F5B35FC55BE635 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		246AF801B1E33DCE9FB4B9DBFA99B8F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87A249C67522112DD205F4CCC2079484 /* HandyJSON.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/HandyJSON/HandyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HandyJSON/HandyJSON-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/HandyJSON/HandyJSON.modulemap";
+				PRODUCT_MODULE_NAME = HandyJSON;
+				PRODUCT_NAME = HandyJSON;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		25A07A8E4C817325BEB7F612A3B13FBA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74AE239CDC4F646BA5D1C412BDF66764 /* GGXSwiftExtension.release.xcconfig */;
+			baseConfigurationReference = 5DE961007E9C37359B4B65F38ABFA242 /* GGXSwiftExtension.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -748,11 +1048,10 @@
 			};
 			name = Release;
 		};
-		33A65BD45DA96F01C3E744B06E5F4B05 /* Debug */ = {
+		3FFBF05E96C2C20410DB922EFB498583 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF004B36B09F472875C3A6CAFC292D49 /* GXTaskDownload.debug.xcconfig */;
+			baseConfigurationReference = B318EBBC5B99481A5375304EAFE226B1 /* HandyJSON.release.xcconfig */;
 			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -761,23 +1060,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/GXTaskDownload/GXTaskDownload-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/HandyJSON/HandyJSON-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/HandyJSON/HandyJSON-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload.modulemap";
-				PRODUCT_MODULE_NAME = GXTaskDownload;
-				PRODUCT_NAME = GXTaskDownload;
+				MODULEMAP_FILE = "Target Support Files/HandyJSON/HandyJSON.modulemap";
+				PRODUCT_MODULE_NAME = HandyJSON;
+				PRODUCT_NAME = HandyJSON;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		53C3E25AAA4B72EA5E6511B14240FB35 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -812,9 +1111,9 @@
 			};
 			name = Debug;
 		};
-		5A715207720E02C2E86F0692A7AE2CB7 /* Release */ = {
+		57F03A6AE5A805976CBDB608E2EF420A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48517E99147F28A6DE5F66127E53AA00 /* GXTaskDownload.release.xcconfig */;
+			baseConfigurationReference = 03AC0972B40FB8330BE0FAD35CCD0FF1 /* GXTaskDownload.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -837,6 +1136,40 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		79A7109FCCCCA62BB69D65FD52061D58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C79A8D13FC5D59187EBF646306931EF1 /* Pods-GXTaskDownload_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-GXTaskDownload_Example/Pods-GXTaskDownload_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GXTaskDownload_Example/Pods-GXTaskDownload_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -940,7 +1273,7 @@
 			};
 			name = Release;
 		};
-		96952CF11B7A1F0A8A866E5487BE24D6 /* Debug */ = {
+		A052BB5CF3AC0CE925349A6783C39AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3A791C1047B9D25DE3C65E72CD2DFB7D /* Pods-GXTaskDownload_Example.debug.xcconfig */;
 			buildSettings = {
@@ -973,43 +1306,9 @@
 			};
 			name = Debug;
 		};
-		9712514D8AB69814579CDF5A0B65F72E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C79A8D13FC5D59187EBF646306931EF1 /* Pods-GXTaskDownload_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-GXTaskDownload_Example/Pods-GXTaskDownload_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GXTaskDownload_Example/Pods-GXTaskDownload_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		B5D8340D5A29DB9196540270FAC840B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A00A1C69A6365A388F1B7411A097A4CC /* GGXSwiftExtension.debug.xcconfig */;
+			baseConfigurationReference = 764DF5B6720CC89B2918E0787E1EB006 /* GGXSwiftExtension.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1104,6 +1403,37 @@
 			};
 			name = Debug;
 		};
+		FA718A01A453FBB2D7183524CE00E79A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A470340EE5F348DFC7F31AD91042659C /* GXTaskDownload.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/GXTaskDownload/GXTaskDownload-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GXTaskDownload/GXTaskDownload.modulemap";
+				PRODUCT_MODULE_NAME = GXTaskDownload;
+				PRODUCT_NAME = GXTaskDownload;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1112,6 +1442,24 @@
 			buildConfigurations = (
 				53C3E25AAA4B72EA5E6511B14240FB35 /* Debug */,
 				8A1F2C4F286245C5DD2A8B7A652937AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C94DA754899233466302FA09B7DD809 /* Build configuration list for PBXNativeTarget "Pods-GXTaskDownload_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A052BB5CF3AC0CE925349A6783C39AC1 /* Debug */,
+				79A7109FCCCCA62BB69D65FD52061D58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CC2B234DF5D832542E7DDFFF8463570 /* Build configuration list for PBXNativeTarget "GXTaskDownload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA718A01A453FBB2D7183524CE00E79A /* Debug */,
+				57F03A6AE5A805976CBDB608E2EF420A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1125,20 +1473,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		68C180367C33B72DB2178D502100F7F7 /* Build configuration list for PBXNativeTarget "Pods-GXTaskDownload_Example" */ = {
+		8E9FBB95372CD753AD57AC3255C436D4 /* Build configuration list for PBXNativeTarget "HandyJSON" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				96952CF11B7A1F0A8A866E5487BE24D6 /* Debug */,
-				9712514D8AB69814579CDF5A0B65F72E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8230F875A27BA12A182F25A899B9BF37 /* Build configuration list for PBXNativeTarget "GXTaskDownload" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				33A65BD45DA96F01C3E744B06E5F4B05 /* Debug */,
-				5A715207720E02C2E86F0692A7AE2CB7 /* Release */,
+				246AF801B1E33DCE9FB4B9DBFA99B8F5 /* Debug */,
+				3FFBF05E96C2C20410DB922EFB498583 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

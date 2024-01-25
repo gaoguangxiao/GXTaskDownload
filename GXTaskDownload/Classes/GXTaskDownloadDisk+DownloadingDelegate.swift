@@ -7,6 +7,7 @@
 
 import Foundation
 import GGXSwiftExtension
+import HandyJSON
 
 extension GXTaskDownloadDisk: GXDownloadingDelegate {
     
@@ -22,17 +23,33 @@ extension GXTaskDownloadDisk: GXDownloadingDelegate {
                 
                 let downloadedSize = FileManager.fileSize(path: boxPath)
                 let downloadCount = downloadedSize * 1024 * 1024
-                print("文件大小:\(downloadCount)")
-                let totalBytesCount = Double(download.totalBytesCount)
                 
-                if totalBytesCount == downloadCount {
-                    downloadBlock?(download.progress, state)
+                let totalBytesCount = Double(download.totalBytesCount)
+                //对比文件的MD5和模型是否一致
+                if let boxFileMd5 = boxPath.toFileUrl?.toMD5(),
+                   let urlMD5 = diskFile.downloadURLModel?.md5 {
+                    let r = boxFileMd5.has(urlMD5)
+                    if r == true {
+                        self.saveUrlInfo()
+                        downloadBlock?(download.progress, state)
+                    } else {
+                        //下载之后的文件和文件URL的md5不一致，说明配置有问题
+                        self.saveUrlInfo()
+                        LogInfo("下载之后的文件和文件URL的md5不一致:\(urlPath)的MD5:\(urlMD5)，计算的为:\(boxFileMd5)")
+                        downloadBlock?(download.progress, GXDownloadingState.error)
+                    }
                 } else {
-                    print("文件有损:\(totalBytesCount)、urlPath：\(urlPath)")
-                    downloadBlock?(download.progress, GXDownloadingState.error)
+//                    print("文件大小:\(downloadCount)")
+                    if totalBytesCount == downloadCount {
+                        self.saveUrlInfo()
+                        downloadBlock?(download.progress, state)
+                    } else {
+                        print("文件有损:\(totalBytesCount)、urlPath：\(urlPath)")
+                        downloadBlock?(download.progress, GXDownloadingState.error)
+                    }
                 }
             }
-//            downloadBlock?(download.progress, state)
+            //            downloadBlock?(download.progress, state)
         } else {
             downloadBlock?(download.progress, state)
         }
@@ -40,7 +57,7 @@ extension GXTaskDownloadDisk: GXDownloadingDelegate {
     
     //错误会触发
     public func download(_ download: GXDownloading, completedWithError error: Error?) {
-        downloadBlock?(download.progress, download.state)
+        downloadBlock?(download.progress, .error)
     }
     
     public func download(_ download: GXDownloading, didReceiveData data: Data, progress: Float) {
@@ -48,13 +65,13 @@ extension GXTaskDownloadDisk: GXDownloadingDelegate {
         if #available(iOS 13.4, *) {
             _ = try? diskFile.fileHandle?.seekToEnd()
             try? diskFile.fileHandle?.write(contentsOf: data)
-//            print("\(String(describing: errorValue))")
+            //            print("\(String(describing: errorValue))")
         } else {
             diskFile.fileHandle?.seekToEndOfFile()
             diskFile.fileHandle?.write(data)
-//            Fallback on earlier versions
+            //            Fallback on earlier versions
         }
-//        print(data)
+        //        print(data)
         downloadBlock?(progress, download.state)
     }
     

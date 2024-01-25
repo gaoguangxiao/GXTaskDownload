@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.1.5'
-  s.summary          = '多任务下载支持缓存policy'
+  s.version          = '0.1.6'
+  s.summary          = '多任务下载优先级设置'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -40,4 +40,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'GGXSwiftExtension'
+  s.dependency 'HandyJSON'
 end
