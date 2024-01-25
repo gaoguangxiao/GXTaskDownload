@@ -39,24 +39,22 @@ extension GXTaskDownloadDisk: GXDownloadingDelegate {
                         downloadBlock?(download.progress, GXDownloadingState.error)
                     }
                 } else {
-//                    print("文件大小:\(downloadCount)")
+                    //                    print("文件大小:\(downloadCount)")
                     if totalBytesCount == downloadCount {
                         self.saveUrlInfo()
                         downloadBlock?(download.progress, state)
                     } else {
-                        print("文件有损:\(totalBytesCount)、urlPath：\(urlPath)")
+                        LogInfo("文件有损:\(totalBytesCount)、urlPath：\(urlPath)")
                         downloadBlock?(download.progress, GXDownloadingState.error)
                     }
                 }
             }
-            //            downloadBlock?(download.progress, state)
-        } else {
-            downloadBlock?(download.progress, state)
         }
     }
     
     //错误会触发
     public func download(_ download: GXDownloading, completedWithError error: Error?) {
+        LogInfo("文件下载错误：urlPath：\(download.url?.absoluteString ?? "")")
         downloadBlock?(download.progress, .error)
     }
     

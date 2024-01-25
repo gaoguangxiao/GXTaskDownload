@@ -1,29 +1,27 @@
 PODS:
-  - GGXSwiftExtension (0.3.9)
-  - GXTaskDownload (0.1.5):
+  - GGXSwiftExtension (0.4.0)
+  - GXTaskDownload (0.1.8):
     - GGXSwiftExtension
     - HandyJSON
   - HandyJSON (5.0.2)
 
 DEPENDENCIES:
-  - GGXSwiftExtension (from `/Users/gaoguangxiao/Documents/GitHub/ggxswiftexten`)
   - GXTaskDownload (from `../`)
 
 SPEC REPOS:
   trunk:
+    - GGXSwiftExtension
     - HandyJSON
 
 EXTERNAL SOURCES:
-  GGXSwiftExtension:
-    :path: "/Users/gaoguangxiao/Documents/GitHub/ggxswiftexten"
   GXTaskDownload:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: 7ac59a173da47f152b83aa5a6d2ddad9f12ac39c
-  GXTaskDownload: e72f9e9296d92b17994d4ccda977d0c446ba4d25
+  GGXSwiftExtension: cc74d75914eda0e94365d3cb9240dc5d9f0dc097
+  GXTaskDownload: 73cd3f1182d0de73782b58df6da4cdab6daa1c0b
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
 
-PODFILE CHECKSUM: f63019986507c1e1a55051d496a24023ea56062b
+PODFILE CHECKSUM: f0552aa395058e367b684a93d1e18389cf3f265b
 
 COCOAPODS: 1.14.3
