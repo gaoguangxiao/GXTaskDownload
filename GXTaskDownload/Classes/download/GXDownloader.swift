@@ -58,7 +58,7 @@ public class GXDownloader: NSObject, GXDownloading {
     var totalBytesCount: Int64 = 0
     
     // MARK: - Properties (Downloading)
-    public var delegate: GXDownloadingDelegate?
+    public weak var delegate: GXDownloadingDelegate?
     public var progress: Float = 0.0
     public var state: GXDownloadingState = .notStarted {
         didSet {

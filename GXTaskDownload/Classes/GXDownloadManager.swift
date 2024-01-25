@@ -21,10 +21,9 @@ public class GXDownloadManager: NSObject {
     /// 最大下载数
     public var maxConcurrentCount = 9
     
+    /// 等待的任务
     private var waitingTasks: Array<GXTaskDownloadDisk> = []
-    
-    private var downloadBlock: GXTaskDownloadBlock?
-    
+        
     private var downloadTotalBlock: GXTaskDownloadTotalBlock?
     
     var isFinish = false
@@ -32,12 +31,8 @@ public class GXDownloadManager: NSObject {
     func progressCallBack() {
 //        print("等待任务数量:\(waitTaskcount)")
         let downCounted = self.tasksCount - Float(waitTaskcount)
-        let progress = downCounted/self.tasksCount
 //        print("进度:\(progress)")
         objc_sync_enter(self)
-        if let pro = self.downloadBlock {
-            pro(progress, .downloading)
-        }
         if let pro = self.downloadTotalBlock {
             pro(self.tasksCount,downCounted,.downloading)
         }
@@ -53,28 +48,19 @@ public class GXDownloadManager: NSObject {
     func stateCallBack(state: GXDownloadingState) {
 //        print("等待任务数量:\(waitTaskcount)")
         let downCounted = self.tasksCount - Float(waitTaskcount)
-        let progress = downCounted/self.tasksCount
 //        print("进度:\(progress)")
         objc_sync_enter(self)
-        if let pro = self.downloadBlock {
-            pro(progress, state)
-        }
+//        if let pro = self.downloadBlock {
+//            pro(progress, state)
+//        }
         if let pro = self.downloadTotalBlock {
             pro(self.tasksCount,downCounted,state)
         }
         objc_sync_exit(self)
     }
-}
-
-/// 测试批量本地校验
-extension GXDownloadManager {
-    func testDiskDataQueue(urls: Array<String>, path: String) {
-        for url in urls {
-            var diskFile = GXTaskDiskFile()
-            diskFile.taskDownloadPath = path
-            let isExist = diskFile.isExistDiskDataWith(url: url)
-            print("存在:\(isExist)")
-        }
+    
+    deinit {
+//        print("\(self)-deinit")
     }
 }
 
@@ -92,22 +78,6 @@ extension GXDownloadManager {
         return taskCount
     }
     
-    func enqueue(url: String) {
-        /// 创建一个任务
-        let downloader = GXTaskDownloadDisk()
-        downloader.diskFile.taskDownloadPath = url.lastPathComponent
-        downloader.prepare(forURL: url)
-        waitingTasks.append(downloader)
-    }
-    
-    func enqueue(url: String, policy: Int, path: String) {
-        /// 创建一个任务
-        let downloader = GXTaskDownloadDisk()
-        downloader.diskFile.taskDownloadPath = path + url.toPath.stringByDeletingLastPathComponent + "/\(policy)"
-        downloader.prepare(forURL: url)
-        waitingTasks.append(downloader)
-    }
-    
     func enqueue(urlModel: GXDownloadURLModel, path: String) {
         /// 创建一个任务
         let downloader = GXTaskDownloadDisk()
@@ -118,7 +88,8 @@ extension GXDownloadManager {
     
     func execute()  {
         let downloader = gainTask()
-        downloader?.start(block: { progress, state in
+        downloader?.start(block: { [weak self] progress, state in
+            guard let `self` = self else { return }
             //单个文件的下载完成，抛出进度
             if state == .completed || state == .error {
                 self.removeTask()
@@ -166,76 +137,18 @@ extension GXDownloadManager {
     ///   - urls: urls description
     ///   - path: <#path description#>
     ///   - block: <#block description#>
-    public func start(forURL urls: Array<Dictionary<String,Any>>, path: String, block: @escaping GXTaskDownloadBlock) {
-        
-        //        self.testDiskDataQueue(urls: urls, path: path)
-        //        return
-        
-        self.downloadBlock = block
-        LogInfo("开始下载")
-        //入队
-        for url in urls {
-            let urlDict = url
-            if let policy = urlDict["policy"] as? Int ,let _url = urlDict["url"] as? String{
-                self.enqueue(url: _url, policy: policy, path: path)
-            }
-        }
-        
-        tasksCount = Float(urls.count)
-        
-        //执行
-        self.executeQueue.async {
-            for _ in 0 ..< self.maxConcurrentCount {
-                //                print("下载次数：\(1)")
-                self.execute()
-            }
-        }
-    }
+    public func start(forURL urls: Array<GXDownloadURLModel>, 
+                      maxDownloadCount: Int = 9,
+                      path: String, 
+                      block: @escaping GXTaskDownloadTotalBlock) {
     
-    
-    /// 下载一组URLS
-    /// - Parameters:
-    ///   - urls: urls description
-    ///   - path: <#path description#>
-    ///   - block: <#block description#>
-    public func start(forURL urls: Array<GXDownloadURLModel>, path: String, block: @escaping GXTaskDownloadTotalBlock) {
-    
+        self.maxConcurrentCount = maxDownloadCount
         self.downloadTotalBlock = block
         LogInfo("开始下载")
         
         //入队
         for url in urls {
             self.enqueue(urlModel: url, path: path)
-        }
-        
-        tasksCount = Float(urls.count)
-        
-        //执行
-        self.executeQueue.async {
-            for _ in 0 ..< self.maxConcurrentCount {
-                //                print("下载次数：\(1)")
-                self.execute()
-            }
-        }
-    }
-    
-    /// 下载一组URLS
-    /// - Parameters:
-    ///   - urls: <#urls description#>
-    ///   - path: <#path description#>
-    ///   - block: <#block description#>
-    public func start(forURL urls: Array<String>, path: String, block: @escaping GXTaskDownloadBlock) {
-        
-        //        self.testDiskDataQueue(urls: urls, path: path)
-        //        return
-        
-        self.downloadBlock = block
-        LogInfo("开始下载")
-        //入队
-        for url in urls {
-            let urlDict = url
-//            self.enqueue(url: urlDict["url"] as? String ?? "", policy: 0, path: path)
-//            self.enqueue(url: url,path: path)
         }
         
         tasksCount = Float(urls.count)

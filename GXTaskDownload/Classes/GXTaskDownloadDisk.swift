@@ -13,7 +13,7 @@ public class GXTaskDownloadDisk: NSObject {
     
     /// 磁盘管理类
     public var diskFile = GXTaskDiskFile()
-
+    
     /// 回调block
     public var downloadBlock: GXTaskDownloadBlock?
     
@@ -21,13 +21,13 @@ public class GXTaskDownloadDisk: NSObject {
     ///1 ~ 5 优先级、默认为3
     public var taskPriority: Int = 3
     
-//MARK: 属性
+    //MARK: 属性
     lazy var downloader: GXDownloader = {
-       let downloader = GXDownloader()
-       downloader.priority = taskPriority
-       downloader.delegate = self
-       return downloader
-   }()
+        let downloader = GXDownloader()
+        downloader.priority = taskPriority
+        downloader.delegate = self
+        return downloader
+    }()
     
     //虚拟
     var downloadPath: String {
@@ -39,15 +39,13 @@ public class GXTaskDownloadDisk: NSObject {
         return diskFile.path
     }
     
-    
-    public override init() {
-//        fileHandle = FileManager.default
-        //初始化下载路径
+    deinit {
+//        print("\(self)-deinit")
     }
     
     //
     public func start(forURL url: String,block: @escaping GXTaskDownloadBlock) {
-//        LogInfo("调用次数------瞬间")
+        //        LogInfo("调用次数------瞬间")
         guard let uurl = url.toUrl else {
             block(0,.error)
             return
@@ -71,18 +69,6 @@ public class GXTaskDownloadDisk: NSObject {
         downloader.start()
     }
     
-    public func prepare(forURL url: String) {
-        guard let uurl = url.toUrl else {
-            return
-        }
-        
-        let downloadURLModel = GXDownloadURLModel()
-        downloadURLModel.src = url
-        diskFile.downloadURLModel = downloadURLModel
-        //指定文件URL
-        downloader.url = uurl
-    }
-    
     public func prepare(urlModel: GXDownloadURLModel) {
         guard let uurl = urlModel.src?.toUrl else {
             return
@@ -97,13 +83,13 @@ public class GXTaskDownloadDisk: NSObject {
     }
     
     public func start(block: @escaping GXTaskDownloadBlock) {
-//        LogInfo("调用次数------瞬间")
+        //        LogInfo("调用次数------瞬间")
         guard let urlPath = diskFile.downloadURLModel?.src else {
             return
         }
-//        print("路径：\(urlPath)")
+        //        print("路径：\(urlPath)")
         let isExist = diskFile.isExistDiskDataWith(url: urlPath)
-//        let isExist = true
+        //let isExist = true
         if isExist {
             block(0,.completed)
             return
@@ -118,13 +104,16 @@ public class GXTaskDownloadDisk: NSObject {
     public func pause() {
         downloader.pause()
     }
-    
+}
+
+//MARK: URL下载完毕
+extension GXTaskDownloadDisk {
     public func saveUrlInfo() {
         
         if let url = diskFile.downloadURLModel?.src {
             //文件信息以 文件名-info.json结尾
             let urlInfoPath = diskFile.path + "/" + "\(url.md5Value).json"
-
+            
             let isexist = FileManager.isFileExists(atPath: urlInfoPath)
             if isexist == true {
                 FileManager.removefile(atPath: urlInfoPath)
@@ -137,5 +126,4 @@ public class GXTaskDownloadDisk: NSObject {
             
         }
     }
-    
 }
