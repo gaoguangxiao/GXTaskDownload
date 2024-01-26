@@ -88,8 +88,8 @@ public class GXTaskDownloadDisk: NSObject {
             return
         }
         //        print("路径：\(urlPath)")
-        let isExist = diskFile.isExistDiskDataWith(url: urlPath)
-        //let isExist = true
+        let isExist = diskFile.isExistDiskAndMD5Update(url: urlPath)
+        //disk
         if isExist {
             block(0,.completed)
             return
