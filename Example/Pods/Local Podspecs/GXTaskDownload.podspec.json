@@ -1,7 +1,7 @@
 {
   "name": "GXTaskDownload",
-  "version": "0.1.8",
-  "summary": "下载内存泄露",
+  "version": "0.1.9",
+  "summary": "增加URL信息MD5文件校验",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/GXTaskDownload.git",
-    "tag": "0.1.8"
+    "tag": "0.1.9"
   },
   "platforms": {
     "ios": "10.0"

@@ -1,6 +1,6 @@
 PODS:
-  - GGXSwiftExtension (0.4.0)
-  - GXTaskDownload (0.1.8):
+  - GGXSwiftExtension (0.4.1)
+  - GXTaskDownload (0.1.9):
     - GGXSwiftExtension
     - HandyJSON
   - HandyJSON (5.0.2)
@@ -18,8 +18,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: cc74d75914eda0e94365d3cb9240dc5d9f0dc097
-  GXTaskDownload: 73cd3f1182d0de73782b58df6da4cdab6daa1c0b
+  GGXSwiftExtension: f77bb3ef93bbe42305fd01523de0de3efafa3e08
+  GXTaskDownload: 75347db89c90648e30929b23997521424d4438d9
   HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
 
 PODFILE CHECKSUM: f0552aa395058e367b684a93d1e18389cf3f265b
