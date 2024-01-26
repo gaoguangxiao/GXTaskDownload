@@ -25,9 +25,7 @@ public class GXDownloadManager: NSObject {
     private var waitingTasks: Array<GXTaskDownloadDisk> = []
         
     private var downloadTotalBlock: GXTaskDownloadTotalBlock?
-    
-    var isFinish = false
-    
+        
     func progressCallBack() {
 //        print("等待任务数量:\(waitTaskcount)")
         let downCounted = self.tasksCount - Float(waitTaskcount)
@@ -95,12 +93,8 @@ extension GXDownloadManager {
                 self.removeTask()
                 //判断是否存在未执行的任务
                 if self.waitTaskcount == 0 {
-                    print("没有任务可供下载")
-                    if !self.isFinish { //仅回调一次
-                        self.isFinish = true
-                        
-                        self.stateCallBack(state: .completed)
-                    }
+//                    print("没有任务可供下载")
+                    self.stateCallBack(state: .completed)
                 } else {
                     self.execute()
                     //进度回调
