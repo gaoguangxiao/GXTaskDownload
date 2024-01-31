@@ -50,13 +50,8 @@ public class GXDownloadManager: NSObject {
         objc_sync_exit(self)
     }
     
-    func getOfflineManifestFolder(url: String) -> String {
-        let folderName = url.lastPathComponent.removeMD5.stringByDeletingPathExtension
-        return folderName
-    }
-    
     deinit {
-        print("\(self)-deinit")
+//        print("\(self)-deinit")
     }
 }
 
