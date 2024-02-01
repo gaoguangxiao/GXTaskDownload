@@ -198,7 +198,7 @@ extension GXDownloadManager {
         }
         
         tasksCount = Float(urls.count)
-        
+        finishTasksCount = 0
         //执行
         self.executeQueue.async {
             for _ in 0 ..< self.maxConcurrentCount {
@@ -228,6 +228,7 @@ extension GXDownloadManager {
         }
         
         tasksCount = Float(urls.count)
+        finishTasksCount = 0
         
         //执行
         self.executeQueue.async {

@@ -1,7 +1,7 @@
 {
   "name": "GXTaskDownload",
-  "version": "0.2.5",
-  "summary": "优化多任务下载",
+  "version": "0.2.6",
+  "summary": "修复资源重新下载数量问题",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/GXTaskDownload.git",
-    "tag": "0.2.5"
+    "tag": "0.2.6"
   },
   "platforms": {
     "ios": "10.0"
