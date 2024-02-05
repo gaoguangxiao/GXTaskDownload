@@ -36,6 +36,9 @@ public class GXDownloadManager: NSObject {
     private var downloadTotalBlock: GXTaskDownloadTotalBlock?
         
 
+    /// 单文件下载
+    let oneTaskDownload = GXTaskDownloadDisk()
+    
     func stateCallBack(state: GXDownloadingState) {
 //        print("等待任务数量:\(waitTaskcount)")
         let downCounted = self.finishTasksCount
@@ -51,7 +54,7 @@ public class GXDownloadManager: NSObject {
     }
     
     deinit {
-//        print("\(self)-deinit")
+        LogInfo("\(self)-deinit")
     }
 }
 
@@ -177,6 +180,32 @@ extension GXDownloadManager {
 
 //MARK: 下载一组URL
 extension GXDownloadManager {
+    
+    /// 下载URL
+    /// - Parameters:
+    ///   - url: <#url description#>
+    ///   - path: <#path description#>
+    ///   - block: <#block description#>
+    public func download(url: String,
+                  path: String = "gxdownload",
+                  priority: Int = 3,
+                  block: @escaping GXTaskCompleteBlock) {
+        oneTaskDownload.diskFile.taskDownloadPath = "/\(path)"
+        oneTaskDownload.taskPriority = priority
+        let isExist = oneTaskDownload.diskFile.checkUrlTask(url: url)
+        if isExist == true {
+            oneTaskDownload.diskFile.clearFile(forUrl: url)
+        }
+        let path = oneTaskDownload.diskFile.getFilePath(url: url)
+        //开始下载
+        oneTaskDownload.start(forURL: url) { progress, state in
+            if state == .completed {
+                block(progress,path,state)
+            } else {
+                block(progress,nil,state)
+            }
+        }
+    }
     
     /// 下载一组URLS
     /// - Parameters:
