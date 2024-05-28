@@ -1,9 +1,9 @@
 PODS:
-  - GGXSwiftExtension (0.4.1)
-  - GXTaskDownload (0.2.6):
+  - GGXSwiftExtension (0.5.7)
+  - GXTaskDownload (0.2.7):
     - GGXSwiftExtension
-    - HandyJSON
-  - HandyJSON (5.0.2)
+    - SmartCodable
+  - SmartCodable (3.4.5)
 
 DEPENDENCIES:
   - GXTaskDownload (from `../`)
@@ -11,17 +11,17 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - GGXSwiftExtension
-    - HandyJSON
+    - SmartCodable
 
 EXTERNAL SOURCES:
   GXTaskDownload:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: f77bb3ef93bbe42305fd01523de0de3efafa3e08
-  GXTaskDownload: 3a7ef4a3ab101129d820e256080757b3bc549319
-  HandyJSON: 9e4e236f5d2dbefad5155a77417bbea438201c03
+  GGXSwiftExtension: 3aebdd5e98bb4ff6edb1916db09c1a2952c55d5c
+  GXTaskDownload: 5c4e6925383effb1f233058694f1e1ad39ade40e
+  SmartCodable: 935b8b3d83133cb07286b0780f614bc739c1e116
 
-PODFILE CHECKSUM: f0552aa395058e367b684a93d1e18389cf3f265b
+PODFILE CHECKSUM: 92c3a63471d3bda2d742df5b06845b35f82609c7
 
 COCOAPODS: 1.15.0

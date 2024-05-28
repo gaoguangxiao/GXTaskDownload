@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.2.7'
-  s.summary          = '提供下载管理单任务下载'
+  s.version          = '0.2.8'
+  s.summary          = '更换数据解析'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
   s.source           = { :git => 'https://github.com/gaoguangxiao/GXTaskDownload.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'GXTaskDownload/Classes/**/*'
   
@@ -40,5 +40,5 @@ TODO: Add long description of the pod here.
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'GGXSwiftExtension'
-  s.dependency 'HandyJSON'
+  s.dependency 'SmartCodable'
 end
