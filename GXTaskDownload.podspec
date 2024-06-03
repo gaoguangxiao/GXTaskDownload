@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.2.8'
-  s.summary          = '更换数据解析'
+  s.version          = '0.2.9'
+  s.summary          = '预置更新检测md5'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
