@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.3.1'
+  s.version          = '0.3.3'
   s.summary          = '增加文件是否可用标志'
 
 # This description is used to generate tags and improve search results.
