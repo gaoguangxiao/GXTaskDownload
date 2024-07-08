@@ -41,8 +41,8 @@ class ViewController: UIViewController {
 //        return "https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"
 //        return "https://file.risekid.cn/static/qa.risekid.cn.zip"
 //        return "https://file.risekid.cn/app/spine/buddy/mojing.json"
-//        return "https://qa.risekid.cn/4307.async.js"
-        return "https://qa.risekid.cn/babu/lanlongbabu_2.png"
+        return "http://39.105.133.106:4000/video/spotitEnd.mp4"
+//        return "https://qa.risekid.cn/babu/lanlongbabu_2.png"
     }
     
     var downloadURLS : Array<String> {
