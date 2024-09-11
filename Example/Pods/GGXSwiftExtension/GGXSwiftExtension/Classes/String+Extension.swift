@@ -63,10 +63,17 @@ public extension String {
         return components(separatedBy: s)
     }
     
-    func range(of searchString: String) -> NSRange {
-        return (self as NSString).range(of: searchString)
-    }
+//    func range(of searchString: String) -> NSRange {
+//        return (self as NSString).range(of: searchString)
+//    }
     
+    func rangeOC(of searchString: String) -> NSRange {
+        if let range = self.range(of: searchString, options: .caseInsensitive) {
+            let nsrange = NSRange(range, in: self)
+            return nsrange
+        }
+        return NSRange(location: 0, length: 0)
+    }
     /// 去掉左右空格
     func trim() -> String {
         return trimmingCharacters(in: CharacterSet.whitespaces)
@@ -141,6 +148,35 @@ public extension String {
                         $0 + String(format: "%02x", digest[$1])
                     }
         }
+    }
+    
+    //
+    func toDiskSize() -> Double {
+//        let byteCount = Double(self)
+        let units = ["B", "K", "M", "G", "T", "P", "E", "Z", "Y"]
+        //获取单位
+        let lastStr = self.substring(from: self.length - 1)
+        //获取数值
+        var byteCount = Double(self.substring(to: self.length - 1)) ?? 0
+        //
+        var index = 0
+        if let _index = units.firstIndex(of: lastStr) {
+            index = _index;
+        } else {
+            if self.has("K") { index = 1
+            } else if self.has("M") { index = 2
+            } else if self.has("G") { index = 3
+            } else if self.has("T") { index = 4
+            } else if self.has("P") { index = 5
+            } else if self.has("E") { index = 6
+            }
+        }
+        
+        while index > 0 {
+            byteCount *= 1024
+            index -= 1
+        }
+        return byteCount
     }
 }
 
@@ -221,7 +257,7 @@ public extension String {
         guard self.contains(baseUrl) && (self.hasPrefix("https://") || self.hasPrefix("http://"))
         else { return self }
         
-        let range = self.range(of: baseUrl)
+        let range = self.rangeOC(of: baseUrl)
         // get  "https://www.baidu.com?"
         let headerStrig = self.substring(to: range.location + range.length)
         // get key1=value1&key2=value2
@@ -249,6 +285,16 @@ public extension String {
         }
     }
     
+    var toHost: String? {
+        guard let url = self.toUrl else { return "" }
+        if #available(iOS 16.0, *) {
+            return url.host()
+        } else {
+            // Fallback on earlier versions
+            return url.host
+        }
+    }
+        
     func getMIMETypeFromPathExtension() -> String {
         var MIMEType = "text/html"
         let pathExtension = self.pathExtension
@@ -399,6 +445,25 @@ public extension String {
             return nil
         }
         return decodedData
+    }
+    
+}
+
+//MARK: Base64
+extension String {
+    
+    public func encodBase64(using encoding: String.Encoding = .utf8) -> String? {
+        if let data = self.data(using: encoding) {
+            return data.base64EncodedString()
+        }
+        return nil
+    }
+    
+    public func decodeBase64(encoding: String.Encoding = .utf8) -> String? {
+        if let data = Data(base64Encoded: self) {
+            return String(data: data, encoding: encoding)
+        }
+        return nil
     }
     
 }

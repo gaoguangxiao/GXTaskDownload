@@ -1,7 +1,7 @@
 {
   "name": "GXTaskDownload",
-  "version": "0.2.7",
-  "summary": "提供下载管理单任务下载",
+  "version": "0.3.6",
+  "summary": "feat：多文件下载下载速度",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,11 +13,12 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/GXTaskDownload.git",
-    "tag": "0.2.7"
+    "tag": "0.3.6"
   },
   "platforms": {
     "ios": "11.0"
   },
+  "swift_versions": "5.0",
   "source_files": "GXTaskDownload/Classes/**/*",
   "dependencies": {
     "GGXSwiftExtension": [
@@ -26,5 +27,6 @@
     "SmartCodable": [
 
     ]
-  }
+  },
+  "swift_version": "5.0"
 }

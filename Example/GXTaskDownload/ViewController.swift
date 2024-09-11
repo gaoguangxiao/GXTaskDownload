@@ -52,6 +52,16 @@ class ViewController: UIViewController {
     
     //检测URL下载是否完毕，URL文件大小
     
+    //获取文件大小和期望不符的URL
+    //https://file.risekid.cn/web/adventure/static/curtain-bg-1.3201fe78.svg
+    var checkURL: String {
+//        "https://file.risekid.cn/web/adventure/static/curtain-bg-1.3201fe78.svg"
+//        "https://file.risekid.cn/web/adventure/static/tip.3d5906e7.svg"
+        "https://file.risekid.cn/web/adventure/a5922dbfe3f7b5f4cca6b3cd83497106.svg"
+    }
+    var checkURL1: String {
+        "https://file.risekid.cn/web/adventure/8269.6beff2a8.async.js"
+    }
     //检测下载状态
     func checkDownStatus()  {
         
@@ -62,31 +72,45 @@ class ViewController: UIViewController {
         下载状态.text = status
     }
     
+    let check = GXCheckTaskSize()
+    let checks = GXCheckTaskManager()
     @IBAction func 多URL下载(_ sender: Any) {
         
+//        LogInfo("文件校验")
         //获取URL大小
-//        let check = GXCheckTaskSize()
-//        if let uurl = downloadURL.toUrl {
-//            check.checkUrlTask(url: uurl) { fileSize in
-//                print("线程:\(Thread.current)")
-//                print("文件大小：\(fileSize)")
-//            }
+        if let uurl = checkURL.toUrl {
+            check.checkUrlTask(url: uurl) { fileSize in
+                LogInfo("文件大小：\(fileSize)")
+            }
+        }
+//
+//        downloader.start(forURL: checkURL) { progress, state in
+//            print("文件进度：\(progress)，文件状态：\(state)")
 //        }
         
-        //多个URL大小
+//        let downloadModel = GXDownloadURLModel()
+//        downloadModel.src    = checkURL
+//        downloader.prepare(urlModel: downloadModel)
+//        downloader.start { progress, state in
+//            print("文件进度：\(progress)，文件状态：\(state)")
+//        }
+        //多个URL校验大小
 //        var totalCount: Int64 = 0
-//        let checks = GXCheckTaskManager()
-//        checks.checkUrls(urls: downloadURLS) { progress,fileSize in
+//        var downloadUrls: Array<GXDownloadURLModel> = []
+//        let assets = [checkURL,checkURL1]
+//        for url in assets {
+//            let downloadModel = GXDownloadURLModel()
+//            downloadModel.src    = url
+//            downloadUrls.append(downloadModel)
+//        }
+//        checks.checkUrls(urls: downloadUrls) { progress,fileSize in
 //            if progress == 1.0 {
 //                
 //            }
 //            print("文件校验进度：\(progress)，文件大小：\(fileSize)")
 //        }
         
-//        let downloader = GXDownloadManager()
-//        downloader.start(forURL: downloadURLS, path: "") { progress, state in
-//            print("文件进度：\(progress)，文件状态：\(state)")
-//        }
+        
     }
     
     @IBAction func 开始下载(_ sender: UIButton) {

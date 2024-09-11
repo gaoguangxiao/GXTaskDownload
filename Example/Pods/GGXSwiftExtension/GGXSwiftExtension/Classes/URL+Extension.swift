@@ -9,6 +9,28 @@
 import Foundation
 import CommonCrypto
 
+public enum WebMIMEType: String {
+    case html
+    case js
+    case css
+    case png
+    case jpeg
+    case json
+    case xml
+    case pdf
+    case webp
+    case gif
+    case mpeg
+    case mp3
+    case mp4
+    case wav
+    case ico
+    case svg
+    case ttf
+    case woff
+    case woff2
+}
+
 public extension URL {
     /// 取出Get请求中的参数，结果是一个大字典
     func getParameters() -> [String: String] {
@@ -26,7 +48,8 @@ public extension URL {
     var base64FileData: String? {
         do {
             let data = try Data(contentsOf: self)
-            return data.base64EncodedString()
+            let base64 = data.base64EncodedString()
+            return base64.length > 0 ? base64 : nil
         } catch {
             print("解析音频数据失败")
             return nil

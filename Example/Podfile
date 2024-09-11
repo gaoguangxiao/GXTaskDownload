@@ -7,9 +7,9 @@ target 'GXTaskDownload_Example' do
 
 #  pod 'GGXSwiftExtension', :path => '/Users/gaoguangxiao/Documents/GitHub/ggxswiftexten'
   
-  target 'GXTaskDownload_Tests' do
-    inherit! :search_paths
-
-    
-  end
+#  target 'GXTaskDownload_Tests' do
+#    inherit! :search_paths
+#
+#    
+#  end
 end
