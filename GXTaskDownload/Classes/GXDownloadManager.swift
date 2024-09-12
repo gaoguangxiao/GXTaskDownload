@@ -50,7 +50,7 @@ public class GXDownloadManager: NSObject {
     // 定时读取文件下载速度
     private var speedTime: Timer?
     
-    private var fileTotalLength: Double = 0
+    private var fileTotalLength: Double = 1
     //已下载
     private var finishBytesReceived: Double = 0
     
@@ -289,7 +289,7 @@ extension GXDownloadManager {
         
         self.tasksCount = Float(urls.count)
         finishTasksCount = 0
-        fileTotalLength = 0
+        fileTotalLength = 1
         
         //入队
         for url in urls {
@@ -321,7 +321,7 @@ extension GXDownloadManager {
         
         tasksCount = Float(urls.count)
         finishTasksCount = 0
-        fileTotalLength = 0
+        fileTotalLength = 1
         //入队
         for url in urls {
             fileTotalLength += url.size
