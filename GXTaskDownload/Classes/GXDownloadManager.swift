@@ -8,6 +8,7 @@
 import Foundation
 import GGXSwiftExtension
 
+@objcMembers
 public class GXDownloadManager: NSObject {
     /// URLS总数量
     private var tasksCount: Float = 0
@@ -264,6 +265,27 @@ extension GXDownloadManager {
                 block(progress,path,state)
             } else {
                 block(progress,nil,state)
+            }
+        }
+    }
+    
+    public func downloadV2(url: String,
+                  path: String = "gxdownload",
+                  priority: Int = 3,
+                  block: @escaping GXTaskCompleteV2Block) {
+        oneTaskDownload.diskFile.taskDownloadPath = "/\(path)"
+        oneTaskDownload.taskPriority = priority
+        let isExist = oneTaskDownload.diskFile.checkUrlTask(url: url)
+        if isExist == true {
+            oneTaskDownload.diskFile.clearFile(forUrl: url)
+        }
+        let path = oneTaskDownload.diskFile.getFilePath(url: url)
+        //开始下载
+        oneTaskDownload.start(forURL: url) { progress, state in
+            if state == .completed {
+                block(progress,path)
+            } else {
+                block(progress,nil)
             }
         }
     }
