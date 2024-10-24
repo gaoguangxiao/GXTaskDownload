@@ -272,11 +272,12 @@ extension GXDownloadManager {
     public func downloadV2(url: String,
                   path: String = "gxdownload",
                   priority: Int = 3,
+                  clearOld: Bool = false,
                   block: @escaping GXTaskCompleteV2Block) {
         oneTaskDownload.diskFile.taskDownloadPath = "/\(path)"
         oneTaskDownload.taskPriority = priority
         let isExist = oneTaskDownload.diskFile.checkUrlTask(url: url)
-        if isExist == true {
+        if isExist == true && clearOld {
             oneTaskDownload.diskFile.clearFile(forUrl: url)
         }
         let path = oneTaskDownload.diskFile.getFilePath(url: url)

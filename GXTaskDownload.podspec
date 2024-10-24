@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.3.9'
+  s.version          = '0.4.0'
   s.summary          = 'feat：暴漏于OC可下载'
 
 # This description is used to generate tags and improve search results.
