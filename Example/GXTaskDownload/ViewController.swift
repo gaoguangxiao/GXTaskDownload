@@ -42,7 +42,7 @@ class ViewController: UIViewController {
 //        return "https://file.risekid.cn/static/qa.risekid.cn.zip"
 //        return "https://file.risekid.cn/app/spine/buddy/mojing.json"
 //        return "https://file.risekid.cn/audio/a9656f6b-df60-403a-977e-8962c2177544.mp3"
-        return "https://aiq-static.pipithink.com/audio/paintGames/tip10-1.mp3"
+        return "https://file.risekid.cn/web/adventure/manifest/manifest-initial.934447a9.json"
     }
     
     var downloadURLS : Array<String> {
