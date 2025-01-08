@@ -1,7 +1,7 @@
 {
   "name": "GXTaskDownload",
-  "version": "0.3.6",
-  "summary": "feat：多文件下载下载速度",
+  "version": "0.5.0",
+  "summary": "feat：增加URL包含md5时的校验",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/GXTaskDownload.git",
-    "tag": "0.3.6"
+    "tag": "0.5.0"
   },
   "platforms": {
     "ios": "11.0"

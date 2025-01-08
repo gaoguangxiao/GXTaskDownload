@@ -2,35 +2,43 @@
 //  TypePatcher.swift
 //  SmartCodable
 //
-//  Created by qixin on 2023/9/5.
+//  Created by Mccc on 2023/9/5.
 //
 
 import Foundation
 
 extension Patcher {
     struct Transformer {
-        static func typeTransform(from jsonValue: Any?) -> T? {
+        static func typeTransform(from jsonValue: JSONValue?, impl: JSONDecoderImpl) -> T? {
             guard let value = jsonValue else { return nil }
-            return (T.self as? TypeTransformable.Type)?.transformValue(from: value) as? T
+            return (T.self as? TypeTransformable.Type)?.transformValue(from: value, impl: impl) as? T
         }
     }
 }
 
 
 fileprivate protocol TypeTransformable {
-    static func transformValue(from value: Any) -> Self?
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Self?
 }
 
 
 extension Bool: TypeTransformable {
-    static func transformValue(from value: Any) -> Bool? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Bool? {
+        
         switch value {
-        case let temp as Int:
-            if temp == 1 { return true}
-            else if temp == 0 { return false }
-        case let temp as String:
-            if ["1","YES","Yes","yes","TRUE","True","true"].contains(temp) { return true }
-            if ["0","NO","No","no","FALSE","False","false"].contains(temp) { return false }
+        case .bool(let bool):
+            return bool
+        case .string(let string):
+            if ["1","YES","Yes","yes","TRUE","True","true"].contains(string) { return true }
+            if ["0","NO","No","no","FALSE","False","false"].contains(string) { return false }
+        case .number(_):
+            if let int = try? impl.unwrapFixedWidthInteger(from: value, as: Int.self) {
+                if int == 1 {
+                    return true
+                } else if int == 0 {
+                    return false
+                }
+            }
         default:
             break
         }
@@ -40,113 +48,104 @@ extension Bool: TypeTransformable {
 
 
 extension String: TypeTransformable {
-    static func transformValue(from value: Any) -> String? {
-        // 检查NSNumber实例是否代表Bool类型
-        if let number = value as? NSNumber {
-            // 检查是否为布尔值，NSNumber表示布尔值时objCType返回的是"c"
-            if String(cString: number.objCType) == "c" {
-                return nil
-            }
-        }
-        
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> String? {
         switch value {
-        case let intValue as Int:
-            return String(intValue)
-        case let floatValue as Float:
-            return String(floatValue)
-        case let doubleValue as Double:
-            return String(doubleValue)
+        case .string(let string):
+            return string
+        case .number(let number):
+            if let int = try? impl.unwrapFixedWidthInteger(from: value, as: Int.self) {
+                return "\(int)"
+            } else if let double = try? impl.unwrapFloatingPoint(from: value, as: Double.self) {
+                return "\(double)"
+            }
+            return number
         default:
-            return nil
+            break
         }
+        return nil
     }
 }
 
 
-
-
-
 extension Int: TypeTransformable {
-    static func transformValue(from value: Any) -> Int? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Int? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 extension Int8: TypeTransformable {
-    static func transformValue(from value: Any) -> Int8? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Int8? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 extension Int16: TypeTransformable {
-    static func transformValue(from value: Any) -> Int16? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Int16? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 
 extension Int32: TypeTransformable {
-    static func transformValue(from value: Any) -> Int32? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Int32? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 extension Int64: TypeTransformable {
-    static func transformValue(from value: Any) -> Int64? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Int64? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 extension UInt: TypeTransformable {
-    static func transformValue(from value: Any) -> UInt? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> UInt? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 extension UInt8: TypeTransformable {
-    static func transformValue(from value: Any) -> UInt8? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> UInt8? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 extension UInt16: TypeTransformable {
-    static func transformValue(from value: Any) -> UInt16? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> UInt16? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 
 extension UInt32: TypeTransformable {
-    static func transformValue(from value: Any) -> UInt32? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> UInt32? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 extension UInt64: TypeTransformable {
-    static func transformValue(from value: Any) -> UInt64? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> UInt64? {
         return _fixedWidthInteger(from: value)
     }
 }
 
 
-
-
 extension Float: TypeTransformable {
-    static func transformValue(from value: Any) -> Float? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Float? {
         _floatingPoint(from: value)
     }
 }
 
 
 extension Double: TypeTransformable {
-    static func transformValue(from value: Any) -> Double? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> Double? {
         _floatingPoint(from: value)
     }
 }
 
 
 extension CGFloat: TypeTransformable {
-    static func transformValue(from value: Any) -> CGFloat? {
+    static func transformValue(from value: JSONValue, impl: JSONDecoderImpl) -> CGFloat? {
         if let temp: Double = _floatingPoint(from: value) {
             return CGFloat(temp)
         }
@@ -155,45 +154,35 @@ extension CGFloat: TypeTransformable {
 }
 
 
-private func _floatingPoint<T: LosslessStringConvertible & BinaryFloatingPoint>(from value: Any) -> T? {
-    
-    // 在Swift中，FixedWidthInteger 是一个协议，
-    // 它定义了一套操作和属性，这些操作和属性是固定宽度整数类型所共有的。
-    // 实现这个协议的类型包括标准库中的所有整数类型，
-    // 比如 Int8, Int16, Int32, Int64 以及它们的无符号版本 UInt8, UInt16, UInt32, UInt64。
-    
+private func _floatingPoint<T: LosslessStringConvertible & BinaryFloatingPoint>(from value: JSONValue) -> T? {
     switch value {
-    case let temp as String:
-        return T(temp)
-    case let temp as any FixedWidthInteger:
-        return T(temp)
+    case .string(let string):
+        return T(string)
+    case .number(let number):
+        return T(number)
     default:
-        return nil
+        break
     }
+    return nil
 }
 
 
-private func _fixedWidthInteger<T: FixedWidthInteger>(from value: Any) -> T? {
+private func _fixedWidthInteger<T: FixedWidthInteger>(from value: JSONValue) -> T? {
     switch value {
-    case let temp as String:
-        return T(temp)
-    case let temp as Float:
-        return T(temp)
-    case let temp as Double:
-        return T(temp)
-    case let temp as CGFloat:
-        return T(temp)
+    case .string(let string):
+        if let integer = T(string) {
+            return integer
+        } else if let float = Double(string), float.isFinite, float >= Double(T.min) && float <= Double(T.max), let integer = T(exactly: float) {
+            return integer
+        }
+    case .number(let number):
+        if let integer = T(number) {
+            return integer
+        } else if let float = Double(number), float.isFinite, float >= Double(T.min) && float <= Double(T.max), let integer = T(exactly: float) {
+            return integer
+        }
     default:
-        return nil
+        break
     }
+    return nil
 }
-
-
-/** 注意 inf
- * String类型的 “inf”，可以直接转成Double类型，代表无穷大和无穷小。
- * Swift 能够识别 "inf", "+inf", "-inf", "Infinity", "+Infinity", 和 "-Infinity" 这些表示形式，将它们转换为相应的无穷大或无穷小的 Double 值。
- *
- * 注意 nan
- * String类型的 “nan”，可以直接转成Double类型，代表不是一个数（Not a Number）的特殊值。
- * Swift 能够识别 "NaN", "Nan", "nan" 这些表示形式,并将其转换为表示不是一个数的 Double 值.
- */

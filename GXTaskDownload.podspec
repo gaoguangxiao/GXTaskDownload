@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.5.0'
-  s.summary          = 'feat：增加URL包含md5时的校验'
+  s.version          = '0.5.1'
+  s.summary          = 'fix：URL包含md5时，md5必须8位，避免后缀.2影响'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

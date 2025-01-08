@@ -1,9 +1,9 @@
 PODS:
-  - GGXSwiftExtension (0.6.8)
-  - GXTaskDownload (0.3.6):
+  - GGXSwiftExtension (0.7.4)
+  - GXTaskDownload (0.5.0):
     - GGXSwiftExtension
     - SmartCodable
-  - SmartCodable (3.4.5)
+  - SmartCodable (4.3.2)
 
 DEPENDENCIES:
   - GXTaskDownload (from `../`)
@@ -18,10 +18,10 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GGXSwiftExtension: 337dbc7b6020457af528f5015290586788450635
-  GXTaskDownload: d0c899de66316dbbeec87a57568a3d9bede75aed
-  SmartCodable: 935b8b3d83133cb07286b0780f614bc739c1e116
+  GGXSwiftExtension: 438330b80997b69e09968004588ce41d8ff36583
+  GXTaskDownload: 6d924d06697bd07c0996329750c952a4dfe1b5e0
+  SmartCodable: 88fbf3d65207c2376fdbce4b080a3d578cb51be8
 
 PODFILE CHECKSUM: 8b64bb102453ccc7051de9ab24a53472fbb8f0fa
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

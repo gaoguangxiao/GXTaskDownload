@@ -7,24 +7,25 @@
 
 import Foundation
 
-
-
 open class SmartJSONDecoder: JSONDecoder {
     
+    
+    open var smartDataDecodingStrategy: SmartDataDecodingStrategy = .base64
+    
     /// Options set on the top-level encoder to pass down the decoding hierarchy.
-    struct Options {
+    struct _Options {
         let dateDecodingStrategy: DateDecodingStrategy
-        let dataDecodingStrategy: DataDecodingStrategy
+        let dataDecodingStrategy: SmartDataDecodingStrategy
         let nonConformingFloatDecodingStrategy: NonConformingFloatDecodingStrategy
         let keyDecodingStrategy: SmartKeyDecodingStrategy
         let userInfo: [CodingUserInfoKey : Any]
     }
     
     /// The options set on the top-level decoder.
-    var options: Options {
-        return Options(
+    var options: _Options {
+        return _Options(
             dateDecodingStrategy: dateDecodingStrategy,
-            dataDecodingStrategy: dataDecodingStrategy,
+            dataDecodingStrategy: smartDataDecodingStrategy,
             nonConformingFloatDecodingStrategy: nonConformingFloatDecodingStrategy,
             keyDecodingStrategy: smartKeyDecodingStrategy,
             userInfo: userInfo
@@ -44,20 +45,29 @@ open class SmartJSONDecoder: JSONDecoder {
     /// - throws: `DecodingError.dataCorrupted` if values requested from the payload are corrupted, or if the given data is not valid JSON.
     /// - throws: An error if any value throws an error during decoding.
     open override func decode<T : Decodable>(_ type: T.Type, from data: Data) throws -> T {
-        let topLevel: Any
+                
+        let mark = SmartSentinel.parsingMark()
+        if let parsingMark = CodingUserInfoKey.parsingMark {
+            userInfo.updateValue(mark, forKey: parsingMark)
+        }
+
         do {
-            topLevel = try JSONSerialization.jsonObject(with: data)
+            var parser = JSONParser(bytes: Array(data))
+            let json = try parser.parse()
+            let impl = JSONDecoderImpl(userInfo: self.userInfo, from: json, codingPath: [], options: self.options)
+            let value = try impl.unwrap(as: type)
+            SmartSentinel.monitorLogs(in: "\(type)", parsingMark: mark)
+            return value
         } catch {
-            throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [], debugDescription: "The given data was not valid JSON.", underlyingError: error))
+            SmartSentinel.monitorAndPrint(debugDescription: "The given data was not valid JSON.", error: error, in: type)
+            throw error
         }
-        
-        let decoder = _SmartJSONDecoder(referencing: topLevel, options: self.options)
-        guard let value = try decoder.unbox(topLevel, as: T.self) else {
-            throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: [], debugDescription: "The given data did not contain a top-level value."))
-        }
-        SmartLog.printCacheLogs(in: "\(type)")
-        return value
     }
 }
 
+
+extension CodingUserInfoKey {
+    /// This parsing tag is used to summarize logs.
+    static var parsingMark = CodingUserInfoKey.init(rawValue: "Stamrt.parsingMark")
+}
 

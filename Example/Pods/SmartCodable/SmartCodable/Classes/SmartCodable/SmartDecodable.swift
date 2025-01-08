@@ -2,7 +2,7 @@
 //  SmartDecodable.swift
 //  SmartCodable
 //
-//  Created by qixin on 2023/9/4.
+//  Created by Mccc on 2023/9/4.
 //
 
 import Foundation
@@ -11,8 +11,9 @@ import Foundation
 public protocol SmartDecodable: Decodable {
     /// The callback for when mapping is complete
     mutating func didFinishMapping()
-  
-    /// The mapping relationship of decoding keys
+    
+    /// The mapping relationship of decoding keys.
+    /// The first mapping relationship that is not null is preferred
     static func mappingForKey() -> [SmartKeyTransformer]?
     
     /// The strategy for decoding values
@@ -32,9 +33,11 @@ extension SmartDecodable {
 /// Options for SmartCodable parsing
 public enum SmartDecodingOption: Hashable {
     
+    
+    /// date的默认策略是ReferenceDate（参考日期是指2001年1月1日 00:00:00 UTC），以秒为单位。
     case date(JSONDecoder.DateDecodingStrategy)
     
-    case data(JSONDecoder.DataDecodingStrategy)
+    case data(JSONDecoder.SmartDataDecodingStrategy)
     
     case float(JSONDecoder.NonConformingFloatDecodingStrategy)
     
@@ -81,14 +84,14 @@ extension SmartDecodable {
     ///   Duplicate enumeration items are not allowed, e.g., multiple keyStrategies cannot be passed in [only the first one is effective].
     /// - Returns: Model
     public static func deserialize(from dict: [String: Any]?, designatedPath: String? = nil,  options: Set<SmartDecodingOption>? = nil) -> Self? {
-                
+        
         guard let _dict = dict else {
-            SmartLog.logVerbose("Expected to decode Dictionary but found nil instead.", in: "\(self)")
+            logNilValue(for: "Dictionary", on: Self.self)
             return nil
         }
         
         guard let _data = getInnerData(inside: _dict, by: designatedPath) else {
-            SmartLog.logVerbose("Expected to decode Dictionary but is cannot be data.", in: "\(self)")
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
             return nil
         }
         
@@ -103,12 +106,12 @@ extension SmartDecodable {
     /// - Returns: Model
     public static func deserialize(from json: String?, designatedPath: String? = nil, options: Set<SmartDecodingOption>? = nil) -> Self? {
         guard let _json = json else {
-            SmartLog.logVerbose("Expected to decode Dictionary but found nil instead.", in: "\(self)")
+            logNilValue(for: "JSON String", on: Self.self)
             return nil
         }
-    
+        
         guard let _data = getInnerData(inside: _json, by: designatedPath) else {
-            SmartLog.logVerbose("Expected to decode Dictionary but is cannot be data.", in: "\(self)")
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
             return nil
         }
         
@@ -124,19 +127,45 @@ extension SmartDecodable {
     /// - Returns: Model
     public static func deserialize(from data: Data?, designatedPath: String? = nil, options: Set<SmartDecodingOption>? = nil) -> Self? {
         guard let data = data else {
-            SmartLog.logVerbose("Expected to decode Dictionary but found nil instead.", in: "\(self)")
+            logNilValue(for: "Data", on: Self.self)
             return nil
         }
         
         guard let _data = getInnerData(inside: data, by: designatedPath) else {
-            SmartLog.logVerbose("Expected to decode Dictionary but is cannot be data.", in: "\(self)")
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
             return nil
         }
         
         return try? _data._deserializeDict(type: Self.self, options: options)
     }
-}
+    
+    
+    /// Deserializes into a model
+    /// - Parameter data: Data
+    /// - Parameter designatedPath: Specifies the data path to decode
+    /// - Parameter options: Decoding strategy
+    ///   Duplicate enumeration items are not allowed, e.g., multiple keyStrategies cannot be passed in [only the first one is effective].
+    /// - Returns: Model
+    public static func deserializePlist(from data: Data?, designatedPath: String? = nil, options: Set<SmartDecodingOption>? = nil) -> Self? {
+        
+        guard let data = data else {
+            logNilValue(for: "Data", on: Self.self)
+            return nil
+        }
+        
+        guard let _tranData = data.tranformToJSONData(type: Self.self) else {
+            return nil
+        }
+        
+        guard let _data = getInnerData(inside: _tranData, by: designatedPath) else {
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
+            return nil
+        }
+        
+        return try? _data._deserializeDict(type: Self.self, options: options)
+    }
 
+}
 
 
 extension Array where Element: SmartDecodable {
@@ -147,15 +176,15 @@ extension Array where Element: SmartDecodable {
     /// - Parameter options: Decoding strategy
     ///   Duplicate enumeration items are not allowed, e.g., multiple keyStrategies cannot be passed in [only the first one is effective].
     /// - Returns: Array of models
-    public static func deserialize(from array: [Any]?, options: Set<SmartDecodingOption>? = nil) -> [Element]? {
-
+    public static func deserialize(from array: [Any]?, designatedPath: String? = nil, options: Set<SmartDecodingOption>? = nil) -> [Element]? {
+        
         guard let _arr = array else {
-            SmartLog.logVerbose("Expected to decode Array but found nil instead.", in: "\(self)")
+            logNilValue(for: "Array", on: Self.self)
             return nil
         }
         
         guard let _data = getInnerData(inside: _arr, by: nil) else {
-            SmartLog.logVerbose("Expected to decode Array but is cannot be data.", in: "\(self)")
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
             return nil
         }
         
@@ -171,12 +200,12 @@ extension Array where Element: SmartDecodable {
     /// - Returns: Array of models
     public static func deserialize(from json: String?, designatedPath: String? = nil, options: Set<SmartDecodingOption>? = nil) -> [Element]? {
         guard let _json = json else {
-            SmartLog.logVerbose("Expected to decode Array but found nil instead.", in: "\(self)")
+            logNilValue(for: "JSON String", on: Self.self)
             return nil
         }
         
         guard let _data = getInnerData(inside: _json, by: designatedPath) else {
-            SmartLog.logVerbose("Expected to decode Array but is cannot be data.", in: "\(self)")
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
             return nil
         }
         
@@ -191,12 +220,38 @@ extension Array where Element: SmartDecodable {
     /// - Returns: Array of models
     public static func deserialize(from data: Data?, designatedPath: String? = nil, options: Set<SmartDecodingOption>? = nil) -> [Element]? {
         guard let data = data else {
-            SmartLog.logVerbose("Expected to decode Array but found nil instead.", in: "\(self)")
+            logNilValue(for: "Data", on: Self.self)
             return nil
         }
         
         guard let _data = getInnerData(inside: data, by: designatedPath) else {
-            SmartLog.logVerbose("Expected to decode Array but is cannot be data.", in: "\(self)")
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
+            return nil
+        }
+        
+        return try? _data._deserializeArray(type: Self.self, options: options)
+    }
+    
+    /// Deserializes into an array of models
+    /// - Parameter data: Data
+    /// - Parameter designatedPath: Specifies the data path to decode
+    /// - Parameter options: Decoding strategy
+    ///   Duplicate enumeration items are not allowed, e.g., multiple keyStrategies cannot be passed in [only the first one is effective].
+    /// - Returns: Array of models
+    public static func deserializePlist(from data: Data?, designatedPath: String? = nil, options: Set<SmartDecodingOption>? = nil) -> [Element]? {
+        
+        
+        guard let data = data else {
+            logNilValue(for: "Data", on: Self.self)
+            return nil
+        }
+        
+        guard let _tranData = data.tranformToJSONData(type: Self.self) else {
+            return nil
+        }
+        
+        guard let _data = getInnerData(inside: _tranData, by: designatedPath) else {
+            logDataExtractionFailure(forPath: designatedPath, type: Self.self)
             return nil
         }
         
@@ -206,16 +261,14 @@ extension Array where Element: SmartDecodable {
 
 
 extension Data {
-
     fileprivate func createDecoder<T>(type: T.Type, options: Set<SmartDecodingOption>? = nil) -> JSONDecoder {
         let _decoder = SmartJSONDecoder()
         
-
         if let _options = options {
             for _option in _options {
                 switch _option {
                 case .data(let strategy):
-                    _decoder.dataDecodingStrategy = strategy
+                    _decoder.smartDataDecodingStrategy = strategy
                     
                 case .date(let strategy):
                     _decoder.dateDecodingStrategy = strategy
@@ -260,31 +313,71 @@ extension Data {
         let jsonObject = try? JSONSerialization.jsonObject(with: self, options: .allowFragments)
         return jsonObject
     }
+    
+    
+    /// 将Plist Data 转成 JSON Data
+    fileprivate func tranformToJSONData(type: Any.Type) -> Data? {
+        guard let jsonObject = try? PropertyListSerialization.propertyList(from: self, options: [], format: nil) else {
+            SmartSentinel.monitorAndPrint(debugDescription: "Failed to convert PropertyList Data to JSON Data.", in: type)
+            return nil
+        }
+        
+        guard JSONSerialization.isValidJSONObject(jsonObject) else {
+            SmartSentinel.monitorAndPrint(debugDescription: "Failed to convert PropertyList Data to JSON Data.", in: type)
+            return nil
+        }
+        
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: jsonObject, options: [])
+            return jsonData
+        } catch {
+            SmartSentinel.monitorAndPrint(debugDescription: "Failed to convert PropertyList Data to JSON Data. ", error: error, in: type)
+            return nil
+        }
+    }
 }
 
-extension Dictionary where Key == String {
+extension Dictionary where Key == String, Value == Any {
     
-    fileprivate func toData() -> Data? {
-        let peeled = self.peelIfPresent
-        guard JSONSerialization.isValidJSONObject(peeled) else { return nil }
-        return try? JSONSerialization.data(withJSONObject: peeled)
+    /// 确保字典中的Value类型都支持JSON序列化。
+    func toData() -> Data? {
+        let jsonCompatibleDict = self.toJSONCompatibleDict()
+        guard JSONSerialization.isValidJSONObject(jsonCompatibleDict) else { return nil }
+        return try? JSONSerialization.data(withJSONObject: jsonCompatibleDict)
+    }
+
+    private func toJSONCompatibleDict() -> [String: Any] {
+        var jsonCompatibleDict: [String: Any] = [:]
+        for (key, value) in self {
+            jsonCompatibleDict[key] = convertToJSONCompatible(value: value)
+        }
+        return jsonCompatibleDict
+    }
+    
+    /// 目前只处理了Data类型。如有需要可以继续扩展补充。
+    private func convertToJSONCompatible(value: Any) -> Any {
+        if let data = value as? Data {
+            return data.base64EncodedString()
+        } else if let dict = value as? [String: Any] {
+            return dict.toJSONCompatibleDict()
+        } else if let array = value as? [Any] {
+            return array.map { convertToJSONCompatible(value: $0) }
+        } else {
+            return value
+        }
     }
     
     fileprivate func toJSONString() -> String? {
         guard let data = toData() else { return nil }
-        if let json = String(data: data, encoding: String.Encoding.utf8) {
-            return json
-        }
-        return nil
+        return String(data: data, encoding: .utf8)
     }
 }
 
 extension Array {
     
     fileprivate func toData() -> Data? {
-        let peeled = self.peelIfPresent
-        guard JSONSerialization.isValidJSONObject(peeled) else { return nil }
-        return try? JSONSerialization.data(withJSONObject: peeled)
+        guard JSONSerialization.isValidJSONObject(self) else { return nil }
+        return try? JSONSerialization.data(withJSONObject: self)
     }
     
     fileprivate func toJSONString() -> String? {
@@ -314,7 +407,7 @@ fileprivate func getInnerData(inside value: Any?, by designatedPath: String?) ->
             return nil
         }
     }
-
+    
     func toData(_ value: Any?) -> Data? {
         switch value {
         case let data as Data:
@@ -330,7 +423,7 @@ fileprivate func getInnerData(inside value: Any?, by designatedPath: String?) ->
         }
         return nil
     }
-
+    
     func getInnerObject(inside object: Any?, by designatedPath: String?) -> Any? {
         
         var result: Any? = object
@@ -362,3 +455,12 @@ fileprivate func getInnerData(inside value: Any?, by designatedPath: String?) ->
     }
 }
 
+
+fileprivate func logNilValue(for valueType: String, on modelType: Any.Type) {
+    SmartSentinel.monitorAndPrint(debugDescription: "Decoding \(modelType) failed because input \(valueType) is nil.", in: modelType)
+}
+
+fileprivate func logDataExtractionFailure(forPath path: String?, type: Any.Type) {
+    
+    SmartSentinel.monitorAndPrint(debugDescription: "Decoding \(type) failed because it was unable to extract valid data from path '\(path ?? "nil")'.", in: type)
+}

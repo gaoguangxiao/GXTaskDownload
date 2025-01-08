@@ -21,8 +21,8 @@ public extension String {
     //
     func isDownloadSuccess() -> Bool {
         let boxFileMd5 = self.toFileUrl?.toMD5()
-        if let urlPathMd5 = self.downloadUrlMD5 {
-            return self.has(urlPathMd5,option: .caseInsensitive)
+        if let urlPathMd5 = self.downloadUrlMD5, urlPathMd5.count == 8 {//文件md5后缀必须是8位
+            return ((boxFileMd5?.has(urlPathMd5,option: .caseInsensitive)) != nil)
         }
         return false
     }
