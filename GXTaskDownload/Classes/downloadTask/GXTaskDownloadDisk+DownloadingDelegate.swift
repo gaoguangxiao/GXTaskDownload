@@ -20,14 +20,16 @@ extension GXTaskDownloadDisk: GXDownloadingDelegate {
             //判断文件完整性。文件长度比较
             if let urlPath = download.url?.absoluteString {
                 let boxPath = diskFile.getFilePath(url: urlPath)
-                
+                guard let boxFileMd5 = boxPath.toFileUrl?.toMD5() else {
+                    downloadBlock?(download.progress, GXDownloadingState.error)
+                    return
+                }
+                LogInfo("The boxPath \(boxPath) md5 is \(boxFileMd5)")
                 let downloadedSize = FileManager.fileSize(path: boxPath)
                 let downloadCount = downloadedSize * 1024 * 1024
-                
                 let totalBytesCount = Double(download.totalBytesCount)
                 //对比文件的MD5和模型是否一致
-                if let boxFileMd5 = boxPath.toFileUrl?.toMD5(),
-                   let urlMD5 = diskFile.remoteDownloadURLModel?.md5, !urlMD5.isEmpty {
+                if let urlMD5 = diskFile.remoteDownloadURLModel?.md5, !urlMD5.isEmpty {
                     //`boxPath`不携带md5，但模型数据具备
                     let r = boxFileMd5.has(urlMD5,option: .caseInsensitive)
                     if r == true {

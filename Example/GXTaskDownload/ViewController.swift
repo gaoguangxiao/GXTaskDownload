@@ -41,7 +41,7 @@ class ViewController: UIViewController {
 //        return "https://www.apple.com/105/media/us/iphone-x/2017/01df5b43-28e4-4848-bf20-490c34a926a7/films/feature/iphone-x-feature-tpl-cc-us-20170912_1280x720h.mp4"
 //        return "https://file.risekid.cn/static/qa.risekid.cn.zip"
 //        return "https://file.risekid.cn/app/spine/buddy/mojing.json"
-        return "https://file.risekid.cn/audio/668d39a6-e1cb-4c49-965c-9c0cc9b709de.mp3"
+        return "https://file.risekid.cn/web/adventure/5710.44c16554.async.js"
 //        return "https://file.risekid.cn/web/adventure/manifest/manifest-initial.934447a9.json"
     }
     

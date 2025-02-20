@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.5.1'
-  s.summary          = 'fix：URL包含md5时，md5必须8位，避免后缀.2影响'
+  s.version          = '0.5.2'
+  s.summary          = 'fix：URL下载链接超时10秒'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
