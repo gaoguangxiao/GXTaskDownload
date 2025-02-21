@@ -50,7 +50,8 @@ extension GXTaskDownloadDisk: GXDownloadingDelegate {
                         self.saveUrlInfo()
                         downloadBlock?(download.progress, state)
                     } else {
-                        LogInfo("no save \(urlPath) info")
+                        LogInfo("no save \(urlPath) info and clearFile \(urlPath)")
+                        diskFile.clearFile(forUrl: urlPath)
                         downloadBlock?(download.progress, GXDownloadingState.error)
                     }
                 }
@@ -67,7 +68,12 @@ extension GXTaskDownloadDisk: GXDownloadingDelegate {
     
     //错误会触发
     public func download(_ download: GXDownloading, completedWithError error: Error?) {
-        LogInfo("文件下载错误：urlPath：\(download.url?.absoluteString ?? "")")
+        if let urlPath = download.url?.absoluteString {
+            let urlInfoPath = "\(urlPath.md5Value).json"
+            LogInfo("文件下载错误：urlPath：\(download.url?.absoluteString ?? "") and clearFile_info \(urlInfoPath)")
+            diskFile.clearFile(forUrl: urlInfoPath)
+            diskFile.clearFile(forUrl: urlPath)
+        }
         downloadBlock?(download.progress, .error)
     }
     
