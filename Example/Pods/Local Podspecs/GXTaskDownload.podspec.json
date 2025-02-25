@@ -1,7 +1,7 @@
 {
   "name": "GXTaskDownload",
-  "version": "0.5.0",
-  "summary": "feat：增加URL包含md5时的校验",
+  "version": "0.6.0",
+  "summary": "fix：多文件下载完毕时回调下载当前文件大小",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/gaoguangxiao",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/gaoguangxiao/GXTaskDownload.git",
-    "tag": "0.5.0"
+    "tag": "0.6.0"
   },
   "platforms": {
     "ios": "11.0"
@@ -21,12 +21,8 @@
   "swift_versions": "5.0",
   "source_files": "GXTaskDownload/Classes/**/*",
   "dependencies": {
-    "GGXSwiftExtension": [
-
-    ],
-    "SmartCodable": [
-
-    ]
+    "GGXSwiftExtension": [],
+    "SmartCodable": []
   },
   "swift_version": "5.0"
 }
