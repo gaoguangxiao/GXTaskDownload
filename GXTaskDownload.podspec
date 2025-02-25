@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GXTaskDownload'
-  s.version          = '0.6.0'
+  s.version          = '0.6.1'
   s.summary          = 'fix：多文件下载完毕时回调下载当前文件大小'
 
 # This description is used to generate tags and improve search results.

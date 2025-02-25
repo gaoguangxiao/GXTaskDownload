@@ -137,7 +137,6 @@ extension GXDownloadManager {
                 //单个文件的下载完成，抛出进度
                 if state == .completed || state == .error {
                     self.removeDownloadTask(task: downloader)
-                    LogInfo("当前已下载下载大小:\(finishBytesReceived)")
                     self.addFinishTaskCount()
                 }
             })
